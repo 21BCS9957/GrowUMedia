@@ -1,8 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import CoreServices from "@/components/CoreServices";
-import Services from "@/components/Services";
+import CaseStudies from "@/components/CaseStudies";
 import Process from "@/components/Process";
+import WhatsAppTestimonials from "@/components/WhatsAppTestimonials";
 import OurWork from "@/components/OurWork";
 import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
@@ -14,8 +15,9 @@ const Index = () => {
       <Navbar />
       <Hero />
       <CoreServices />
-      <Services />
+      <CaseStudies />
       <Process />
+      <WhatsAppTestimonials />
       <OurWork />
       <Testimonials />
       <CTA />

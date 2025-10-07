@@ -84,7 +84,7 @@ const CoreServices = () => {
               style={{
                 top: `${80}px`,
                 zIndex: 50 + index,
-                marginBottom: index === coreServices.length - 1 ? '400px' : '24px'
+                marginBottom: index === coreServices.length - 1 ? '120px' : '24px'
               }}
             >
               {/* Gradient background */}
@@ -124,7 +124,7 @@ const CoreServices = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center pb-32">
+        <div className="text-center pb-16">
           <div className="inline-flex flex-col items-center gap-4 p-8 rounded-2xl bg-card/50 backdrop-blur border border-primary/30">
             <p className="text-lg font-semibold">
               Ready to scale your channel with our proven systems?
