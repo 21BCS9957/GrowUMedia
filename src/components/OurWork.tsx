@@ -38,6 +38,7 @@ const videos = [
 const VideoCard = ({ video, index }: { video: typeof videos[0]; index: number }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   const togglePlay = () => {
     if (videoRef.current) {
@@ -50,10 +51,29 @@ const VideoCard = ({ video, index }: { video: typeof videos[0]; index: number })
     }
   };
 
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    if (videoRef.current && !isPlaying) {
+      videoRef.current.play();
+      setIsPlaying(true);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    if (videoRef.current && isPlaying) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0; // Reset to beginning
+      setIsPlaying(false);
+    }
+  };
+
   return (
-    <div 
+    <div
       className="group relative rounded-2xl overflow-hidden border border-border/50 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-500 animate-fade-in"
       style={{ animationDelay: `${index * 100}ms` }}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       {/* Video Container */}
       <div className="relative aspect-[9/16] md:aspect-video overflow-hidden bg-gradient-to-br from-black via-card to-black">
@@ -66,7 +86,7 @@ const VideoCard = ({ video, index }: { video: typeof videos[0]; index: number })
           muted
           autoPlay
         />
-        
+
         {/* Main video */}
         <video
           ref={videoRef}
@@ -74,13 +94,14 @@ const VideoCard = ({ video, index }: { video: typeof videos[0]; index: number })
           src={video.videoUrl}
           preload="metadata"
           loop
+          muted
           onClick={togglePlay}
         />
-        
+
         {/* Play Button Overlay */}
-        {!isPlaying && (
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-center justify-center opacity-100 group-hover:opacity-90 transition-opacity duration-300">
-            <button 
+        {!isPlaying && !isHovered && (
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-center justify-center opacity-100 group-hover:opacity-0 transition-opacity duration-300">
+            <button
               onClick={togglePlay}
               className="w-16 h-16 rounded-full bg-primary/90 hover:bg-primary flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 shadow-lg shadow-primary/50"
             >
@@ -89,9 +110,18 @@ const VideoCard = ({ video, index }: { video: typeof videos[0]; index: number })
           </div>
         )}
 
+        {/* Hover Preview Indicator */}
+        {isHovered && isPlaying && (
+          <div className="absolute bottom-4 left-4">
+            <span className="px-3 py-1 bg-primary/90 backdrop-blur-sm rounded-full text-xs font-medium text-primary-foreground">
+              Preview
+            </span>
+          </div>
+        )}
+
         {/* Pause Button (appears when playing) */}
         {isPlaying && (
-          <button 
+          <button
             onClick={togglePlay}
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-black/50 hover:bg-black/70 flex items-center justify-center transform transition-all duration-300 opacity-0 group-hover:opacity-100"
           >
@@ -171,7 +201,7 @@ const OurWork = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          
+
           <div className="hidden md:block">
             <CarouselPrevious className="left-0" />
             <CarouselNext className="right-0" />
