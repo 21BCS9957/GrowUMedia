@@ -23,7 +23,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Done-for-you editing, repurposing, strategy, and publishing systems—trusted by creators, brands, and media companies ready to dominate the platform and build lasting audiences.
+           
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
