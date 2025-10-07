@@ -17,7 +17,22 @@ const videos = [
     views: "2.5M",
     category: "Documentary"
   },
-  // Add more videos here as needed
+  {
+    id: 2,
+    title: "Cuba Intro",
+    description: "Casual Vloging",
+    videoUrl: "public/videos/Cuba intro.mp4",
+    views: "1.4M",
+    category: "Vloging"
+  },
+  {
+    id: 3,
+    title: "Use Time Wisely",
+    description: "Motion Graphics",
+    videoUrl: "public/videos/Use Time Wisely.mp4",
+    views: "3.8M",
+    category: "Short Form"
+  },
 ];
 
 const VideoCard = ({ video, index }: { video: typeof videos[0]; index: number }) => {

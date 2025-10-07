@@ -10,37 +10,37 @@ import {
 const testimonials = [
   {
     quote: "Growu Media transformed our channel from struggling to get views to consistently hitting 100K+ per video. The ROI has been incredible.",
-    author: "Sarah Johnson",
+    author: "Satyam Tripathi",
     role: "Founder, TechStartup Channel",
     growth: "450% increase in 6 months"
   },
   {
     quote: "The team's understanding of YouTube's algorithm and audience psychology is unmatched. They don't just edit videos—they engineer growth.",
-    author: "Marcus Chen",
+    author: "Pratham",
     role: "Business Coach",
     growth: "$2M+ in course sales"
   },
   {
     quote: "From 5K to 250K subscribers in a year. The systems they built are scalable, repeatable, and most importantly—they work.",
-    author: "Emily Rodriguez",
+    author: "Tom Zener",
     role: "Lifestyle Creator",
     growth: "5000% subscriber growth"
   },
   {
     quote: "Working with Growu Media has been game-changing. They handle everything so I can focus on what I do best—creating content.",
-    author: "David Park",
+    author: "Flow With Adee",
     role: "Tech Reviewer",
     growth: "2M+ views per month"
   },
   {
     quote: "The analytics insights and optimization strategies they provide are worth their weight in gold. Our CPM tripled in 4 months.",
-    author: "Jennifer Walsh",
+    author: "Maria",
     role: "Financial Education Channel",
     growth: "$50K+ monthly ad revenue"
   },
   {
     quote: "Best decision we made for our brand. The content quality and engagement metrics have skyrocketed since partnering with them.",
-    author: "Alex Thompson",
+    author: "Vista Social",
     role: "Fitness Brand",
     growth: "800% engagement increase"
   }

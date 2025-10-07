@@ -76,3 +76,78 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+/* Auto-scrolling animation for client showcase */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}/* C
+ustom Cursor Styles */
+* {
+  cursor: none !important;
+}
+
+body {
+  cursor: none !important;
+}
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, hsl(45 93% 58%), hsl(30 93% 58%));
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transition: transform 0.1s ease;
+}
+
+.cursor-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 2px solid hsl(45 93% 58% / 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transition: all 0.3s ease;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-hover {
+  transform: scale(1.5);
+  background: hsl(0 72% 51%);
+}
+
+.cursor-follower-hover {
+  transform: translate(-50%, -50%) scale(1.5);
+  border-color: hsl(0 72% 51% / 0.8);
+}
+
+/* Hide cursor on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  * {
+    cursor: auto !important;
+  }
+  
+  .cursor,
+  .cursor-follower {
+    display: none;
+  }
+}
