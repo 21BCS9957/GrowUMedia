@@ -63,7 +63,7 @@ const Hero = () => {
                 ].map((client, index) => (
                   <div
                     key={`first-${index}`}
-                    className="flex-shrink-0 w-24 h-12 flex items-center justify-center transition-all duration-300 opacity-60 hover:opacity-100 hover:scale-105"
+                    className="flex-shrink-0 w-24 h-12 flex items-center justify-center transition-all duration-300 opacity-90 hover:opacity-100 hover:scale-105"
                   >
                     <img
                       src={client.logo}
@@ -85,7 +85,7 @@ const Hero = () => {
                 ].map((client, index) => (
                   <div
                     key={`second-${index}`}
-                    className="flex-shrink-0 w-24 h-12 flex items-center justify-center transition-all duration-300 opacity-60 hover:opacity-100 hover:scale-105"
+                    className="flex-shrink-0 w-24 h-12 flex items-center justify-center transition-all duration-300 opacity-90 hover:opacity-100 hover:scale-105"
                   >
                     <img
                       src={client.logo}

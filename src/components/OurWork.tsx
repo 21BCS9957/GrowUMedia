@@ -1,38 +1,71 @@
-import { Play, Pause } from "lucide-react";
+import { Play, Pause, Filter, Grid3X3 } from "lucide-react";
 import { useRef, useState } from "react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+
+const categories = [
+  { id: "all", name: "All Work", count: 15 },
+  { id: "podcast", name: "Podcast", count: 3 },
+  { id: "talking-head", name: "Talking Head", count: 4 },
+  { id: "documentary", name: "Documentary", count: 2 },
+  { id: "corporate", name: "Corporate", count: 3 },
+  { id: "entertainment", name: "Entertainment", count: 3 }
+];
 
 const videos = [
   {
     id: 1,
     title: "Charles Manson Documentary",
-    description: "Professional editing and storytelling",
+    description: "Deep dive investigative storytelling with professional editing",
     videoUrl: "/videos/charles_Manson_4.mp4",
     views: "2.5M",
-    category: "Documentary"
+    category: "documentary",
+    thumbnail: "/videos/charles_Manson_4.mp4"
   },
   {
     id: 2,
-    title: "Cuba Intro",
-    description: "Casual Vloging",
+    title: "Cuba Travel Experience",
+    description: "Engaging talking head format with dynamic visuals",
     videoUrl: "/videos/Cuba intro.mp4",
     views: "1.4M",
-    category: "Vloging"
+    category: "talking-head",
+    thumbnail: "/videos/Cuba intro.mp4"
   },
   {
     id: 3,
-    title: "Use Time Wisely",
-    description: "Motion Graphics",
+    title: "Time Management Mastery",
+    description: "Entertainment content with motion graphics",
     videoUrl: "/videos/Use Time Wisely.mp4",
     views: "3.8M",
-    category: "Short Form"
+    category: "entertainment",
+    thumbnail: "/videos/Use Time Wisely.mp4"
   },
+  // Placeholder videos for other categories
+  {
+    id: 4,
+    title: "Business Podcast Episode",
+    description: "Professional podcast editing and audio enhancement",
+    videoUrl: "/videos/charles_Manson_4.mp4", // Using existing video as placeholder
+    views: "1.2M",
+    category: "podcast",
+    thumbnail: "/videos/charles_Manson_4.mp4"
+  },
+  {
+    id: 5,
+    title: "Corporate Training Video",
+    description: "Clean corporate presentation with professional graphics",
+    videoUrl: "/videos/Cuba intro.mp4", // Using existing video as placeholder
+    views: "890K",
+    category: "corporate",
+    thumbnail: "/videos/Cuba intro.mp4"
+  },
+  {
+    id: 6,
+    title: "Comedy Entertainment",
+    description: "High-energy entertainment content with dynamic editing",
+    videoUrl: "/videos/Use Time Wisely.mp4", // Using existing video as placeholder
+    views: "2.1M",
+    category: "entertainment",
+    thumbnail: "/videos/Use Time Wisely.mp4"
+  }
 ];
 
 const VideoCard = ({ video, index }: { video: typeof videos[0]; index: number }) => {
@@ -163,59 +196,100 @@ const VideoCard = ({ video, index }: { video: typeof videos[0]; index: number })
 };
 
 const OurWork = () => {
-  return (
-    <section className="py-24 relative overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-card to-background" />
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
+  const [activeCategory, setActiveCategory] = useState("all");
 
-      <div className="container mx-auto px-4 relative z-10">
+  const filteredVideos = activeCategory === "all"
+    ? videos
+    : videos.filter(video => video.category === activeCategory);
+
+  return (
+    <section className="py-32 relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-card/30 to-background" />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/5 rounded-full blur-3xl animate-pulse delay-1000" />
+
+      <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <div className="inline-block mb-4">
-            <span className="px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary text-sm font-medium">
+        <div className="text-center mb-20 animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/10 backdrop-blur mb-6">
+            <Grid3X3 className="w-4 h-4 text-primary" />
+            <span className="text-sm font-semibold text-primary uppercase tracking-wider">
               Our Portfolio
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Our Best <span className="text-primary">Work</span>
+
+          <h2 className="text-5xl md:text-7xl font-black leading-tight mb-6">
+            Our Best{" "}
+            <span className="bg-gradient-to-r from-primary via-yellow-400 to-orange-500 bg-clip-text text-transparent">
+              Work
+            </span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Explore our portfolio of successful YouTube content that has generated millions of views
+
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Explore our diverse portfolio of successful YouTube content across multiple categories, each generating millions of views.
           </p>
         </div>
 
-        {/* Videos Carousel */}
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="w-full max-w-7xl mx-auto"
-        >
-          <CarouselContent className="-ml-4">
-            {videos.map((video, index) => (
-              <CarouselItem key={video.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                <VideoCard video={video} index={index} />
-              </CarouselItem>
-            ))}
-          </CarouselContent>
+        {/* Category Filter */}
+        <div className="flex flex-wrap justify-center gap-3 mb-16">
+          {categories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => setActiveCategory(category.id)}
+              className={`group px-6 py-3 rounded-full font-medium transition-all duration-300 ${activeCategory === category.id
+                  ? 'bg-primary text-primary-foreground shadow-lg shadow-primary/30'
+                  : 'bg-card/50 border border-border hover:border-primary/50 text-muted-foreground hover:text-foreground'
+                }`}
+            >
+              <span className="flex items-center gap-2">
+                {category.name}
+                <span className={`text-xs px-2 py-1 rounded-full ${activeCategory === category.id
+                    ? 'bg-primary-foreground/20 text-primary-foreground'
+                    : 'bg-muted text-muted-foreground group-hover:text-foreground'
+                  }`}>
+                  {category.count}
+                </span>
+              </span>
+            </button>
+          ))}
+        </div>
 
-          <div className="hidden md:block">
-            <CarouselPrevious className="left-0" />
-            <CarouselNext className="right-0" />
+        {/* Videos Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
+          {filteredVideos.map((video, index) => (
+            <VideoCard key={video.id} video={video} index={index} />
+          ))}
+        </div>
+
+        {/* Empty State */}
+        {filteredVideos.length === 0 && (
+          <div className="text-center py-16">
+            <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center mx-auto mb-4">
+              <Filter className="w-8 h-8 text-muted-foreground" />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">No videos found</h3>
+            <p className="text-muted-foreground">
+              We're working on adding more content to this category. Check back soon!
+            </p>
           </div>
-        </Carousel>
+        )}
 
         {/* View All CTA */}
-        <div className="text-center mt-12">
-          <button className="group px-8 py-4 bg-card/50 backdrop-blur-sm border border-border/50 rounded-full hover:border-primary/50 transition-all duration-300 inline-flex items-center gap-2">
-            <span className="text-foreground group-hover:text-primary transition-colors">
-              View Full Portfolio
-            </span>
-            <Play className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors" />
-          </button>
+        <div className="text-center">
+          <div className="inline-flex flex-col items-center gap-4 p-8 rounded-2xl bg-gradient-to-br from-card/80 to-card/40 backdrop-blur border border-primary/30">
+            <div className="space-y-2">
+              <h3 className="text-xl font-bold">Ready to Create Content Like This?</h3>
+              <p className="text-muted-foreground text-sm">
+                Let us help you create professional, engaging content that drives results.
+              </p>
+            </div>
+
+            <button className="group px-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl font-semibold transition-all duration-300 flex items-center gap-2">
+              <Play className="w-4 h-4" />
+              Start Your Project
+            </button>
+          </div>
         </div>
       </div>
     </section>
