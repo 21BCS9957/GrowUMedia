@@ -21,7 +21,7 @@ const videos = [
     id: 2,
     title: "Cuba Intro",
     description: "Casual Vloging",
-    videoUrl: "public/videos/Cuba intro.mp4",
+    videoUrl: "/videos/Cuba intro.mp4",
     views: "1.4M",
     category: "Vloging"
   },
@@ -29,7 +29,7 @@ const videos = [
     id: 3,
     title: "Use Time Wisely",
     description: "Motion Graphics",
-    videoUrl: "public/videos/Use Time Wisely.mp4",
+    videoUrl: "/videos/Use Time Wisely.mp4",
     views: "3.8M",
     category: "Short Form"
   },
