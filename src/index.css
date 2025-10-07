@@ -92,8 +92,9 @@ All colors MUST be HSL.
 
 .animate-scroll:hover {
   animation-play-state: paused;
-}/* C
-ustom Cursor Styles */
+}
+
+/* Custom Cursor Styles */
 * {
   cursor: none !important;
 }
@@ -150,4 +151,41 @@ body {
   .cursor-follower {
     display: none;
   }
+}
+
+/* Smooth stacking animation for core services */
+.sticky-card {
+  transform: translateY(0);
+  transition: transform 0.3s ease-out;
+}
+
+.sticky-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Ensure smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced stacking effect for core services */
+.sticky {
+  will-change: transform;
+}
+
+/* Add progressive shadow depth to stacked cards */
+.sticky:nth-child(1) {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.sticky:nth-child(2) {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.sticky:nth-child(3) {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.sticky:nth-child(4) {
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.25);
 }
