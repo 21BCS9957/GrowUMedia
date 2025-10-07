@@ -25,7 +25,12 @@ const Navbar = () => {
             </a>
           </div>
 
-          <Button variant="hero" size="lg" className="shadow-lg">
+          <Button 
+            variant="hero" 
+            size="lg" 
+            className="shadow-lg"
+            onClick={() => window.open('https://app.reclaim.ai/m/arsh-growumedia/m', '_blank')}
+          >
             Book Your Call
           </Button>
         </div>

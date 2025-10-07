@@ -27,7 +27,12 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-            <Button variant="hero" size="lg" className="text-lg px-8 py-6 h-auto group">
+            <Button 
+              variant="hero" 
+              size="lg" 
+              className="text-lg px-8 py-6 h-auto group"
+              onClick={() => window.open('https://app.reclaim.ai/m/arsh-growumedia/m', '_blank')}
+            >
               Book Free Strategy Session
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>

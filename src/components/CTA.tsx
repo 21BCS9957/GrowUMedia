@@ -24,7 +24,12 @@ const CTA = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-            <Button variant="hero" size="lg" className="text-lg px-10 py-7 h-auto group">
+            <Button 
+              variant="hero" 
+              size="lg" 
+              className="text-lg px-10 py-7 h-auto group"
+              onClick={() => window.open('https://app.reclaim.ai/m/arsh-growumedia/m', '_blank')}
+            >
               <Calendar className="mr-2" />
               Book Your Free Call
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
