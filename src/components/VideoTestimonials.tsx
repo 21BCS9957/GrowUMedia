@@ -43,12 +43,12 @@ const testimonials = [
   }
 ];
 
-const TestimonialCard = ({ 
-  testimonial, 
-  index, 
-  onVideoClick 
-}: { 
-  testimonial: typeof testimonials[0]; 
+const TestimonialCard = ({
+  testimonial,
+  index,
+  onVideoClick
+}: {
+  testimonial: typeof testimonials[0];
   index: number;
   onVideoClick: (testimonial: typeof testimonials[0]) => void;
 }) => {
@@ -138,14 +138,14 @@ const TestimonialCard = ({
 };
 
 // Video Modal Component
-const VideoModal = ({ 
-  testimonial, 
-  isOpen, 
-  onClose 
-}: { 
-  testimonial: typeof testimonials[0] | null; 
-  isOpen: boolean; 
-  onClose: () => void; 
+const VideoModal = ({
+  testimonial,
+  isOpen,
+  onClose
+}: {
+  testimonial: typeof testimonials[0] | null;
+  isOpen: boolean;
+  onClose: () => void;
 }) => {
   if (!isOpen || !testimonial) return null;
 
@@ -162,7 +162,7 @@ const VideoModal = ({
   };
 
   return (
-    <div 
+    <div
       className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
       onClick={handleBackdropClick}
     >
@@ -260,21 +260,32 @@ const VideoTestimonials = () => {
         {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <TestimonialCard 
-              key={testimonial.id} 
-              testimonial={testimonial} 
-              index={index} 
+            <TestimonialCard
+              key={testimonial.id}
+              testimonial={testimonial}
+              index={index}
               onVideoClick={openModal}
             />
           ))}
         </div>
+
+        {/* See More Button */}
+        <div className="text-center mt-12">
+          <a
+            href="/testimonials"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25"
+          >
+            <Play className="w-5 h-5" />
+            See More Testimonials
+          </a>
+        </div>
       </div>
 
       {/* Video Modal */}
-      <VideoModal 
-        testimonial={modalTestimonial} 
-        isOpen={isModalOpen} 
-        onClose={closeModal} 
+      <VideoModal
+        testimonial={modalTestimonial}
+        isOpen={isModalOpen}
+        onClose={closeModal}
       />
     </section>
   );

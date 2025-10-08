@@ -1,70 +1,273 @@
-import { Play, Pause, Filter, Grid3X3, X, Maximize2 } from "lucide-react";
-import { useRef, useState } from "react";
+import { Play, Grid3X3, X, Maximize2 } from "lucide-react";
+import { useState } from "react";
 
 const categories = [
-  { id: "podcast", name: "Podcast", count: 1 },
-  { id: "talking-head", name: "Talking Head", count: 1 },
-  { id: "documentary", name: "Documentary", count: 1 },
-  { id: "corporate", name: "Corporate", count: 1 },
-  { id: "entertainment", name: "Entertainment", count: 1 }
+  { id: "podcast", name: "Podcast", count: 7 },
+  { id: "talking-head", name: "Talking Head", count: 5 },
+  { id: "documentary", name: "Documentary", count: 4 },
+  { id: "corporate", name: "Corporate", count: 7 },
+  { id: "entertainment", name: "Entertainment", count: 3 }
 ];
 
+
+
 const videos = [
+  // Podcast Videos
   {
     id: 1,
-    title: "Charles Manson Documentary",
-    description: "Deep dive investigative storytelling with professional editing",
-    videoUrl: "/videos/charles_Manson_4.mp4",
-    views: "2.5M",
+    title: "Business Growth Podcast",
+    description: "Professional podcast editing and audio enhancement",
+    youtubeUrl: "https://www.youtube.com/watch?v=6VeoFb5oLz8",
+    thumbnail: "https://img.youtube.com/vi/6VeoFb5oLz8/maxresdefault.jpg",
+    views: "1.2M",
     category: "podcast",
-    thumbnail: "/videos/charles_Manson_4.mp4"
+    badge: "Full Pod"
   },
   {
     id: 2,
-    title: "Cuba Travel Experience",
-    description: "Engaging talking head format with dynamic visuals",
-    videoUrl: "/videos/Cuba intro.mp4",
-    views: "1.4M",
-    category: "talking-head",
-    thumbnail: "/videos/Cuba intro.mp4"
+    title: "Tech Innovation Podcast",
+    description: "Deep dive into technology trends and innovations",
+    youtubeUrl: "https://www.youtube.com/watch?v=3Xo-XGetRbk",
+    thumbnail: "https://img.youtube.com/vi/3Xo-XGetRbk/maxresdefault.jpg",
+    views: "890K",
+    category: "podcast",
+    badge: "Teaser"
   },
   {
     id: 3,
-    title: "Comedy Entertainment",
-    description: "High-energy entertainment content with dynamic editing",
-    videoUrl: "/videos/charles_Manson_4.mp4",
-    views: "3.8M",
-    category: "documentary",
-    thumbnail: "/videos/charles_Manson_4.mp4"
+    title: "Entrepreneurship Stories",
+    description: "Inspiring stories from successful entrepreneurs",
+    youtubeUrl: "https://www.youtube.com/watch?v=eTVhdcp-WVw",
+    thumbnail: "https://img.youtube.com/vi/eTVhdcp-WVw/maxresdefault.jpg",
+    views: "2.1M",
+    category: "podcast",
+    badge: "Teaser"
   },
-  // Placeholder videos for other categories
   {
     id: 4,
-    title: "Business Podcast Episode",
-    description: "Professional podcast editing and audio enhancement",
-    videoUrl: "/videos/ocean frontiers.mp4", // Using existing video as placeholder
-    views: "1.2M",
-    category: "corporate",
-    thumbnail: "/videos/ocean frontiers.mp4"
+    title: "Marketing Mastery Podcast",
+    description: "Advanced marketing strategies and tactics",
+    youtubeUrl: "https://www.youtube.com/watch?v=6KBdGABVvFg",
+    thumbnail: "https://img.youtube.com/vi/6KBdGABVvFg/maxresdefault.jpg",
+    views: "1.5M",
+    category: "podcast",
+    badge: "Channel Intro"
   },
   {
     id: 5,
-    title: "Corporate Training Video",
-    description: "Clean corporate presentation with professional graphics",
-    videoUrl: "/videos/Cuba intro.mp4", // Using existing video as placeholder
-    views: "890K",
-    category: "corporate",
-    thumbnail: "/videos/Cuba intro.mp4"
+    title: "Leadership Insights",
+    description: "Leadership lessons from industry experts",
+    youtubeUrl: "https://youtube.com/shorts/_byCwhJ-G1U",
+    thumbnail: "https://img.youtube.com/vi/_byCwhJ-G1U/maxresdefault.jpg",
+    views: "1.8M",
+    category: "podcast",
+    badge: "Shortform"
   },
   {
+    id: 26,
+    title: "Podcast Highlights",
+    description: "Best moments from our podcast series",
+    youtubeUrl: "https://youtube.com/shorts/OijOnkaWAsY",
+    thumbnail: "https://img.youtube.com/vi/OijOnkaWAsY/maxresdefault.jpg",
+    views: "950K",
+    category: "podcast",
+    badge: "Shortform"
+  },
+  {
+    id: 27,
+    title: "Quick Insights",
+    description: "Bite-sized content for maximum impact",
+    youtubeUrl: "https://www.youtube.com/shorts/WQXAprEEVtQ",
+    thumbnail: "https://img.youtube.com/vi/WQXAprEEVtQ/maxresdefault.jpg",
+    views: "780K",
+    category: "podcast",
+    badge: "Shortform"
+  },
+
+  // Talking Head Videos
+  {
     id: 6,
-    title: "Time Management Mastery",
-    description: "Entertainment content with motion graphics",
-    videoUrl: "public/videos/The Halal Ham - Sample Complete - v4 (1).mp4",
+    title: "Personal Development Tips",
+    description: "Engaging talking head format with dynamic visuals",
+    youtubeUrl: "https://www.youtube.com/watch?v=w1iVErYblDc",
+    thumbnail: "https://img.youtube.com/vi/w1iVErYblDc/maxresdefault.jpg",
+    views: "1.4M",
+    category: "talking-head"
+  },
+  {
+    id: 7,
+    title: "Financial Freedom Guide",
+    description: "Expert advice on building wealth and financial independence",
+    youtubeUrl: "https://www.youtube.com/watch?v=LJ0fQoqpQCQ",
+    thumbnail: "https://img.youtube.com/vi/LJ0fQoqpQCQ/maxresdefault.jpg",
+    views: "2.3M",
+    category: "talking-head"
+  },
+  {
+    id: 8,
+    title: "Productivity Hacks",
+    description: "Time management and productivity strategies",
+    youtubeUrl: "https://www.youtube.com/watch?v=KTzjHf90Wc4",
+    thumbnail: "https://img.youtube.com/vi/KTzjHf90Wc4/maxresdefault.jpg",
+    views: "1.7M",
+    category: "talking-head"
+  },
+  {
+    id: 9,
+    title: "Career Advancement",
+    description: "Professional growth and career development advice",
+    youtubeUrl: "https://www.youtube.com/watch?v=8Ab-W51t8WI",
+    thumbnail: "https://img.youtube.com/vi/8Ab-W51t8WI/maxresdefault.jpg",
+    views: "1.1M",
+    category: "talking-head"
+  },
+  {
+    id: 10,
+    title: "Health & Wellness",
+    description: "Holistic approach to health and well-being",
+    youtubeUrl: "https://www.youtube.com/watch?v=6N6tj4aGz5Q",
+    thumbnail: "https://img.youtube.com/vi/6N6tj4aGz5Q/maxresdefault.jpg",
+    views: "1.9M",
+    category: "talking-head"
+  },
+
+  // Documentary Videos
+  {
+    id: 11,
+    title: "Crime Investigation Documentary",
+    description: "Deep dive investigative storytelling with professional editing",
+    youtubeUrl: "https://www.youtube.com/watch?v=gMzPu5dAhy4&feature=youtu.be",
+    thumbnail: "https://img.youtube.com/vi/gMzPu5dAhy4/maxresdefault.jpg",
+    views: "2.5M",
+    category: "documentary",
+    badge: "Crime LF"
+  },
+  {
+    id: 12,
+    title: "Business Documentary",
+    description: "Professional business storytelling and corporate narratives",
+    youtubeUrl: "https://www.youtube.com/watch?si=5l9RNhy_BKSMaaex&v=w_KnjFhnws0&feature=youtu.be",
+    thumbnail: "https://img.youtube.com/vi/w_KnjFhnws0/maxresdefault.jpg",
+    views: "3.2M",
+    category: "documentary",
+    badge: "Business"
+  },
+  {
+    id: 13,
+    title: "Educational Content",
+    description: "Engaging educational content in short-form format",
+    youtubeUrl: "https://www.youtube.com/watch?v=gU5-41_s-Ao",
+    thumbnail: "https://img.youtube.com/vi/gU5-41_s-Ao/maxresdefault.jpg",
+    views: "2.8M",
+    category: "documentary",
+    badge: "Educational Shortform"
+  },
+  {
+    id: 14,
+    title: "Documentary Production",
+    description: "Professional documentary filmmaking and storytelling",
+    youtubeUrl: "https://www.youtube.com/watch?v=eVTl2iAOmCI",
+    thumbnail: "https://img.youtube.com/vi/eVTl2iAOmCI/maxresdefault.jpg",
     views: "2.1M",
-    category: "entertainment",
-    thumbnail: "public/videos/The Halal Ham - Sample Complete - v4 (1).mp4"
-  }
+    category: "documentary"
+  },
+
+
+  // Corporate Videos
+  {
+    id: 16,
+    title: "Corporate Training Excellence",
+    description: "Clean corporate presentation with professional graphics",
+    youtubeUrl: "https://www.youtube.com/watch?v=Wh_dKDon8I0",
+    thumbnail: "https://img.youtube.com/vi/fiCF0OvNI-s/maxresdefault.jpg",
+    views: "890K",
+    category: "corporate"
+  },
+  {
+    id: 17,
+    title: "Company Culture Video",
+    description: "Showcasing company values and team dynamics",
+    youtubeUrl: "https://www.youtube.com/watch?v=ammb6H2eMtg",
+    thumbnail: "https://img.youtube.com/vi/ammb6H2eMtg/maxresdefault.jpg",
+    views: "1.2M",
+    category: "corporate"
+  },
+  {
+    id: 18,
+    title: "Product Launch Campaign",
+    description: "Professional product showcase and marketing",
+    youtubeUrl: "https://www.youtube.com/watch?v=Wh_dKDon8I0",
+    thumbnail: "https://img.youtube.com/vi/Wh_dKDon8I0/maxresdefault.jpg",
+    views: "1.5M",
+    category: "corporate"
+  },
+  {
+    id: 19,
+    title: "Annual Report Video",
+    description: "Engaging presentation of company achievements",
+    youtubeUrl: "https://www.youtube.com/watch?v=BeWlAIODDkQ",
+    thumbnail: "https://img.youtube.com/vi/BeWlAIODDkQ/maxresdefault.jpg",
+    views: "750K",
+    category: "corporate"
+  },
+  {
+    id: 20,
+    title: "Executive Interview",
+    description: "Professional executive communication and messaging",
+    youtubeUrl: "https://www.youtube.com/watch?v=wl4UFHkYNZ8",
+    thumbnail: "https://img.youtube.com/vi/wl4UFHkYNZ8/maxresdefault.jpg",
+    views: "980K",
+    category: "corporate"
+  },
+  {
+    id: 28,
+    title: "Brand Showcase",
+    description: "Professional brand presentation and storytelling",
+    youtubeUrl: "https://youtu.be/1phjXRmqQt4",
+    thumbnail: "https://img.youtube.com/vi/1phjXRmqQt4/maxresdefault.jpg",
+    views: "1.1M",
+    category: "corporate"
+  },
+  {
+    id: 29,
+    title: "Corporate Portfolio",
+    description: "Comprehensive corporate video production showcase",
+    youtubeUrl: "https://www.youtube.com/watch?v=ammb6H2eMtg",
+    thumbnail: "https://img.youtube.com/vi/ammb6H2eMtg/maxresdefault.jpg",
+    views: "850K",
+    category: "corporate"
+  },
+
+  // Entertainment Videos
+  {
+    id: 21,
+    title: "Entertainment Production",
+    description: "High-energy entertainment content with dynamic editing",
+    youtubeUrl: "https://www.youtube.com/watch?v=-gfUZpYKD6E",
+    thumbnail: "https://img.youtube.com/vi/-gfUZpYKD6E/maxresdefault.jpg",
+    views: "3.8M",
+    category: "entertainment"
+  },
+  {
+    id: 22,
+    title: "Creative Content Series",
+    description: "Creative entertainment video with stunning visuals",
+    youtubeUrl: "https://youtu.be/YM4l_PafjgU",
+    thumbnail: "https://img.youtube.com/vi/YM4l_PafjgU/maxresdefault.jpg",
+    views: "4.2M",
+    category: "entertainment"
+  },
+
+  {
+    id: 24,
+    title: "Entertainment Showcase",
+    description: "Professional entertainment video production",
+    youtubeUrl: "https://www.youtube.com/watch?v=bZZi6tceM9E",
+    thumbnail: "https://img.youtube.com/vi/bZZi6tceM9E/maxresdefault.jpg",
+    views: "3.1M",
+    category: "entertainment"
+  },
+
 ];
 
 const VideoCard = ({ video, index, onOpenModal }: {
@@ -72,38 +275,6 @@ const VideoCard = ({ video, index, onOpenModal }: {
   index: number;
   onOpenModal: (video: typeof videos[0]) => void;
 }) => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
-
-  const togglePlay = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-    if (videoRef.current && !isPlaying) {
-      videoRef.current.play();
-      setIsPlaying(true);
-    }
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-    if (videoRef.current && isPlaying) {
-      videoRef.current.pause();
-      videoRef.current.currentTime = 0; // Reset to beginning
-      setIsPlaying(false);
-    }
-  };
-
   const handleVideoClick = (e: React.MouseEvent) => {
     e.preventDefault();
     onOpenModal(video);
@@ -113,31 +284,25 @@ const VideoCard = ({ video, index, onOpenModal }: {
     <div
       className="group relative rounded-2xl overflow-hidden border border-border/50 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-500 animate-fade-in"
       style={{ animationDelay: `${index * 100}ms` }}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
     >
       {/* Video Container */}
-      <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-black via-card to-black cursor-pointer flex items-center justify-center">
-        {/* Blurred background */}
-        <video
-          className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-30 scale-110"
-          src={video.videoUrl}
-          preload="metadata"
-          loop
-          muted
-          autoPlay
+      <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-black via-card to-black cursor-pointer" onClick={handleVideoClick}>
+        {/* YouTube Thumbnail */}
+        <img
+          src={video.thumbnail}
+          alt={video.title}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
 
-        {/* Main video - centered with object-contain for proper aspect ratio */}
-        <video
-          ref={videoRef}
-          className="relative w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
-          src={video.videoUrl}
-          preload="metadata"
-          loop
-          muted
-          onClick={handleVideoClick}
-        />
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
+
+        {/* Play Button Overlay */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-16 h-16 rounded-full bg-primary/90 hover:bg-primary flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 shadow-lg shadow-primary/50">
+            <Play className="w-6 h-6 text-primary-foreground ml-1" fill="currentColor" />
+          </div>
+        </div>
 
         {/* Expand Icon */}
         <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -146,55 +311,15 @@ const VideoCard = ({ video, index, onOpenModal }: {
           </div>
         </div>
 
-        {/* Play Button Overlay */}
-        {!isPlaying && !isHovered && (
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-center justify-center opacity-100 group-hover:opacity-0 transition-opacity duration-300">
-            <div className="flex flex-col items-center gap-3">
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  togglePlay();
-                }}
-                className="w-16 h-16 rounded-full bg-primary/90 hover:bg-primary flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 shadow-lg shadow-primary/50"
-              >
-                <Play className="w-6 h-6 text-primary-foreground ml-1" fill="currentColor" />
-              </button>
-              <span className="text-white/80 text-sm font-medium">Click to expand</span>
-            </div>
-          </div>
-        )}
-
-        {/* Hover Preview Indicator */}
-        {isHovered && isPlaying && (
-          <div className="absolute bottom-4 left-4">
-            <span className="px-3 py-1 bg-primary/90 backdrop-blur-sm rounded-full text-xs font-medium text-primary-foreground">
-              Preview
-            </span>
-          </div>
-        )}
-
-        {/* Pause Button (appears when playing) */}
-        {isPlaying && (
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              togglePlay();
-            }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-black/50 hover:bg-black/70 flex items-center justify-center transform transition-all duration-300 opacity-0 group-hover:opacity-100"
-          >
-            <Pause className="w-6 h-6 text-white" fill="currentColor" />
-          </button>
-        )}
-
         {/* Category Badge */}
         <div className="absolute top-4 left-4">
-          <span className="px-3 py-1 bg-secondary/90 backdrop-blur-sm rounded-full text-xs font-medium text-secondary-foreground">
-            {video.category}
+          <span className="px-3 py-1 bg-secondary/90 backdrop-blur-sm rounded-full text-xs font-medium text-secondary-foreground capitalize">
+            {(video as any).badge || video.category.replace('-', ' ')}
           </span>
         </div>
 
         {/* Views Badge */}
-        <div className="absolute top-4 right-4">
+        <div className="absolute bottom-4 right-4">
           <span className="px-3 py-1 bg-black/60 backdrop-blur-sm rounded-full text-xs font-medium text-white">
             {video.views} views
           </span>
@@ -229,8 +354,6 @@ const VideoModal = ({
   isOpen: boolean;
   onClose: () => void;
 }) => {
-  const modalVideoRef = useRef<HTMLVideoElement>(null);
-
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
       onClose();
@@ -238,6 +361,12 @@ const VideoModal = ({
   };
 
   if (!isOpen || !video) return null;
+
+  // Extract YouTube video ID from URL
+  const getYouTubeEmbedUrl = (url: string) => {
+    const videoId = url.split('v=')[1]?.split('&')[0];
+    return `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+  };
 
   return (
     <div
@@ -254,13 +383,14 @@ const VideoModal = ({
         </button>
 
         {/* Video Container */}
-        <div className="relative bg-black">
-          <video
-            ref={modalVideoRef}
-            className="w-full h-auto max-h-[80vh] object-contain"
-            src={video.videoUrl}
-            controls
-            autoPlay
+        <div className="relative bg-black aspect-video">
+          <iframe
+            src={getYouTubeEmbedUrl(video.youtubeUrl)}
+            title={video.title}
+            className="w-full h-full"
+            style={{ border: 0 }}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
           />
         </div>
 
@@ -271,8 +401,8 @@ const VideoModal = ({
               <h3 className="text-2xl font-bold mb-2">{video.title}</h3>
               <p className="text-muted-foreground mb-4">{video.description}</p>
               <div className="flex items-center gap-4 text-sm">
-                <span className="px-3 py-1 bg-secondary rounded-full text-secondary-foreground">
-                  {video.category}
+                <span className="px-3 py-1 bg-secondary rounded-full text-secondary-foreground capitalize">
+                  {video.category.replace('-', ' ')}
                 </span>
                 <span className="text-muted-foreground">{video.views} views</span>
               </div>
@@ -289,14 +419,7 @@ const OurWork = () => {
   const [modalVideo, setModalVideo] = useState<typeof videos[0] | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Get only the first video for each category
-  const getVideoForCategory = (category: string) => {
-    return videos.find(video => video.category === category);
-  };
-
-  const filteredVideos = activeCategory === "all"
-    ? categories.map(cat => getVideoForCategory(cat.id)).filter(Boolean) as typeof videos
-    : [getVideoForCategory(activeCategory)].filter(Boolean) as typeof videos;
+  const filteredVideos = videos.filter(video => video.category === activeCategory).slice(0, 6);
 
   const openModal = (video: typeof videos[0]) => {
     setModalVideo(video);
@@ -360,27 +483,16 @@ const OurWork = () => {
           ))}
         </div>
 
-        {/* Single Video Display - Centered */}
-        <div className="flex justify-center mb-16">
-          <div className="w-full max-w-2xl">
-            {filteredVideos.length > 0 && (
-              <VideoCard key={filteredVideos[0].id} video={filteredVideos[0]} index={0} onOpenModal={openModal} />
-            )}
+        {/* 2x3 Grid Layout */}
+        <div className="mb-16 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredVideos.map((video, index) => (
+              <VideoCard key={video.id} video={video} index={index} onOpenModal={openModal} />
+            ))}
           </div>
         </div>
 
-        {/* Empty State */}
-        {filteredVideos.length === 0 && (
-          <div className="text-center py-16">
-            <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center mx-auto mb-4">
-              <Filter className="w-8 h-8 text-muted-foreground" />
-            </div>
-            <h3 className="text-xl font-semibold mb-2">No videos found</h3>
-            <p className="text-muted-foreground">
-              We're working on adding more content to this category. Check back soon!
-            </p>
-          </div>
-        )}
+
 
         {/* View All CTA */}
         <div className="text-center">
