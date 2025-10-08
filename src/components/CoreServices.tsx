@@ -63,19 +63,11 @@ const CoreServices = () => {
               </span>
             </div>
 
-            <div className="relative">
-              {/* Decorative Brackets */}
-              <div className="absolute -left-8 top-1/2 -translate-y-1/2 text-primary/30 text-6xl font-thin hidden md:block">
-                [
-              </div>
-              <div className="absolute -right-8 top-1/2 -translate-y-1/2 text-primary/30 text-6xl font-thin hidden md:block">
-                ]
-              </div>
-              
-              <h2 className="text-3xl md:text-4xl font-semibold bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent">
+            <h2 className="text-3xl md:text-4xl font-semibold">
+              <span className="bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent">
                 Everything Your Channel Needs to Thrive
-              </h2>
-            </div>
+              </span>
+            </h2>
 
             <p className="text-xl text-muted-foreground leading-relaxed">
               From concept to viral success—we provide the complete toolkit for sustainable YouTube growth.

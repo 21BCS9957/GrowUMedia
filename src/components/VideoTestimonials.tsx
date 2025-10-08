@@ -246,22 +246,11 @@ const VideoTestimonials = () => {
             </span>
           </div>
 
-          <div className="relative mb-6">
-            {/* Decorative Brackets */}
-            <div className="absolute -left-8 top-1/2 -translate-y-1/2 text-primary/30 text-6xl font-thin hidden md:block">
-              [
-            </div>
-            <div className="absolute -right-8 top-1/2 -translate-y-1/2 text-primary/30 text-6xl font-thin hidden md:block">
-              ]
-            </div>
-            
-            <h2 className="text-3xl md:text-4xl font-medium leading-tight">
-              Real Results from{" "}
-              <span className="bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent">
-                Real Creators
-              </span>
-            </h2>
-          </div>
+          <h2 className="text-3xl md:text-4xl font-medium leading-tight mb-6">
+            <span className="bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent">
+              Real Results from Real Creators
+            </span>
+          </h2>
 
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Watch our clients share their success stories and see how we've helped them achieve massive growth on YouTube.

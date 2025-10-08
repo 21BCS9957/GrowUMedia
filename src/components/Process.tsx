@@ -50,19 +50,9 @@ const Process = () => {
               Our Methodology
             </span>
           </div>
-          <div className="relative">
-            {/* Decorative Brackets */}
-            <div className="absolute -left-8 top-1/2 -translate-y-1/2 text-primary/30 text-6xl font-thin hidden md:block">
-              [
-            </div>
-            <div className="absolute -right-8 top-1/2 -translate-y-1/2 text-primary/30 text-6xl font-thin hidden md:block">
-              ]
-            </div>
-            
-            <h2 className="text-3xl md:text-4xl font-medium leading-tight">
-              <span className="bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent"> What happens when you Call</span>
-            </h2>
-          </div>
+          <h2 className="text-3xl md:text-4xl font-medium leading-tight">
+            <span className="bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent">What happens when you Call</span>
+          </h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
             From first call to viral success—here's our battle-tested methodology that's helped 60+ channels scale.
           </p>

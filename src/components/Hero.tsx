@@ -49,7 +49,7 @@ const Hero = () => {
 
             {/* Auto-scrolling logos */}
             <div className="relative overflow-hidden">
-              <div className="flex animate-scroll space-x-12 items-center">
+              <div className="flex animate-scroll space-x-16 items-center">
                 {/* First set of logos */}
                 {[
                   { name: "Athena DAO", logo: "/Company Logo/Athena DAO.png" },
@@ -58,13 +58,13 @@ const Hero = () => {
                   { name: "Client 4", logo: "/Company Logo/image (4).png" },
                   { name: "Client 5", logo: "/Company Logo/logowhite-2.svg" },
                   { name: "Molecule", logo: "/Company Logo/molecule.png" },
-                   { name: "client 6", logo: "/Company Logo/Surviving the survivor.png" },
+                  { name: "client 6", logo: "/Company Logo/Surviving the survivor.png" },
                   { name: "Unchained Podcast", logo: "/Company Logo/Unchained-Podcast-Artwork-2000x2000-1.png" },
                   { name: "Vista Social", logo: "/Company Logo/Vistasocial.png" },
                 ].map((client, index) => (
                   <div
                     key={`first-${index}`}
-                    className="flex-shrink-0 w-24 h-12 flex items-center justify-center transition-all duration-300 opacity-90 hover:opacity-100 hover:scale-105"
+                    className="flex-shrink-0 w-32 h-16 flex items-center justify-center transition-all duration-300 opacity-90 hover:opacity-100 hover:scale-105"
                   >
                     <img
                       src={client.logo}
@@ -86,7 +86,7 @@ const Hero = () => {
                 ].map((client, index) => (
                   <div
                     key={`second-${index}`}
-                    className="flex-shrink-0 w-24 h-12 flex items-center justify-center transition-all duration-300 opacity-90 hover:opacity-100 hover:scale-105"
+                    className="flex-shrink-0 w-32 h-16 flex items-center justify-center transition-all duration-300 opacity-90 hover:opacity-100 hover:scale-105"
                   >
                     <img
                       src={client.logo}

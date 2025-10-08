@@ -16,7 +16,7 @@ const videos = [
     description: "Deep dive investigative storytelling with professional editing",
     videoUrl: "/videos/charles_Manson_4.mp4",
     views: "2.5M",
-    category: "documentary",
+    category: "podcast",
     thumbnail: "/videos/charles_Manson_4.mp4"
   },
   {
@@ -30,22 +30,22 @@ const videos = [
   },
   {
     id: 3,
-    title: "Time Management Mastery",
-    description: "Entertainment content with motion graphics",
-    videoUrl: "/videos/Use Time Wisely.mp4",
+    title: "Comedy Entertainment",
+    description: "High-energy entertainment content with dynamic editing",
+    videoUrl: "/videos/charles_Manson_4.mp4",
     views: "3.8M",
-    category: "entertainment",
-    thumbnail: "/videos/Use Time Wisely.mp4"
+    category: "documentary",
+    thumbnail: "/videos/charles_Manson_4.mp4"
   },
   // Placeholder videos for other categories
   {
     id: 4,
     title: "Business Podcast Episode",
     description: "Professional podcast editing and audio enhancement",
-    videoUrl: "/videos/charles_Manson_4.mp4", // Using existing video as placeholder
+    videoUrl: "/videos/ocean frontiers.mp4", // Using existing video as placeholder
     views: "1.2M",
-    category: "podcast",
-    thumbnail: "/videos/charles_Manson_4.mp4"
+    category: "corporate",
+    thumbnail: "/videos/ocean frontiers.mp4"
   },
   {
     id: 5,
@@ -58,18 +58,18 @@ const videos = [
   },
   {
     id: 6,
-    title: "Comedy Entertainment",
-    description: "High-energy entertainment content with dynamic editing",
-    videoUrl: "/videos/Use Time Wisely.mp4", // Using existing video as placeholder
+    title: "Time Management Mastery",
+    description: "Entertainment content with motion graphics",
+    videoUrl: "public/videos/The Halal Ham - Sample Complete - v4 (1).mp4",
     views: "2.1M",
     category: "entertainment",
-    thumbnail: "/videos/Use Time Wisely.mp4"
+    thumbnail: "public/videos/The Halal Ham - Sample Complete - v4 (1).mp4"
   }
 ];
 
-const VideoCard = ({ video, index, onOpenModal }: { 
-  video: typeof videos[0]; 
-  index: number; 
+const VideoCard = ({ video, index, onOpenModal }: {
+  video: typeof videos[0];
+  index: number;
   onOpenModal: (video: typeof videos[0]) => void;
 }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -220,14 +220,14 @@ const VideoCard = ({ video, index, onOpenModal }: {
 };
 
 // Video Modal Component
-const VideoModal = ({ 
-  video, 
-  isOpen, 
-  onClose 
-}: { 
-  video: typeof videos[0] | null; 
-  isOpen: boolean; 
-  onClose: () => void; 
+const VideoModal = ({
+  video,
+  isOpen,
+  onClose
+}: {
+  video: typeof videos[0] | null;
+  isOpen: boolean;
+  onClose: () => void;
 }) => {
   const modalVideoRef = useRef<HTMLVideoElement>(null);
 
@@ -240,7 +240,7 @@ const VideoModal = ({
   if (!isOpen || !video) return null;
 
   return (
-    <div 
+    <div
       className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
       onClick={handleBackdropClick}
     >
@@ -325,22 +325,11 @@ const OurWork = () => {
             </span>
           </div>
 
-          <div className="relative mb-6">
-            {/* Decorative Brackets */}
-            <div className="absolute -left-8 top-1/2 -translate-y-1/2 text-primary/30 text-6xl font-thin hidden md:block">
-              [
-            </div>
-            <div className="absolute -right-8 top-1/2 -translate-y-1/2 text-primary/30 text-6xl font-thin hidden md:block">
-              ]
-            </div>
-            
-            <h2 className="text-3xl md:text-4xl font-medium leading-tight">
-              Our Best{" "}
-              <span className="bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent">
-                Work
-              </span>
-            </h2>
-          </div>
+          <h2 className="text-3xl md:text-4xl font-medium leading-tight mb-6">
+            <span className="bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent">
+              Our Best Work
+            </span>
+          </h2>
 
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Explore our diverse portfolio of successful YouTube content across multiple categories, each generating millions of views.
@@ -403,7 +392,7 @@ const OurWork = () => {
               </p>
             </div>
 
-            <button 
+            <button
               className="group px-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl font-semibold transition-all duration-300 flex items-center gap-2"
               onClick={() => window.open('https://app.reclaim.ai/m/arsh-growumedia/m', '_blank')}
             >
@@ -415,10 +404,10 @@ const OurWork = () => {
       </div>
 
       {/* Video Modal */}
-      <VideoModal 
-        video={modalVideo} 
-        isOpen={isModalOpen} 
-        onClose={closeModal} 
+      <VideoModal
+        video={modalVideo}
+        isOpen={isModalOpen}
+        onClose={closeModal}
       />
     </section>
   );

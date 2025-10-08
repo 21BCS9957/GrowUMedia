@@ -99,26 +99,14 @@ const CaseStudies = () => {
             </span>
           </div>
 
-          <div className="relative">
-            {/* Decorative Brackets */}
-            <div className="absolute -left-8 top-1/2 -translate-y-1/2 text-primary/30 text-6xl font-thin hidden md:block">
-              [
-            </div>
-            <div className="absolute -right-8 top-1/2 -translate-y-1/2 text-primary/30 text-6xl font-thin hidden md:block">
-              ]
-            </div>
-            
-            {/* Main Heading */}
-            <h2 className="text-3xl md:text-4xl font-medium leading-tight">
-              Our Client{" "}
-              <span className="bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent">
-                Case Studies
-              </span>
-            </h2>
-          </div>
+          <h2 className="text-3xl md:text-4xl font-medium leading-tight">
+            <span className="bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent">
+              Our Client Case Studies
+            </span>
+          </h2>
 
           <p className="text-xl text-muted-foreground leading-relaxed">
-            Real results from real clients. See how we've helped channels achieve viral success and massive growth.
+            See how we've helped business achieve viral success and massive growth.
           </p>
         </div>
 
@@ -232,7 +220,7 @@ const CaseStudies = () => {
               </p>
             </div>
 
-            <button 
+            <button
               className="group px-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl font-semibold transition-all duration-300 flex items-center gap-2 text-sm"
               onClick={() => window.open('https://app.reclaim.ai/m/arsh-growumedia/m', '_blank')}
             >
