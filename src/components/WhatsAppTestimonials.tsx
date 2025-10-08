@@ -32,9 +32,19 @@ const WhatsAppTestimonials = () => {
             </span>
           </div>
           
-          <h2 className="text-3xl md:text-4xl font-medium leading-tight bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent">
-            What Our Clients Really Say
-          </h2>
+          <div className="relative">
+            {/* Decorative Brackets */}
+            <div className="absolute -left-8 top-1/2 -translate-y-1/2 text-primary/30 text-6xl font-thin hidden md:block">
+              [
+            </div>
+            <div className="absolute -right-8 top-1/2 -translate-y-1/2 text-primary/30 text-6xl font-thin hidden md:block">
+              ]
+            </div>
+            
+            <h2 className="text-3xl md:text-4xl font-medium leading-tight bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent">
+              What Our Clients Really Say
+            </h2>
+          </div>
           
           <p className="text-xl text-muted-foreground leading-relaxed">
             Authentic WhatsApp conversations showing real client satisfaction and results.

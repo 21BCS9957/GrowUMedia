@@ -43,7 +43,7 @@ const Footer = () => {
           <div>
             <h4 className="font-bold mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-primary transition-colors">Book a Call</a></li>
+              <li><a href="https://app.reclaim.ai/m/arsh-growumedia/m" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Book a Call</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">hello@growumedia.com</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">YouTube</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">LinkedIn</a></li>

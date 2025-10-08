@@ -77,8 +77,8 @@ const Services = () => {
             <div
               key={service.title}
               className={`group relative p-8 rounded-3xl border transition-all duration-500 cursor-pointer ${hoveredIndex === index
-                  ? 'bg-card border-primary/50 shadow-[0_0_60px_hsl(var(--primary)/0.3)] -translate-y-4 scale-105'
-                  : 'bg-card/50 border-border hover:border-primary/30 hover:-translate-y-2'
+                ? 'bg-card border-primary/50 shadow-[0_0_60px_hsl(var(--primary)/0.3)] -translate-y-4 scale-105'
+                : 'bg-card/50 border-border hover:border-primary/30 hover:-translate-y-2'
                 }`}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
@@ -95,8 +95,8 @@ const Services = () => {
               {/* Floating Number */}
               <div className="absolute -top-4 -right-4">
                 <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-300 ${hoveredIndex === index
-                    ? 'bg-primary text-primary-foreground scale-110'
-                    : 'bg-muted/50 text-muted-foreground'
+                  ? 'bg-primary text-primary-foreground scale-110'
+                  : 'bg-muted/50 text-muted-foreground'
                   }`}>
                   {index + 1}
                 </div>
@@ -106,8 +106,8 @@ const Services = () => {
                 {/* Enhanced Icon */}
                 <div className="relative">
                   <div className={`w-16 h-16 rounded-2xl flex items-center justify-center transition-all duration-500 ${hoveredIndex === index
-                      ? `bg-gradient-to-br ${service.color} shadow-lg shadow-primary/30 scale-110 rotate-3`
-                      : 'bg-primary/10 group-hover:bg-primary/20'
+                    ? `bg-gradient-to-br ${service.color} shadow-lg shadow-primary/30 scale-110 rotate-3`
+                    : 'bg-primary/10 group-hover:bg-primary/20'
                     }`}>
                     <service.icon className={`w-8 h-8 transition-all duration-300 ${hoveredIndex === index ? 'text-white scale-110' : 'text-primary'
                       }`} />
@@ -170,13 +170,19 @@ const Services = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="group px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl font-semibold transition-all duration-300 flex items-center gap-2 shadow-lg shadow-primary/30">
+              <button 
+                className="group px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl font-semibold transition-all duration-300 flex items-center gap-2 shadow-lg shadow-primary/30"
+                onClick={() => window.open('https://app.reclaim.ai/m/arsh-growumedia/m', '_blank')}
+              >
                 <Play className="w-4 h-4" />
                 Get Started Today
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
 
-              <button className="px-8 py-4 border border-border hover:border-primary/50 rounded-xl font-semibold transition-all duration-300 flex items-center gap-2">
+              <button 
+                className="px-8 py-4 border border-border hover:border-primary/50 rounded-xl font-semibold transition-all duration-300 flex items-center gap-2"
+                onClick={() => window.open('https://app.reclaim.ai/m/arsh-growumedia/m', '_blank')}
+              >
                 <Calendar className="w-4 h-4" />
                 Schedule Consultation
               </button>

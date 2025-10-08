@@ -6,50 +6,37 @@ const caseStudies = [
     id: 1,
     title: "Adee VSL v2",
     thumbnail: "/Case Study/Adee VSL v2.png",
-    client: "Adee",
-    category: "VSL Campaign",
-    results: "2.5M+ Views"
+    client: "Adee"
   },
   {
     id: 2,
     title: "Brian VSL",
     thumbnail: "/Case Study/Brian VSL.png",
-    client: "Brian",
-    category: "",
-    results: "1.8M+ Views"
+    client: "Brian"
   },
   {
     id: 3,
     title: "Hairdao VSL",
     thumbnail: "/Case Study/Hairdao VSL.png",
-    client: "Hairdao",
-    category: "",
-    results: "3.2M+ Views"
+    client: "Hairdao"
   },
   {
     id: 4,
     title: "Kamikaze VSL v2",
     thumbnail: "/Case Study/Kamikaze VSL v2.png",
-    client: "Kamikaze",
-    category: "",
-    results: "4.1M+ Views"
+    client: "Kamikaze"
   },
-
   {
     id: 5,
     title: "Michelle Platti VSL",
     thumbnail: "/Case Study/Michelle Platti VSL.png",
-    client: "Michelle Platti",
-    category: "",
-    results: "1.6M+ Views"
+    client: "Michelle Platti"
   },
   {
     id: 6,
     title: "Tom VSL",
     thumbnail: "/Case Study/tom vsl.png",
-    client: "Tom",
-    category: "",
-    results: "2.3M+ Views"
+    client: "Tom"
   }
 ];
 
@@ -96,7 +83,7 @@ const CaseStudies = () => {
 
 
   return (
-    <section className="py-32 relative overflow-hidden">
+    <section id="case-studies" className="py-32 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-card/30 via-background to-card/30" />
       <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse" />
@@ -112,12 +99,23 @@ const CaseStudies = () => {
             </span>
           </div>
 
-          <h2 className="text-3xl md:text-4xl font-medium leading-tight">
-            Our Client{" "}
-            <span className="bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent">
-              Case Studies
-            </span>
-          </h2>
+          <div className="relative">
+            {/* Decorative Brackets */}
+            <div className="absolute -left-8 top-1/2 -translate-y-1/2 text-primary/30 text-6xl font-thin hidden md:block">
+              [
+            </div>
+            <div className="absolute -right-8 top-1/2 -translate-y-1/2 text-primary/30 text-6xl font-thin hidden md:block">
+              ]
+            </div>
+            
+            {/* Main Heading */}
+            <h2 className="text-3xl md:text-4xl font-medium leading-tight">
+              Our Client{" "}
+              <span className="bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent">
+                Case Studies
+              </span>
+            </h2>
+          </div>
 
           <p className="text-xl text-muted-foreground leading-relaxed">
             Real results from real clients. See how we've helped channels achieve viral success and massive growth.
@@ -175,19 +173,9 @@ const CaseStudies = () => {
                       </div>
                     </div>
 
-                    {/* Results Badge */}
-                    <div className="absolute top-3 right-3">
-                      <div className="px-3 py-1 bg-primary/90 backdrop-blur rounded-full text-xs font-semibold text-primary-foreground">
-                        {study.results}
-                      </div>
-                    </div>
 
-                    {/* Category Badge */}
-                    <div className="absolute top-3 left-3">
-                      <div className="px-3 py-1 bg-black/60 backdrop-blur rounded-full text-xs font-medium text-white">
-                        {study.category}
-                      </div>
-                    </div>
+
+
                   </div>
 
                   {/* Content */}
@@ -244,8 +232,11 @@ const CaseStudies = () => {
               </p>
             </div>
 
-            <button className="group px-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl font-semibold transition-all duration-300 flex items-center gap-2 text-sm">
-              View All Case Studies
+            <button 
+              className="group px-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl font-semibold transition-all duration-300 flex items-center gap-2 text-sm"
+              onClick={() => window.open('https://app.reclaim.ai/m/arsh-growumedia/m', '_blank')}
+            >
+              Book Strategy Call
               <ExternalLink className="w-4 h-4 group-hover:scale-110 transition-transform" />
             </button>
           </div>

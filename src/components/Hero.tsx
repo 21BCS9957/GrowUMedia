@@ -58,6 +58,7 @@ const Hero = () => {
                   { name: "Client 4", logo: "/Company Logo/image (4).png" },
                   { name: "Client 5", logo: "/Company Logo/logowhite-2.svg" },
                   { name: "Molecule", logo: "/Company Logo/molecule.png" },
+                   { name: "client 6", logo: "/Company Logo/Surviving the survivor.png" },
                   { name: "Unchained Podcast", logo: "/Company Logo/Unchained-Podcast-Artwork-2000x2000-1.png" },
                   { name: "Vista Social", logo: "/Company Logo/Vistasocial.png" },
                 ].map((client, index) => (

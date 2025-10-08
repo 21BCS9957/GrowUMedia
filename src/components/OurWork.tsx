@@ -325,12 +325,22 @@ const OurWork = () => {
             </span>
           </div>
 
-          <h2 className="text-3xl md:text-4xl font-medium leading-tight mb-6">
-            Our Best{" "}
-            <span className="bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent">
-              Work
-            </span>
-          </h2>
+          <div className="relative mb-6">
+            {/* Decorative Brackets */}
+            <div className="absolute -left-8 top-1/2 -translate-y-1/2 text-primary/30 text-6xl font-thin hidden md:block">
+              [
+            </div>
+            <div className="absolute -right-8 top-1/2 -translate-y-1/2 text-primary/30 text-6xl font-thin hidden md:block">
+              ]
+            </div>
+            
+            <h2 className="text-3xl md:text-4xl font-medium leading-tight">
+              Our Best{" "}
+              <span className="bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent">
+                Work
+              </span>
+            </h2>
+          </div>
 
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Explore our diverse portfolio of successful YouTube content across multiple categories, each generating millions of views.
@@ -393,7 +403,10 @@ const OurWork = () => {
               </p>
             </div>
 
-            <button className="group px-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl font-semibold transition-all duration-300 flex items-center gap-2">
+            <button 
+              className="group px-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl font-semibold transition-all duration-300 flex items-center gap-2"
+              onClick={() => window.open('https://app.reclaim.ai/m/arsh-growumedia/m', '_blank')}
+            >
               <Play className="w-4 h-4" />
               Start Your Project
             </button>

@@ -50,9 +50,19 @@ const Process = () => {
               Our Methodology
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-medium leading-tight">
-            <span className="bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent"> What happens when you Call</span>
-          </h2>
+          <div className="relative">
+            {/* Decorative Brackets */}
+            <div className="absolute -left-8 top-1/2 -translate-y-1/2 text-primary/30 text-6xl font-thin hidden md:block">
+              [
+            </div>
+            <div className="absolute -right-8 top-1/2 -translate-y-1/2 text-primary/30 text-6xl font-thin hidden md:block">
+              ]
+            </div>
+            
+            <h2 className="text-3xl md:text-4xl font-medium leading-tight">
+              <span className="bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent"> What happens when you Call</span>
+            </h2>
+          </div>
           <p className="text-xl text-muted-foreground leading-relaxed">
             From first call to viral success—here's our battle-tested methodology that's helped 60+ channels scale.
           </p>
@@ -174,7 +184,10 @@ const Process = () => {
             <p className="text-lg font-semibold">
               Ready to experience our proven process?
             </p>
-            <button className="group px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl font-semibold transition-all duration-300 flex items-center gap-2">
+            <button 
+              className="group px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl font-semibold transition-all duration-300 flex items-center gap-2"
+              onClick={() => window.open('https://app.reclaim.ai/m/arsh-growumedia/m', '_blank')}
+            >
               Start Your Journey
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
