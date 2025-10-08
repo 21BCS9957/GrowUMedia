@@ -4,9 +4,9 @@ import { useState } from "react";
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    title: "Tech YouTuber",
-    channel: "@TechWithSarah",
+    name: "Flow With Adee",
+    title: "Fitness Channel",
+    channel: "@Flow With Adee",
     subscribers: "2.3M",
     videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Replace with actual testimonial video
     thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg", // Auto-generated YouTube thumbnail
@@ -17,9 +17,9 @@ const testimonials = [
   },
   {
     id: 2,
-    name: "Marcus Chen",
+    name: "HayNow",
     title: "Business Coach",
-    channel: "@BusinessWithMarcus",
+    channel: "@HayNow",
     subscribers: "890K",
     videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Replace with actual testimonial video
     thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
@@ -30,9 +30,9 @@ const testimonials = [
   },
   {
     id: 3,
-    name: "Emma Rodriguez",
+    name: " Tom Zenner",
     title: "Lifestyle Creator",
-    channel: "@EmmaLifestyle",
+    channel: "@Tom Zenner",
     subscribers: "1.5M",
     videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Replace with actual testimonial video
     thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
@@ -58,7 +58,7 @@ const TestimonialCard = ({ testimonial, index }: { testimonial: typeof testimoni
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Video Thumbnail */}
-      <div 
+      <div
         className="relative aspect-video cursor-pointer overflow-hidden bg-gradient-to-br from-black to-card"
         onClick={handleVideoClick}
       >
@@ -67,7 +67,7 @@ const TestimonialCard = ({ testimonial, index }: { testimonial: typeof testimoni
           alt={`${testimonial.name} testimonial`}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
-        
+
         {/* Play Button Overlay */}
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-100 group-hover:opacity-80 transition-opacity duration-300">
           <div className="w-16 h-16 rounded-full bg-primary/90 hover:bg-primary flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 shadow-lg shadow-primary/50">
@@ -160,30 +160,10 @@ const VideoTestimonials = () => {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <TestimonialCard key={testimonial.id} testimonial={testimonial} index={index} />
           ))}
-        </div>
-
-        {/* Stats Summary */}
-        <div className="text-center">
-          <div className="inline-flex flex-col items-center gap-4 p-8 rounded-2xl bg-gradient-to-br from-card/80 to-card/40 backdrop-blur border border-primary/30">
-            <div className="grid grid-cols-3 gap-8 text-center">
-              <div>
-                <div className="text-2xl font-bold text-primary">4M+</div>
-                <div className="text-sm text-muted-foreground">Subscribers Added</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-primary">500+</div>
-                <div className="text-sm text-muted-foreground">Videos Created</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-primary">98%</div>
-                <div className="text-sm text-muted-foreground">Client Satisfaction</div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
