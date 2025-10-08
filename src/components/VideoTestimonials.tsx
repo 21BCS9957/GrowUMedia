@@ -21,7 +21,7 @@ const testimonials = [
     videoUrl: "https://www.youtube.com/watch?v=uLm5--cS_Z4",
     quote: "100k+ views in 28 days , building the biggest hair community together, they have helped us  by getting our product two thousands of people  ",
     rating: 5,
-    results: "800X views in just ",
+    results: "100X views in just ",
     timeframe: "28 Days"
   },
   {
@@ -260,13 +260,12 @@ const VideoTestimonials = () => {
 
         {/* See More Button */}
         <div className="text-center mt-12">
-          <a
-            href="/testimonials"
+          <button
             className="inline-flex items-center gap-2 px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25"
           >
             <Play className="w-5 h-5" />
             See More Testimonials
-          </a>
+          </button>
         </div>
       </div>
 

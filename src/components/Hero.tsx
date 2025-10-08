@@ -10,17 +10,10 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 relative z-20">
         <div className="text-center max-w-5xl mx-auto space-y-8 animate-fade-in">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight" style={{ fontFamily: 'Manrope, sans-serif' }}>
-            <span className="text-white">YouTube</span>{" "}
-            <span className="bg-gradient-to-r from-white via-yellow-200 to-yellow-400 bg-clip-text text-transparent">
-              Growth Engines
-            </span>
-            ,
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent" style={{ fontFamily: 'Manrope, sans-serif' }}>
+            YouTube Growth Engines,
             <br />
-            <span className="text-white">Built</span>{" "}
-            <span className="bg-gradient-to-r from-white via-yellow-200 to-yellow-400 bg-clip-text text-transparent">
-              for Scale
-            </span>
+            Built for Scale
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -55,12 +48,16 @@ const Hero = () => {
                   { name: "Athena DAO", logo: "/Company Logo/Athena DAO.png" },
                   { name: "Cerebrum DAO", logo: "/Company Logo/cerebrum-dao-1.png" },
                   { name: "Haynow", logo: "/Company Logo/Haynow.png" },
+                  { name: "Catalyst", logo: "/Company Logo/Catalyst.png" },
                   { name: "Client 4", logo: "/Company Logo/image (4).png" },
                   { name: "Client 5", logo: "/Company Logo/logowhite-2.svg" },
+                  { name: "Modern Stoa", logo: "/Company Logo/Modern Stoa.png" },
                   { name: "Molecule", logo: "/Company Logo/molecule.png" },
-                  { name: "client 6", logo: "/Company Logo/Surviving the survivor.png" },
+                  { name: "Full Mag", logo: "/Company Logo/Full Mag Background Removed.png" },
+                  { name: "Surviving the Survivor", logo: "/Company Logo/Surviving the survivor.png" },
                   { name: "Unchained Podcast", logo: "/Company Logo/Unchained-Podcast-Artwork-2000x2000-1.png" },
                   { name: "Vista Social", logo: "/Company Logo/Vistasocial.png" },
+                  { name: "Download 37", logo: "/Company Logo/download (37).png" },
                 ].map((client, index) => (
                   <div
                     key={`first-${index}`}
@@ -78,11 +75,16 @@ const Hero = () => {
                   { name: "Athena DAO", logo: "/Company Logo/Athena DAO.png" },
                   { name: "Cerebrum DAO", logo: "/Company Logo/cerebrum-dao-1.png" },
                   { name: "Haynow", logo: "/Company Logo/Haynow.png" },
+                  { name: "Catalyst", logo: "/Company Logo/Catalyst.png" },
                   { name: "Client 4", logo: "/Company Logo/image (4).png" },
                   { name: "Client 5", logo: "/Company Logo/logowhite-2.svg" },
+                  { name: "Modern Stoa", logo: "/Company Logo/Modern Stoa.png" },
                   { name: "Molecule", logo: "/Company Logo/molecule.png" },
+                  { name: "Full Mag", logo: "/Company Logo/Full Mag Background Removed.png" },
+                  { name: "Surviving the Survivor", logo: "/Company Logo/Surviving the survivor.png" },
                   { name: "Unchained Podcast", logo: "/Company Logo/Unchained-Podcast-Artwork-2000x2000-1.png" },
                   { name: "Vista Social", logo: "/Company Logo/Vistasocial.png" },
+                  { name: "Download 37", logo: "/Company Logo/download (37).png" },
                 ].map((client, index) => (
                   <div
                     key={`second-${index}`}

@@ -15,8 +15,8 @@ const videos = [
   // Podcast Videos
   {
     id: 1,
-    title: "Business Growth Podcast",
-    description: "Professional podcast editing and audio enhancement",
+    title: "Podcast Episode",
+    description: "Full-length podcast episode with professional editing and audio enhancement",
     youtubeUrl: "https://www.youtube.com/watch?v=6VeoFb5oLz8&rco=1",
     thumbnail: "https://img.youtube.com/vi/6VeoFb5oLz8/maxresdefault.jpg",
     views: "1.2M",

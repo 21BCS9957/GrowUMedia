@@ -51,7 +51,7 @@ const Process = () => {
             </span>
           </div>
           <h2 className="text-3xl md:text-4xl font-medium leading-tight">
-            <span className="bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent">What happens when you Call</span>
+            <span className="bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent">What happens when you book A call</span>
           </h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
             From first call to viral success—here's our battle-tested methodology that's helped 60+ channels scale.
@@ -174,7 +174,7 @@ const Process = () => {
             <p className="text-lg font-semibold">
               Ready to experience our proven process?
             </p>
-            <button 
+            <button
               className="group px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl font-semibold transition-all duration-300 flex items-center gap-2"
               onClick={() => window.open('https://app.reclaim.ai/m/arsh-growumedia/m', '_blank')}
             >
