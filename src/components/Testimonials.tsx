@@ -59,9 +59,11 @@ const Testimonials = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <h2 className="text-4xl md:text-6xl font-black">
+          <h2 className="text-3xl md:text-4xl font-medium">
             Trusted by creators, brands, and podcasters serious about{" "}
-            <span className="text-primary">real YouTube growth</span>
+            <span className="bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent">
+              real YouTube growth
+            </span>
           </h2>
           <p className="text-xl text-muted-foreground">
             Hear how we helped creators and brands scale faster on YouTube.

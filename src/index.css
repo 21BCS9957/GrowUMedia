@@ -236,4 +236,17 @@ rocess section animations */
 /* Hover scale utilities */
 .hover\:scale-102:hover {
   transform: scale(1.02);
+}/*
+ Hide scrollbar for case studies */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}/* Smo
+oth horizontal scrolling for case studies */
+.scrollbar-hide {
+  scroll-behavior: smooth;
 }

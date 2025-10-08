@@ -1,13 +1,12 @@
-import { Play, Pause, Filter, Grid3X3 } from "lucide-react";
+import { Play, Pause, Filter, Grid3X3, X, Maximize2 } from "lucide-react";
 import { useRef, useState } from "react";
 
 const categories = [
-  { id: "all", name: "All Work", count: 15 },
-  { id: "podcast", name: "Podcast", count: 3 },
-  { id: "talking-head", name: "Talking Head", count: 4 },
-  { id: "documentary", name: "Documentary", count: 2 },
-  { id: "corporate", name: "Corporate", count: 3 },
-  { id: "entertainment", name: "Entertainment", count: 3 }
+  { id: "podcast", name: "Podcast", count: 1 },
+  { id: "talking-head", name: "Talking Head", count: 1 },
+  { id: "documentary", name: "Documentary", count: 1 },
+  { id: "corporate", name: "Corporate", count: 1 },
+  { id: "entertainment", name: "Entertainment", count: 1 }
 ];
 
 const videos = [
@@ -68,7 +67,11 @@ const videos = [
   }
 ];
 
-const VideoCard = ({ video, index }: { video: typeof videos[0]; index: number }) => {
+const VideoCard = ({ video, index, onOpenModal }: { 
+  video: typeof videos[0]; 
+  index: number; 
+  onOpenModal: (video: typeof videos[0]) => void;
+}) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
@@ -101,6 +104,11 @@ const VideoCard = ({ video, index }: { video: typeof videos[0]; index: number })
     }
   };
 
+  const handleVideoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    onOpenModal(video);
+  };
+
   return (
     <div
       className="group relative rounded-2xl overflow-hidden border border-border/50 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-500 animate-fade-in"
@@ -109,7 +117,7 @@ const VideoCard = ({ video, index }: { video: typeof videos[0]; index: number })
       onMouseLeave={handleMouseLeave}
     >
       {/* Video Container */}
-      <div className="relative aspect-[9/16] md:aspect-video overflow-hidden bg-gradient-to-br from-black via-card to-black">
+      <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-black via-card to-black cursor-pointer flex items-center justify-center">
         {/* Blurred background */}
         <video
           className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-30 scale-110"
@@ -120,26 +128,39 @@ const VideoCard = ({ video, index }: { video: typeof videos[0]; index: number })
           autoPlay
         />
 
-        {/* Main video */}
+        {/* Main video - centered with object-contain for proper aspect ratio */}
         <video
           ref={videoRef}
-          className="relative w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="relative w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
           src={video.videoUrl}
           preload="metadata"
           loop
           muted
-          onClick={togglePlay}
+          onClick={handleVideoClick}
         />
+
+        {/* Expand Icon */}
+        <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="w-8 h-8 rounded-full bg-black/60 backdrop-blur-sm flex items-center justify-center">
+            <Maximize2 className="w-4 h-4 text-white" />
+          </div>
+        </div>
 
         {/* Play Button Overlay */}
         {!isPlaying && !isHovered && (
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-center justify-center opacity-100 group-hover:opacity-0 transition-opacity duration-300">
-            <button
-              onClick={togglePlay}
-              className="w-16 h-16 rounded-full bg-primary/90 hover:bg-primary flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 shadow-lg shadow-primary/50"
-            >
-              <Play className="w-6 h-6 text-primary-foreground ml-1" fill="currentColor" />
-            </button>
+            <div className="flex flex-col items-center gap-3">
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  togglePlay();
+                }}
+                className="w-16 h-16 rounded-full bg-primary/90 hover:bg-primary flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 shadow-lg shadow-primary/50"
+              >
+                <Play className="w-6 h-6 text-primary-foreground ml-1" fill="currentColor" />
+              </button>
+              <span className="text-white/80 text-sm font-medium">Click to expand</span>
+            </div>
           </div>
         )}
 
@@ -155,7 +176,10 @@ const VideoCard = ({ video, index }: { video: typeof videos[0]; index: number })
         {/* Pause Button (appears when playing) */}
         {isPlaying && (
           <button
-            onClick={togglePlay}
+            onClick={(e) => {
+              e.stopPropagation();
+              togglePlay();
+            }}
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-black/50 hover:bg-black/70 flex items-center justify-center transform transition-all duration-300 opacity-0 group-hover:opacity-100"
           >
             <Pause className="w-6 h-6 text-white" fill="currentColor" />
@@ -195,12 +219,94 @@ const VideoCard = ({ video, index }: { video: typeof videos[0]; index: number })
   );
 };
 
+// Video Modal Component
+const VideoModal = ({ 
+  video, 
+  isOpen, 
+  onClose 
+}: { 
+  video: typeof videos[0] | null; 
+  isOpen: boolean; 
+  onClose: () => void; 
+}) => {
+  const modalVideoRef = useRef<HTMLVideoElement>(null);
+
+  const handleBackdropClick = (e: React.MouseEvent) => {
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
+
+  if (!isOpen || !video) return null;
+
+  return (
+    <div 
+      className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
+      onClick={handleBackdropClick}
+    >
+      <div className="relative max-w-6xl w-full max-h-[90vh] bg-card rounded-2xl overflow-hidden border border-border/50 shadow-2xl">
+        {/* Close Button */}
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-black/60 hover:bg-black/80 backdrop-blur-sm flex items-center justify-center transition-colors duration-200"
+        >
+          <X className="w-5 h-5 text-white" />
+        </button>
+
+        {/* Video Container */}
+        <div className="relative bg-black">
+          <video
+            ref={modalVideoRef}
+            className="w-full h-auto max-h-[80vh] object-contain"
+            src={video.videoUrl}
+            controls
+            autoPlay
+          />
+        </div>
+
+        {/* Video Info */}
+        <div className="p-6 bg-card">
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <h3 className="text-2xl font-bold mb-2">{video.title}</h3>
+              <p className="text-muted-foreground mb-4">{video.description}</p>
+              <div className="flex items-center gap-4 text-sm">
+                <span className="px-3 py-1 bg-secondary rounded-full text-secondary-foreground">
+                  {video.category}
+                </span>
+                <span className="text-muted-foreground">{video.views} views</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const OurWork = () => {
-  const [activeCategory, setActiveCategory] = useState("all");
+  const [activeCategory, setActiveCategory] = useState("podcast");
+  const [modalVideo, setModalVideo] = useState<typeof videos[0] | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Get only the first video for each category
+  const getVideoForCategory = (category: string) => {
+    return videos.find(video => video.category === category);
+  };
 
   const filteredVideos = activeCategory === "all"
-    ? videos
-    : videos.filter(video => video.category === activeCategory);
+    ? categories.map(cat => getVideoForCategory(cat.id)).filter(Boolean) as typeof videos
+    : [getVideoForCategory(activeCategory)].filter(Boolean) as typeof videos;
+
+  const openModal = (video: typeof videos[0]) => {
+    setModalVideo(video);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setModalVideo(null);
+  };
 
   return (
     <section className="py-32 relative overflow-hidden">
@@ -219,9 +325,9 @@ const OurWork = () => {
             </span>
           </div>
 
-          <h2 className="text-5xl md:text-7xl font-black leading-tight mb-6">
+          <h2 className="text-3xl md:text-4xl font-medium leading-tight mb-6">
             Our Best{" "}
-            <span className="bg-gradient-to-r from-primary via-yellow-400 to-orange-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent">
               Work
             </span>
           </h2>
@@ -238,15 +344,15 @@ const OurWork = () => {
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
               className={`group px-6 py-3 rounded-full font-medium transition-all duration-300 ${activeCategory === category.id
-                  ? 'bg-primary text-primary-foreground shadow-lg shadow-primary/30'
-                  : 'bg-card/50 border border-border hover:border-primary/50 text-muted-foreground hover:text-foreground'
+                ? 'bg-primary text-primary-foreground shadow-lg shadow-primary/30'
+                : 'bg-card/50 border border-border hover:border-primary/50 text-muted-foreground hover:text-foreground'
                 }`}
             >
               <span className="flex items-center gap-2">
                 {category.name}
                 <span className={`text-xs px-2 py-1 rounded-full ${activeCategory === category.id
-                    ? 'bg-primary-foreground/20 text-primary-foreground'
-                    : 'bg-muted text-muted-foreground group-hover:text-foreground'
+                  ? 'bg-primary-foreground/20 text-primary-foreground'
+                  : 'bg-muted text-muted-foreground group-hover:text-foreground'
                   }`}>
                   {category.count}
                 </span>
@@ -255,11 +361,13 @@ const OurWork = () => {
           ))}
         </div>
 
-        {/* Videos Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
-          {filteredVideos.map((video, index) => (
-            <VideoCard key={video.id} video={video} index={index} />
-          ))}
+        {/* Single Video Display - Centered */}
+        <div className="flex justify-center mb-16">
+          <div className="w-full max-w-2xl">
+            {filteredVideos.length > 0 && (
+              <VideoCard key={filteredVideos[0].id} video={filteredVideos[0]} index={0} onOpenModal={openModal} />
+            )}
+          </div>
         </div>
 
         {/* Empty State */}
@@ -292,6 +400,13 @@ const OurWork = () => {
           </div>
         </div>
       </div>
+
+      {/* Video Modal */}
+      <VideoModal 
+        video={modalVideo} 
+        isOpen={isModalOpen} 
+        onClose={closeModal} 
+      />
     </section>
   );
 };
