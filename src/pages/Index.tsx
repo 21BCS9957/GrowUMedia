@@ -6,6 +6,7 @@ import CaseStudies from "@/components/CaseStudies";
 import Process from "@/components/Process";
 import WhatsAppTestimonials from "@/components/WhatsAppTestimonials";
 import OurWork from "@/components/OurWork";
+import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
@@ -20,6 +21,7 @@ const Index = () => {
       <Process />
       <WhatsAppTestimonials />
       <OurWork />
+      <FAQ />
       <CTA />
       <Footer />
     </div>

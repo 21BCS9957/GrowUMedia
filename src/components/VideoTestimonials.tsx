@@ -5,41 +5,35 @@ const testimonials = [
   {
     id: 1,
     name: "Flow With Adee",
-    title: "Fitness Channel",
+    title: "Yoga Instructor",
     channel: "@Flow With Adee",
-    subscribers: "2.3M",
-    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Replace with actual testimonial video
-    thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg", // Auto-generated YouTube thumbnail
-    quote: "GUMO transformed my channel completely. From 50K to 2.3M subscribers in just 18 months!",
+    videoUrl: "https://www.youtube.com/watch?v=QCoObNPANxI&feature=youtu.be",
+    quote: "Gum have helped this channel to grow from 500k to 1.6M subscriber in just 9 months",
     rating: 5,
-    results: "+2.2M subscribers",
-    timeframe: "18 months"
+    results: "+1.4M subscribers",
+    timeframe: "9 months"
   },
   {
     id: 2,
-    name: "HayNow",
-    title: "Business Coach",
-    channel: "@HayNow",
-    subscribers: "890K",
-    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Replace with actual testimonial video
-    thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
-    quote: "The editing quality and strategy advice helped me reach my first million views in a single video.",
+    name: "Andrew Verbinnen",
+    title: "Cofounder HairDAO",
+    channel: "@Anagen",
+    videoUrl: "https://www.youtube.com/watch?v=uLm5--cS_Z4",
+    quote: "100k+ views in 28 days , building the biggest hair community together, they have helped us  by getting our product two thousands of people  ",
     rating: 5,
-    results: "+800K subscribers",
-    timeframe: "12 months"
+    results: "800X views in just ",
+    timeframe: "28 Days"
   },
   {
     id: 3,
     name: " Tom Zenner",
-    title: "Lifestyle Creator",
+    title: "True Crime Athority",
     channel: "@Tom Zenner",
-    subscribers: "1.5M",
-    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Replace with actual testimonial video
-    thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
-    quote: "Professional editing that matches my vision perfectly. My engagement rates doubled!",
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    quote: "Super efficient and growth team I ever worked with ",
     rating: 5,
-    results: "+1.2M subscribers",
-    timeframe: "15 months"
+    results: "+68K subscribers",
+    timeframe: "6 months"
   }
 ];
 
@@ -52,7 +46,11 @@ const TestimonialCard = ({
   index: number;
   onVideoClick: (testimonial: typeof testimonials[0]) => void;
 }) => {
-  const [isHovered, setIsHovered] = useState(false);
+  // Extract YouTube video ID and generate thumbnail URL
+  const getYouTubeThumbnail = (url: string) => {
+    const videoId = url.split('v=')[1]?.split('&')[0];
+    return `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+  };
 
   const handleVideoClick = () => {
     onVideoClick(testimonial);
@@ -62,8 +60,6 @@ const TestimonialCard = ({
     <div
       className="group relative bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 animate-fade-in"
       style={{ animationDelay: `${index * 200}ms` }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
       {/* Video Thumbnail */}
       <div
@@ -71,7 +67,7 @@ const TestimonialCard = ({
         onClick={handleVideoClick}
       >
         <img
-          src={testimonial.thumbnail}
+          src={getYouTubeThumbnail(testimonial.videoUrl)}
           alt={`${testimonial.name} testimonial`}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
@@ -116,16 +112,10 @@ const TestimonialCard = ({
         </div>
 
         {/* Creator Info */}
-        <div className="flex items-center justify-between">
-          <div>
-            <h4 className="font-semibold text-foreground">{testimonial.name}</h4>
-            <p className="text-sm text-muted-foreground">{testimonial.title}</p>
-            <p className="text-xs text-primary font-medium">{testimonial.channel}</p>
-          </div>
-          <div className="text-right">
-            <div className="text-sm font-semibold text-foreground">{testimonial.subscribers}</div>
-            <div className="text-xs text-muted-foreground">subscribers</div>
-          </div>
+        <div>
+          <h4 className="font-semibold text-foreground">{testimonial.name}</h4>
+          <p className="text-sm text-muted-foreground">{testimonial.title}</p>
+          <p className="text-xs text-primary font-medium">{testimonial.channel}</p>
         </div>
       </div>
 
@@ -181,7 +171,7 @@ const VideoModal = ({
             src={getYouTubeEmbedUrl(testimonial.videoUrl)}
             title={`${testimonial.name} testimonial`}
             className="w-full h-full"
-            frameBorder="0"
+            style={{ border: 0 }}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
@@ -197,7 +187,6 @@ const VideoModal = ({
                 <span className="px-3 py-1 bg-primary/10 rounded-full text-primary font-medium">
                   {testimonial.channel}
                 </span>
-                <span className="text-muted-foreground">{testimonial.subscribers} subscribers</span>
                 <span className="px-2 py-1 bg-green-500/10 rounded-full text-green-600 text-xs font-medium">
                   {testimonial.results}
                 </span>
@@ -242,7 +231,7 @@ const VideoTestimonials = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/10 backdrop-blur mb-6">
             <Play className="w-4 h-4 text-primary" />
             <span className="text-sm font-semibold text-primary uppercase tracking-wider">
-              Client Success Stories
+              Recomendations
             </span>
           </div>
 

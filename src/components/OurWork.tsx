@@ -17,7 +17,7 @@ const videos = [
     id: 1,
     title: "Business Growth Podcast",
     description: "Professional podcast editing and audio enhancement",
-    youtubeUrl: "https://www.youtube.com/watch?v=6VeoFb5oLz8",
+    youtubeUrl: "https://www.youtube.com/watch?v=6VeoFb5oLz8&rco=1",
     thumbnail: "https://img.youtube.com/vi/6VeoFb5oLz8/maxresdefault.jpg",
     views: "1.2M",
     category: "podcast",
@@ -57,7 +57,7 @@ const videos = [
     id: 5,
     title: "Leadership Insights",
     description: "Leadership lessons from industry experts",
-    youtubeUrl: "https://youtube.com/shorts/_byCwhJ-G1U",
+    youtubeUrl: "https://youtube.com/watch?v=_byCwhJ-G1U",
     thumbnail: "https://img.youtube.com/vi/_byCwhJ-G1U/maxresdefault.jpg",
     views: "1.8M",
     category: "podcast",
@@ -67,7 +67,7 @@ const videos = [
     id: 26,
     title: "Podcast Highlights",
     description: "Best moments from our podcast series",
-    youtubeUrl: "https://youtube.com/shorts/OijOnkaWAsY",
+    youtubeUrl: "https://youtube.com/watch?v=OijOnkaWAsY",
     thumbnail: "https://img.youtube.com/vi/OijOnkaWAsY/maxresdefault.jpg",
     views: "950K",
     category: "podcast",
@@ -136,8 +136,8 @@ const videos = [
     id: 11,
     title: "Crime Investigation Documentary",
     description: "Deep dive investigative storytelling with professional editing",
-    youtubeUrl: "https://www.youtube.com/watch?v=gMzPu5dAhy4&feature=youtu.be",
-    thumbnail: "https://img.youtube.com/vi/gMzPu5dAhy4/maxresdefault.jpg",
+    youtubeUrl: "https://www.youtube.com/watch?v=eVTl2iAOmCI",
+    thumbnail: "https://img.youtube.com/vi/eVTl2iAOmCI/maxresdefault.jpg",
     views: "2.5M",
     category: "documentary",
     badge: "Crime LF"
@@ -166,8 +166,8 @@ const videos = [
     id: 14,
     title: "Documentary Production",
     description: "Professional documentary filmmaking and storytelling",
-    youtubeUrl: "https://www.youtube.com/watch?v=eVTl2iAOmCI",
-    thumbnail: "https://img.youtube.com/vi/eVTl2iAOmCI/maxresdefault.jpg",
+    youtubeUrl: "https://www.youtube.com/watch?v=gMzPu5dAhy4&feature=youtu.be",
+    thumbnail: "https://img.youtube.com/vi/gMzPu5dAhy4/maxresdefault.jpg",
     views: "2.1M",
     category: "documentary"
   },
@@ -178,7 +178,7 @@ const videos = [
     id: 16,
     title: "Corporate Training Excellence",
     description: "Clean corporate presentation with professional graphics",
-    youtubeUrl: "https://www.youtube.com/watch?v=Wh_dKDon8I0",
+    youtubeUrl: "https://www.youtube.com/watch?v=fiCF0OvNI-s",
     thumbnail: "https://img.youtube.com/vi/fiCF0OvNI-s/maxresdefault.jpg",
     views: "890K",
     category: "corporate"
@@ -494,25 +494,7 @@ const OurWork = () => {
 
 
 
-        {/* View All CTA */}
-        <div className="text-center">
-          <div className="inline-flex flex-col items-center gap-4 p-8 rounded-2xl bg-gradient-to-br from-card/80 to-card/40 backdrop-blur border border-primary/30">
-            <div className="space-y-2">
-              <h3 className="text-xl font-bold">Ready to Create Content Like This?</h3>
-              <p className="text-muted-foreground text-sm">
-                Let us help you create professional, engaging content that drives results.
-              </p>
-            </div>
 
-            <button
-              className="group px-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl font-semibold transition-all duration-300 flex items-center gap-2"
-              onClick={() => window.open('https://app.reclaim.ai/m/arsh-growumedia/m', '_blank')}
-            >
-              <Play className="w-4 h-4" />
-              Start Your Project
-            </button>
-          </div>
-        </div>
       </div>
 
       {/* Video Modal */}
