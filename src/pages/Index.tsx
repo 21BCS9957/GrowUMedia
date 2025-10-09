@@ -4,7 +4,7 @@ import VideoTestimonials from "@/components/VideoTestimonials";
 import CoreServices from "@/components/CoreServices";
 import CaseStudies from "@/components/CaseStudies";
 import Process from "@/components/Process";
-
+import WhatsAppTestimonialsNew from "@/components/WhatsAppTestimonialsNew";
 import OurWork from "@/components/OurWork";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
@@ -19,6 +19,7 @@ const Index = () => {
       <CoreServices />
       <CaseStudies />
       <Process />
+      <WhatsAppTestimonialsNew />
       <OurWork />
       <FAQ />
       <CTA />
