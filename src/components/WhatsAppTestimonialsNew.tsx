@@ -47,21 +47,7 @@ const WhatsAppTestimonialsNew = () => {
           </div>
         </div>
 
-        {/* Bottom Stats */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          <div className="text-center p-6 rounded-2xl bg-card/50 backdrop-blur border border-border/50">
-            <div className="text-3xl font-bold text-primary mb-2">100%</div>
-            <div className="text-muted-foreground">Authentic Conversations</div>
-          </div>
-          <div className="text-center p-6 rounded-2xl bg-card/50 backdrop-blur border border-border/50">
-            <div className="text-3xl font-bold text-primary mb-2">Real-Time</div>
-            <div className="text-muted-foreground">Client Communication</div>
-          </div>
-          <div className="text-center p-6 rounded-2xl bg-card/50 backdrop-blur border border-border/50">
-            <div className="text-3xl font-bold text-primary mb-2">Proven</div>
-            <div className="text-muted-foreground">Results & Growth</div>
-          </div>
-        </div>
+
       </div>
     </section>
   );
