@@ -17,9 +17,8 @@ const videos = [
     id: 1,
     title: "Podcast Episode",
     description: "Full-length podcast episode with professional editing and audio enhancement",
-    youtubeUrl: "https://www.youtube.com/watch?v=6VeoFb5oLz8&rco=1",
-    thumbnail: "https://img.youtube.com/vi/6VeoFb5oLz8/maxresdefault.jpg",
-    views: "1.2M",
+    youtubeUrl: "https://www.youtube.com/watch?v=Fm0yGaIiJrw&t=121s",
+    thumbnail: "https://img.youtube.com/vi/Fm0yGaIiJrw/maxresdefault.jpg",
     category: "podcast",
     badge: "Full Pod"
   },
@@ -29,7 +28,6 @@ const videos = [
     description: "Deep dive into technology trends and innovations",
     youtubeUrl: "https://www.youtube.com/watch?v=3Xo-XGetRbk",
     thumbnail: "https://img.youtube.com/vi/3Xo-XGetRbk/maxresdefault.jpg",
-    views: "890K",
     category: "podcast",
     badge: "Teaser"
   },
@@ -39,7 +37,6 @@ const videos = [
     description: "Inspiring stories from successful entrepreneurs",
     youtubeUrl: "https://www.youtube.com/watch?v=eTVhdcp-WVw",
     thumbnail: "https://img.youtube.com/vi/eTVhdcp-WVw/maxresdefault.jpg",
-    views: "2.1M",
     category: "podcast",
     badge: "Teaser"
   },
@@ -49,7 +46,6 @@ const videos = [
     description: "Advanced marketing strategies and tactics",
     youtubeUrl: "https://www.youtube.com/watch?v=6KBdGABVvFg",
     thumbnail: "https://img.youtube.com/vi/6KBdGABVvFg/maxresdefault.jpg",
-    views: "1.5M",
     category: "podcast",
     badge: "Channel Intro"
   },
@@ -59,7 +55,6 @@ const videos = [
     description: "Leadership lessons from industry experts",
     youtubeUrl: "https://youtube.com/watch?v=_byCwhJ-G1U",
     thumbnail: "https://img.youtube.com/vi/_byCwhJ-G1U/maxresdefault.jpg",
-    views: "1.8M",
     category: "podcast",
     badge: "Shortform"
   },
@@ -69,7 +64,6 @@ const videos = [
     description: "Best moments from our podcast series",
     youtubeUrl: "https://youtube.com/watch?v=OijOnkaWAsY",
     thumbnail: "https://img.youtube.com/vi/OijOnkaWAsY/maxresdefault.jpg",
-    views: "950K",
     category: "podcast",
     badge: "Shortform"
   },
@@ -79,7 +73,6 @@ const videos = [
     description: "Bite-sized content for maximum impact",
     youtubeUrl: "https://www.youtube.com/shorts/WQXAprEEVtQ",
     thumbnail: "https://img.youtube.com/vi/WQXAprEEVtQ/maxresdefault.jpg",
-    views: "780K",
     category: "podcast",
     badge: "Shortform"
   },
@@ -91,7 +84,6 @@ const videos = [
     description: "Engaging talking head format with dynamic visuals",
     youtubeUrl: "https://www.youtube.com/watch?v=w1iVErYblDc",
     thumbnail: "https://img.youtube.com/vi/w1iVErYblDc/maxresdefault.jpg",
-    views: "1.4M",
     category: "talking-head"
   },
   {
@@ -100,7 +92,6 @@ const videos = [
     description: "Expert advice on building wealth and financial independence",
     youtubeUrl: "https://www.youtube.com/watch?v=LJ0fQoqpQCQ",
     thumbnail: "https://img.youtube.com/vi/LJ0fQoqpQCQ/maxresdefault.jpg",
-    views: "2.3M",
     category: "talking-head"
   },
   {
@@ -109,7 +100,6 @@ const videos = [
     description: "Time management and productivity strategies",
     youtubeUrl: "https://www.youtube.com/watch?v=KTzjHf90Wc4",
     thumbnail: "https://img.youtube.com/vi/KTzjHf90Wc4/maxresdefault.jpg",
-    views: "1.7M",
     category: "talking-head"
   },
   {
@@ -118,16 +108,14 @@ const videos = [
     description: "Professional growth and career development advice",
     youtubeUrl: "https://www.youtube.com/watch?v=8Ab-W51t8WI",
     thumbnail: "https://img.youtube.com/vi/8Ab-W51t8WI/maxresdefault.jpg",
-    views: "1.1M",
     category: "talking-head"
   },
   {
     id: 10,
-    title: "Health & Wellness",
-    description: "Holistic approach to health and well-being",
+    title: "Thriller ",
+    description: "Inside the Mind of a Criminal",
     youtubeUrl: "https://www.youtube.com/watch?v=6N6tj4aGz5Q",
     thumbnail: "https://img.youtube.com/vi/6N6tj4aGz5Q/maxresdefault.jpg",
-    views: "1.9M",
     category: "talking-head"
   },
 
@@ -138,7 +126,6 @@ const videos = [
     description: "Deep dive investigative storytelling with professional editing",
     youtubeUrl: "https://www.youtube.com/watch?v=eVTl2iAOmCI",
     thumbnail: "https://img.youtube.com/vi/eVTl2iAOmCI/maxresdefault.jpg",
-    views: "2.5M",
     category: "documentary",
     badge: "Crime LF"
   },
@@ -148,7 +135,6 @@ const videos = [
     description: "Professional business storytelling and corporate narratives",
     youtubeUrl: "https://www.youtube.com/watch?si=5l9RNhy_BKSMaaex&v=w_KnjFhnws0&feature=youtu.be",
     thumbnail: "https://img.youtube.com/vi/w_KnjFhnws0/maxresdefault.jpg",
-    views: "3.2M",
     category: "documentary",
     badge: "Business"
   },
@@ -158,7 +144,6 @@ const videos = [
     description: "Engaging educational content in short-form format",
     youtubeUrl: "https://www.youtube.com/watch?v=gU5-41_s-Ao",
     thumbnail: "https://img.youtube.com/vi/gU5-41_s-Ao/maxresdefault.jpg",
-    views: "2.8M",
     category: "documentary",
     badge: "Educational Shortform"
   },
@@ -168,7 +153,6 @@ const videos = [
     description: "Professional documentary filmmaking and storytelling",
     youtubeUrl: "https://www.youtube.com/watch?v=gMzPu5dAhy4&feature=youtu.be",
     thumbnail: "https://img.youtube.com/vi/gMzPu5dAhy4/maxresdefault.jpg",
-    views: "2.1M",
     category: "documentary"
   },
 
@@ -180,16 +164,14 @@ const videos = [
     description: "Clean corporate presentation with professional graphics",
     youtubeUrl: "https://www.youtube.com/watch?v=fiCF0OvNI-s",
     thumbnail: "https://img.youtube.com/vi/fiCF0OvNI-s/maxresdefault.jpg",
-    views: "890K",
     category: "corporate"
   },
   {
     id: 17,
-    title: "Company Culture Video",
-    description: "Showcasing company values and team dynamics",
+    title: "Redefining the Future of Aging",
+    description: "Pioneering research and breakthroughs driving the science of longevity",
     youtubeUrl: "https://www.youtube.com/watch?v=ammb6H2eMtg",
     thumbnail: "https://img.youtube.com/vi/ammb6H2eMtg/maxresdefault.jpg",
-    views: "1.2M",
     category: "corporate"
   },
   {
@@ -198,34 +180,30 @@ const videos = [
     description: "Professional product showcase and marketing",
     youtubeUrl: "https://www.youtube.com/watch?v=Wh_dKDon8I0",
     thumbnail: "https://img.youtube.com/vi/Wh_dKDon8I0/maxresdefault.jpg",
-    views: "1.5M",
     category: "corporate"
   },
   {
     id: 19,
-    title: "Annual Report Video",
+    title: "Our Services. Your Possibilities.",
     description: "Engaging presentation of company achievements",
     youtubeUrl: "https://www.youtube.com/watch?v=BeWlAIODDkQ",
     thumbnail: "https://img.youtube.com/vi/BeWlAIODDkQ/maxresdefault.jpg",
-    views: "750K",
     category: "corporate"
   },
   {
     id: 20,
-    title: "Executive Interview",
+    title: "Inspirational & Visionary",
     description: "Professional executive communication and messaging",
     youtubeUrl: "https://www.youtube.com/watch?v=wl4UFHkYNZ8",
     thumbnail: "https://img.youtube.com/vi/wl4UFHkYNZ8/maxresdefault.jpg",
-    views: "980K",
     category: "corporate"
   },
   {
     id: 28,
     title: "Brand Showcase",
     description: "Professional brand presentation and storytelling",
-    youtubeUrl: "https://youtu.be/1phjXRmqQt4",
+    youtubeUrl: "https://www.youtube.com/watch?v=1phjXRmqQt4",
     thumbnail: "https://img.youtube.com/vi/1phjXRmqQt4/maxresdefault.jpg",
-    views: "1.1M",
     category: "corporate"
   },
   {
@@ -234,7 +212,6 @@ const videos = [
     description: "Comprehensive corporate video production showcase",
     youtubeUrl: "https://www.youtube.com/watch?v=ammb6H2eMtg",
     thumbnail: "https://img.youtube.com/vi/ammb6H2eMtg/maxresdefault.jpg",
-    views: "850K",
     category: "corporate"
   },
 
@@ -245,7 +222,6 @@ const videos = [
     description: "High-energy entertainment content with dynamic editing",
     youtubeUrl: "https://www.youtube.com/watch?v=-gfUZpYKD6E",
     thumbnail: "https://img.youtube.com/vi/-gfUZpYKD6E/maxresdefault.jpg",
-    views: "3.8M",
     category: "entertainment"
   },
   {
@@ -254,7 +230,6 @@ const videos = [
     description: "Creative entertainment video with stunning visuals",
     youtubeUrl: "https://youtu.be/YM4l_PafjgU",
     thumbnail: "https://img.youtube.com/vi/YM4l_PafjgU/maxresdefault.jpg",
-    views: "4.2M",
     category: "entertainment"
   },
 
@@ -264,7 +239,6 @@ const videos = [
     description: "Professional entertainment video production",
     youtubeUrl: "https://www.youtube.com/watch?v=bZZi6tceM9E",
     thumbnail: "https://img.youtube.com/vi/bZZi6tceM9E/maxresdefault.jpg",
-    views: "3.1M",
     category: "entertainment"
   },
 
@@ -318,12 +292,7 @@ const VideoCard = ({ video, index, onOpenModal }: {
           </span>
         </div>
 
-        {/* Views Badge */}
-        <div className="absolute bottom-4 right-4">
-          <span className="px-3 py-1 bg-black/60 backdrop-blur-sm rounded-full text-xs font-medium text-white">
-            {video.views} views
-          </span>
-        </div>
+
       </div>
 
       {/* Video Info */}
@@ -404,7 +373,6 @@ const VideoModal = ({
                 <span className="px-3 py-1 bg-secondary rounded-full text-secondary-foreground capitalize">
                   {video.category.replace('-', ' ')}
                 </span>
-                <span className="text-muted-foreground">{video.views} views</span>
               </div>
             </div>
           </div>

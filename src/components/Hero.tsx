@@ -40,63 +40,74 @@ const Hero = () => {
               </p>
             </div>
 
-            {/* Auto-scrolling logos */}
-            <div className="relative overflow-hidden">
-              <div className="flex animate-scroll space-x-16 items-center">
+            {/* Infinite Scrolling Logos Marquee */}
+            <div className="marquee-container">
+              <div className="marquee-wrapper">
                 {/* First set of logos */}
-                {[
-                  { name: "Athena DAO", logo: "/Company Logo/Athena DAO.png" },
-                  { name: "Cerebrum DAO", logo: "/Company Logo/cerebrum-dao-1.png" },
-                  { name: "Haynow", logo: "/Company Logo/Haynow.png" },
-                  { name: "Catalyst", logo: "/Company Logo/Catalyst.png" },
-                  { name: "Client 4", logo: "/Company Logo/image (4).png" },
-                  { name: "Client 5", logo: "/Company Logo/logowhite-2.svg" },
-                  { name: "Modern Stoa", logo: "/Company Logo/Modern Stoa.png" },
-                  { name: "Molecule", logo: "/Company Logo/molecule.png" },
-                  { name: "Full Mag", logo: "/Company Logo/Full Mag Background Removed.png" },
-                  { name: "Surviving the Survivor", logo: "/Company Logo/Surviving the survivor.png" },
-                  { name: "Unchained Podcast", logo: "/Company Logo/Unchained-Podcast-Artwork-2000x2000-1.png" },
-                  { name: "Vista Social", logo: "/Company Logo/Vistasocial.png" },
-                  { name: "Download 37", logo: "/Company Logo/download (37).png" },
-                ].map((client, index) => (
-                  <div
-                    key={`first-${index}`}
-                    className="flex-shrink-0 w-32 h-16 flex items-center justify-center transition-all duration-300 opacity-90 hover:opacity-100 hover:scale-105"
-                  >
-                    <img
-                      src={client.logo}
-                      alt={client.name}
-                      className="max-w-full max-h-full object-contain"
-                    />
-                  </div>
-                ))}
+                <div className="marquee-content">
+                  {[
+                    { name: "Athena DAO", logo: "/Company Logo/Athena DAO.png" },
+                    { name: "Athena Logo White", logo: "/Company Logo/athena-logo-white.png" },
+                    { name: "Cerebrum DAO", logo: "/Company Logo/cerebrum-dao-1.png" },
+                    { name: "Haynow", logo: "/Company Logo/Haynow.png" },
+                    { name: "Catalyst", logo: "/Company Logo/Catalyst.png" },
+                    { name: "First Choice Investment", logo: "/Company Logo/firstchoiceinvestment.png" },
+                    { name: "Client 4", logo: "/Company Logo/image (4).png" },
+                    { name: "Image", logo: "/Company Logo/image.png" },
+                    { name: "Client 5", logo: "/Company Logo/logowhite-2.svg" },
+                    { name: "Logo Footer", logo: "/Company Logo/logo-footer.png" },
+                    { name: "Modern Stoa", logo: "/Company Logo/Modern Stoa.png" },
+                    { name: "Molecule", logo: "/Company Logo/molecule.png" },
+                    { name: "Police Off The Cuff", logo: "/Company Logo/police-off-the-cuff-coffeetea-mug.png" },
+                    { name: "Full Mag", logo: "/Company Logo/Full Mag Background Removed.png" },
+                    { name: "Screenshot", logo: "/Company Logo/Screenshot 2025-09-13 170427.png" },
+                    { name: "Surviving the Survivor", logo: "/Company Logo/Surviving the survivor.png" },
+                    { name: "Unchained Podcast", logo: "/Company Logo/Unchained-Podcast-Artwork-2000x2000-1.png" },
+                    { name: "Vista Social", logo: "/Company Logo/Vistasocial.png" },
+                    { name: "Download 37", logo: "/Company Logo/download (37).png" },
+                  ].map((client, index) => (
+                    <div key={`first-${index}`} className="logo-item">
+                      <img
+                        src={client.logo}
+                        alt={client.name}
+                        loading="lazy"
+                      />
+                    </div>
+                  ))}
+                </div>
+                
                 {/* Duplicate set for seamless loop */}
-                {[
-                  { name: "Athena DAO", logo: "/Company Logo/Athena DAO.png" },
-                  { name: "Cerebrum DAO", logo: "/Company Logo/cerebrum-dao-1.png" },
-                  { name: "Haynow", logo: "/Company Logo/Haynow.png" },
-                  { name: "Catalyst", logo: "/Company Logo/Catalyst.png" },
-                  { name: "Client 4", logo: "/Company Logo/image (4).png" },
-                  { name: "Client 5", logo: "/Company Logo/logowhite-2.svg" },
-                  { name: "Modern Stoa", logo: "/Company Logo/Modern Stoa.png" },
-                  { name: "Molecule", logo: "/Company Logo/molecule.png" },
-                  { name: "Full Mag", logo: "/Company Logo/Full Mag Background Removed.png" },
-                  { name: "Surviving the Survivor", logo: "/Company Logo/Surviving the survivor.png" },
-                  { name: "Unchained Podcast", logo: "/Company Logo/Unchained-Podcast-Artwork-2000x2000-1.png" },
-                  { name: "Vista Social", logo: "/Company Logo/Vistasocial.png" },
-                  { name: "Download 37", logo: "/Company Logo/download (37).png" },
-                ].map((client, index) => (
-                  <div
-                    key={`second-${index}`}
-                    className="flex-shrink-0 w-32 h-16 flex items-center justify-center transition-all duration-300 opacity-90 hover:opacity-100 hover:scale-105"
-                  >
-                    <img
-                      src={client.logo}
-                      alt={client.name}
-                      className="max-w-full max-h-full object-contain"
-                    />
-                  </div>
-                ))}
+                <div className="marquee-content">
+                  {[
+                    { name: "Athena DAO", logo: "/Company Logo/Athena DAO.png" },
+                    { name: "Athena Logo White", logo: "/Company Logo/athena-logo-white.png" },
+                    { name: "Cerebrum DAO", logo: "/Company Logo/cerebrum-dao-1.png" },
+                    { name: "Haynow", logo: "/Company Logo/Haynow.png" },
+                    { name: "Catalyst", logo: "/Company Logo/Catalyst.png" },
+                    { name: "First Choice Investment", logo: "/Company Logo/firstchoiceinvestment.png" },
+                    { name: "Client 4", logo: "/Company Logo/image (4).png" },
+                    { name: "Image", logo: "/Company Logo/image.png" },
+                    { name: "Client 5", logo: "/Company Logo/logowhite-2.svg" },
+                    { name: "Logo Footer", logo: "/Company Logo/logo-footer.png" },
+                    { name: "Modern Stoa", logo: "/Company Logo/Modern Stoa.png" },
+                    { name: "Molecule", logo: "/Company Logo/molecule.png" },
+                    { name: "Police Off The Cuff", logo: "/Company Logo/police-off-the-cuff-coffeetea-mug.png" },
+                    { name: "Full Mag", logo: "/Company Logo/Full Mag Background Removed.png" },
+                    { name: "Screenshot", logo: "/Company Logo/Screenshot 2025-09-13 170427.png" },
+                    { name: "Surviving the Survivor", logo: "/Company Logo/Surviving the survivor.png" },
+                    { name: "Unchained Podcast", logo: "/Company Logo/Unchained-Podcast-Artwork-2000x2000-1.png" },
+                    { name: "Vista Social", logo: "/Company Logo/Vistasocial.png" },
+                    { name: "Download 37", logo: "/Company Logo/download (37).png" },
+                  ].map((client, index) => (
+                    <div key={`second-${index}`} className="logo-item">
+                      <img
+                        src={client.logo}
+                        alt={client.name}
+                        loading="lazy"
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

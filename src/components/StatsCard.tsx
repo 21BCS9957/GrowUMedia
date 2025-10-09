@@ -11,14 +11,20 @@ const StatsCard = ({ stat, description, icon: Icon }: StatsCardProps) => {
   const [animatedValue, setAnimatedValue] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
-  // Extract number from stat string (e.g., "5X" -> 5, "$10M+" -> 10, "60+" -> 60)
-  const extractNumber = (statString: string) => {
-    const match = statString.match(/(\d+)/);
-    return match ? parseInt(match[1]) : 0;
+  // Extract number and prefix/suffix from stat string
+  const parseStatString = (statString: string) => {
+    const match = statString.match(/^([^\d]*)(\d+)(.*)$/);
+    if (match) {
+      return {
+        prefix: match[1] || '',
+        number: parseInt(match[2]),
+        suffix: match[3] || ''
+      };
+    }
+    return { prefix: '', number: 0, suffix: statString };
   };
 
-  const targetNumber = extractNumber(stat);
-  const suffix = stat.replace(/\d+/, '');
+  const { prefix, number: targetNumber, suffix } = parseStatString(stat);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -73,8 +79,8 @@ const StatsCard = ({ stat, description, icon: Icon }: StatsCardProps) => {
 
       <div className="relative z-10 space-y-3">
         <div className="flex items-center justify-between">
-          <span className="text-5xl font-semibold bg-gradient-to-r from-amber-400 via-yellow-300 to-orange-400 bg-clip-text text-transparent">
-            {animatedValue}{suffix}
+          <span className="text-5xl font-semibold bg-gradient-to-r from-amber-300/90 via-yellow-200/80 to-orange-300/90 bg-clip-text text-transparent">
+            {prefix}{animatedValue}{suffix}
           </span>
           <div className="w-12 h-12 rounded-xl bg-yellow-400/10 flex items-center justify-center group-hover:bg-yellow-400 group-hover:scale-110 transition-all duration-300">
             <Icon className="w-6 h-6 text-yellow-400 group-hover:text-black transition-colors" />

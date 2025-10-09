@@ -8,7 +8,7 @@ const testimonials = [
     title: "Yoga Instructor",
     channel: "@Flow With Adee",
     videoUrl: "https://www.youtube.com/watch?v=QCoObNPANxI&feature=youtu.be",
-    quote: "Gum have helped this channel to grow from 500k to 1.6M subscriber in just 9 months",
+    quote: "GUM has played a pivotal role in scaling this channel’s audience from 500K to 1.6M subscribers in just 9 months.",
     rating: 5,
     results: "+1.4M subscribers",
     timeframe: "9 months"
@@ -19,7 +19,7 @@ const testimonials = [
     title: "Cofounder HairDAO",
     channel: "@Anagen",
     videoUrl: "https://www.youtube.com/watch?v=uLm5--cS_Z4",
-    quote: "100k+ views in 28 days , building the biggest hair community together, they have helped us  by getting our product two thousands of people  ",
+    quote: "With over 100K+ views in just 28 days and a rapidly growing hair community, they’ve been instrumental in bringing our product to thousands of people and fueling our shared mission. ",
     rating: 5,
     results: "100X views in just ",
     timeframe: "28 Days"
@@ -29,8 +29,8 @@ const testimonials = [
     name: " Tom Zenner",
     title: "True Crime Athority",
     channel: "@Tom Zenner",
-    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    quote: "Super efficient and growth team I ever worked with ",
+    videoUrl: "https://www.youtube.com/watch?v=TehJ9uHD_ZU&feature=youtu.be",
+    quote: "The most efficient and growth-driven team I’ve ever had the pleasure of working with. ",
     rating: 5,
     results: "+68K subscribers",
     timeframe: "6 months"
@@ -237,7 +237,7 @@ const VideoTestimonials = () => {
 
           <h2 className="text-3xl md:text-4xl font-medium leading-tight mb-6">
             <span className="bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent">
-              Real Results from Real Creators
+              Real Results for  Real Brands
             </span>
           </h2>
 
