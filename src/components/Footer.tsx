@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer className="py-12 border-t border-border relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
-      
+
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="space-y-4">
@@ -44,9 +44,9 @@ const Footer = () => {
             <h4 className="font-bold mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><a href="https://app.reclaim.ai/m/arsh-growumedia/m" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Book a Call</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">hello@growumedia.com</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">YouTube</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">LinkedIn</a></li>
+              <li><a href="mailto:growth@growumedia.com" className="hover:text-primary transition-colors">growth@growumedia.com</a></li>
+              <li><a href="https://www.instagram.com/growumedia" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Instagram</a></li>
+              <li><a href="https://www.linkedin.com/company/growumedia" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">LinkedIn</a></li>
             </ul>
           </div>
         </div>

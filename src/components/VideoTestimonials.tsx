@@ -27,7 +27,7 @@ const testimonials = [
   {
     id: 3,
     name: " Tom Zenner",
-    title: "True Crime Athority",
+    title: "True Crime Authority",
     channel: "@Tom Zenner",
     videoUrl: "https://www.youtube.com/watch?v=TehJ9uHD_ZU&feature=youtu.be",
     quote: "The most efficient and growth-driven team I’ve ever had the pleasure of working with. ",
