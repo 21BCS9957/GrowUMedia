@@ -3,16 +3,28 @@ import { useState } from "react";
 
 const allTestimonials = [
   {
-    id: 1,
+    id: 7,
+    name: "Michelle Platti",
+    title: "Content Creator",
+    channel: "@Michelle",
+    videoUrl: "https://www.youtube.com/watch?v=EGDKPHQjnCQ",
+    quote: "Working with GUM has been a game-changer for our content strategy and growth.",
+    rating: 5,
+    results: "Exceptional Growth",
+    timeframe: "4 months"
+  },
+  {
+    id: 8,
     name: "Brian Feroldi",
     title: "Co-Founder",
     channel: "@Long Term Mindset",
-    videoUrl: "https://www.youtube.com/watch?v=O9CaWiYAm1M",
-    quote: "Partnering with GUM directly boosted our lead conversions — our YouTube-driven sales more than doubled in just 3 months.",
+    videoUrl: "https://www.youtube.com/watch?v=8ritZBOwUWo",
+    quote: "The professional quality and strategic approach delivered outstanding results for our channel.",
     rating: 5,
-    results: "Amazing Growth",
-    timeframe: "3 months"
+    results: "outstanding  Results",
+    timeframe: "2 months"
   },
+
   {
     id: 2,
     name: "KamiKaze Cash",
@@ -49,8 +61,8 @@ const allTestimonials = [
   {
     id: 5,
     name: "Joe Soto",
-    title: "Real Estate",
-    channel: "@Advisor",
+    title: "Advisor",
+    channel: "@Real Estate",
     videoUrl: "https://www.youtube.com/watch?v=L5_sMg2Uk68&t=23s",
     quote: "Our videos started generating qualified leads on autopilot — GUM’s work directly contributed to a noticeable spike in closed deals.",
     rating: 5,
@@ -68,6 +80,7 @@ const allTestimonials = [
     results: "Generated 4x more qualified leads,",
     timeframe: "3 months"
   },
+
 
 ];
 
@@ -280,7 +293,7 @@ const TestimonialsPage = () => {
 
           {/* Page Header */}
           <div className="text-center mb-16 animate-fade-in">
-            
+
             <h1 className="text-4xl md:text-5xl font-medium leading-tight mb-6">
               <span className="bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent">
                 Success Stories from Our Clients
