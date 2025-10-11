@@ -19,7 +19,7 @@ const allTestimonials = [
     title: " Finance Content Creator",
     channel: "@KamiKaze",
     videoUrl: "https://www.youtube.com/watch?v=FCeDFMbSOeE",
-    quote: "The content strategy GUM built didn’t just grow views — it helped us convert viewers into paying clients and significantly increased revenue.",
+    quote: "GUM’s content strategy grew our views, converted them into paying clients, and increased revenue significantly",
     rating: 5,
     results: "Exceptional Results",
     timeframe: "6 months"
