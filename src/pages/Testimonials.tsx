@@ -4,132 +4,101 @@ import { useState } from "react";
 const allTestimonials = [
   {
     id: 1,
-    name: "Flow With Adee",
-    title: "Fitness Channel",
-    channel: "@Flow With Adee",
-    subscribers: "2.3M",
-    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
-    quote: "GUMO transformed my channel completely. From 50K to 2.3M subscribers in just 18 months!",
+    name: "Brian Feroldi",
+    title: "Co-Founder",
+    channel: "@Long Term Mindset",
+    videoUrl: "https://www.youtube.com/watch?v=O9CaWiYAm1M",
+    quote: "Partnering with GUM directly boosted our lead conversions — our YouTube-driven sales more than doubled in just 3 months.",
     rating: 5,
-    results: "+2.2M subscribers",
-    timeframe: "18 months"
+    results: "Amazing Growth",
+    timeframe: "3 months"
   },
   {
     id: 2,
-    name: "HayNow",
-    title: "Business Coach",
-    channel: "@HayNow",
-    subscribers: "890K",
-    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
-    quote: "The editing quality and strategy advice helped me reach my first million views in a single video.",
+    name: "KamiKaze Cash",
+    title: " Finance Content Creator",
+    channel: "@KamiKaze",
+    videoUrl: "https://www.youtube.com/watch?v=FCeDFMbSOeE",
+    quote: "The content strategy GUM built didn’t just grow views — it helped us convert viewers into paying clients and significantly increased revenue.",
     rating: 5,
-    results: "+800K subscribers",
-    timeframe: "12 months"
+    results: "Exceptional Results",
+    timeframe: "6 months"
   },
   {
     id: 3,
-    name: "Tom Zenner",
-    title: "Lifestyle Creator",
-    channel: "@Tom Zenner",
-    subscribers: "1.5M",
-    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
-    quote: "Professional editing that matches my vision perfectly. My engagement rates doubled!",
+    name: "Armando Novelo",
+    title: "Co-Founder",
+    channel: "@Super Mortgage Brothers",
+    videoUrl: "https://www.youtube.com/watch?v=7VevPW_fOws",
+    quote: "GUM’s approach helped us turn engagement into real business — our inbound sales inquiries doubled thanks to their strategy.",
     rating: 5,
-    results: "+1.2M subscribers",
-    timeframe: "15 months"
+    results: "Doubled Engagement",
+    timeframe: "4 months"
   },
   {
     id: 4,
-    name: "Sarah Johnson",
-    title: "Beauty & Lifestyle",
-    channel: "@SarahBeauty",
-    subscribers: "750K",
-    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
-    quote: "GUMO's editing style perfectly captured my brand aesthetic. My videos now look incredibly professional!",
+    name: "Noah Huisman",
+    title: "Author",
+    channel: "@Noah",
+    videoUrl: "https://www.youtube.com/watch?v=DQgteTUJABs",
+    quote: "The content GUM produced positioned my brand as premium, allowing us to launch high-ticket offers and boost revenue dramatically.",
     rating: 5,
-    results: "+650K subscribers",
-    timeframe: "10 months"
+    results: "Professional Quality",
+    timeframe: "5 months"
   },
   {
     id: 5,
-    name: "Tech Reviews Pro",
-    title: "Technology Channel",
-    channel: "@TechReviewsPro",
-    subscribers: "1.8M",
-    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
-    quote: "The technical editing quality is outstanding. Complex tech reviews made simple and engaging.",
+    name: "Joe Soto",
+    title: "Real Estate",
+    channel: "@Advisor",
+    videoUrl: "https://www.youtube.com/watch?v=L5_sMg2Uk68&t=23s",
+    quote: "Our videos started generating qualified leads on autopilot — GUM’s work directly contributed to a noticeable spike in closed deals.",
     rating: 5,
-    results: "+1.5M subscribers",
-    timeframe: "14 months"
+    results: "Outstanding Quality",
+    timeframe: "7 months"
   },
   {
     id: 6,
-    name: "Cooking with Maria",
-    title: "Food & Recipe Channel",
-    channel: "@CookingWithMaria",
-    subscribers: "920K",
-    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
-    quote: "My cooking videos went from amateur to professional overnight. The food styling shots are incredible!",
+    name: "Denial Salinas",
+    title: "Co-Founder",
+    channel: "@TheSale.io",
+    videoUrl: "https://www.youtube.com/watch?v=_dRW_QWhmzA&t=6s",
+    quote: "GUM turned our channel into a revenue engine — our video strategy now drives consistent sales and client sign-ups every week.",
     rating: 5,
-    results: "+800K subscribers",
-    timeframe: "11 months"
+    results: "Professional Transformation",
+    timeframe: "3 months"
   },
-  {
-    id: 7,
-    name: "Gaming Master",
-    title: "Gaming Content",
-    channel: "@GamingMaster",
-    subscribers: "3.2M",
-    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
-    quote: "Epic gaming montages and perfect timing. My highlight reels are now viral-worthy!",
-    rating: 5,
-    results: "+2.8M subscribers",
-    timeframe: "20 months"
-  },
-  {
-    id: 8,
-    name: "Mindful Living",
-    title: "Wellness & Meditation",
-    channel: "@MindfulLiving",
-    subscribers: "580K",
-    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
-    quote: "Peaceful, calming edits that perfectly match my meditation content. Subscriber growth has been amazing!",
-    rating: 5,
-    results: "+520K subscribers",
-    timeframe: "9 months"
-  },
-  {
-    id: 9,
-    name: "Travel Adventures",
-    title: "Travel Vlogger",
-    channel: "@TravelAdventures",
-    subscribers: "1.4M",
-    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
-    quote: "Cinematic travel videos that transport viewers. My content now feels like a Netflix documentary!",
-    rating: 5,
-    results: "+1.1M subscribers",
-    timeframe: "13 months"
-  }
+
 ];
 
-const TestimonialCard = ({ 
-  testimonial, 
-  index, 
-  onVideoClick 
-}: { 
-  testimonial: typeof allTestimonials[0]; 
+const TestimonialCard = ({
+  testimonial,
+  index,
+  onVideoClick
+}: {
+  testimonial: typeof allTestimonials[0];
   index: number;
   onVideoClick: (testimonial: typeof allTestimonials[0]) => void;
 }) => {
+  // Extract YouTube video ID and generate thumbnail URL
+  const getYouTubeThumbnail = (url: string, testimonialId?: number) => {
+    // Special case for testimonial ID 5 - use placeholder
+    if (testimonialId === 5) {
+      return '/placeholder.svg';
+    }
+
+    // Handle different YouTube URL formats
+    let videoId = '';
+
+    if (url.includes('v=')) {
+      videoId = url.split('v=')[1]?.split('&')[0]?.split('#')[0] || '';
+    } else if (url.includes('youtu.be/')) {
+      videoId = url.split('youtu.be/')[1]?.split('?')[0]?.split('&')[0] || '';
+    }
+
+    return videoId ? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg` : '/placeholder.svg';
+  };
+
   const handleVideoClick = () => {
     onVideoClick(testimonial);
   };
@@ -145,7 +114,7 @@ const TestimonialCard = ({
         onClick={handleVideoClick}
       >
         <img
-          src={testimonial.thumbnail}
+          src={getYouTubeThumbnail(testimonial.videoUrl, testimonial.id)}
           alt={`${testimonial.name} testimonial`}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
@@ -183,16 +152,10 @@ const TestimonialCard = ({
         </div>
 
         {/* Creator Info */}
-        <div className="flex items-center justify-between">
-          <div>
-            <h4 className="font-semibold text-foreground">{testimonial.name}</h4>
-            <p className="text-sm text-muted-foreground">{testimonial.title}</p>
-            <p className="text-xs text-primary font-medium">{testimonial.channel}</p>
-          </div>
-          <div className="text-right">
-            <div className="text-sm font-semibold text-foreground">{testimonial.subscribers}</div>
-            <div className="text-xs text-muted-foreground">subscribers</div>
-          </div>
+        <div>
+          <h4 className="font-semibold text-foreground">{testimonial.name}</h4>
+          <p className="text-sm text-muted-foreground">{testimonial.title}</p>
+          <p className="text-xs text-primary font-medium">{testimonial.channel}</p>
         </div>
       </div>
 
@@ -205,14 +168,14 @@ const TestimonialCard = ({
 };
 
 // Video Modal Component
-const VideoModal = ({ 
-  testimonial, 
-  isOpen, 
-  onClose 
-}: { 
-  testimonial: typeof allTestimonials[0] | null; 
-  isOpen: boolean; 
-  onClose: () => void; 
+const VideoModal = ({
+  testimonial,
+  isOpen,
+  onClose
+}: {
+  testimonial: typeof allTestimonials[0] | null;
+  isOpen: boolean;
+  onClose: () => void;
 }) => {
   if (!isOpen || !testimonial) return null;
 
@@ -229,7 +192,7 @@ const VideoModal = ({
   };
 
   return (
-    <div 
+    <div
       className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
       onClick={handleBackdropClick}
     >
@@ -263,7 +226,6 @@ const VideoModal = ({
                 <span className="px-3 py-1 bg-primary/10 rounded-full text-primary font-medium">
                   {testimonial.channel}
                 </span>
-                <span className="text-muted-foreground">{testimonial.subscribers} subscribers</span>
                 <span className="px-2 py-1 bg-green-500/10 rounded-full text-green-600 text-xs font-medium">
                   {testimonial.results}
                 </span>
@@ -318,13 +280,7 @@ const TestimonialsPage = () => {
 
           {/* Page Header */}
           <div className="text-center mb-16 animate-fade-in">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/10 backdrop-blur mb-6">
-              <Play className="w-4 h-4 text-primary" />
-              <span className="text-sm font-semibold text-primary uppercase tracking-wider">
-                All Client Testimonials
-              </span>
-            </div>
-
+            
             <h1 className="text-4xl md:text-5xl font-medium leading-tight mb-6">
               <span className="bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent">
                 Success Stories from Our Clients
@@ -332,25 +288,11 @@ const TestimonialsPage = () => {
             </h1>
 
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Watch how we've helped creators across different niches achieve massive growth and success on YouTube.
+              See how we’ve helped businesses across industries drive massive growth and success on YouTube.
             </p>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-16">
-            <div className="text-center p-6 rounded-2xl bg-card/50 backdrop-blur border border-border/50">
-              <div className="text-3xl font-bold text-primary mb-2">15M+</div>
-              <div className="text-muted-foreground">Total Subscribers Gained</div>
-            </div>
-            <div className="text-center p-6 rounded-2xl bg-card/50 backdrop-blur border border-border/50">
-              <div className="text-3xl font-bold text-primary mb-2">500+</div>
-              <div className="text-muted-foreground">Videos Edited</div>
-            </div>
-            <div className="text-center p-6 rounded-2xl bg-card/50 backdrop-blur border border-border/50">
-              <div className="text-3xl font-bold text-primary mb-2">98%</div>
-              <div className="text-muted-foreground">Client Satisfaction</div>
-            </div>
-          </div>
+
         </div>
       </section>
 
@@ -359,10 +301,10 @@ const TestimonialsPage = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {allTestimonials.map((testimonial, index) => (
-              <TestimonialCard 
-                key={testimonial.id} 
-                testimonial={testimonial} 
-                index={index} 
+              <TestimonialCard
+                key={testimonial.id}
+                testimonial={testimonial}
+                index={index}
                 onVideoClick={openModal}
               />
             ))}
@@ -371,10 +313,10 @@ const TestimonialsPage = () => {
       </section>
 
       {/* Video Modal */}
-      <VideoModal 
-        testimonial={modalTestimonial} 
-        isOpen={isModalOpen} 
-        onClose={closeModal} 
+      <VideoModal
+        testimonial={modalTestimonial}
+        isOpen={isModalOpen}
+        onClose={closeModal}
       />
     </div>
   );
