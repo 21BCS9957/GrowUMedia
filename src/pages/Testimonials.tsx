@@ -10,8 +10,8 @@ const allTestimonials = [
     videoUrl: "https://www.youtube.com/watch?v=EGDKPHQjnCQ",
     quote: "Working with GUM has been a game-changer for our content strategy and growth.",
     rating: 5,
-    results: "Exceptional Growth",
-    timeframe: "4 months"
+    results: "2X+ Revenue",
+    timeframe: "1 months"
   },
   {
     id: 8,
