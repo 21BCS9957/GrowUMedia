@@ -21,7 +21,7 @@ const testimonials = [
     videoUrl: "https://www.youtube.com/watch?v=uLm5--cS_Z4",
     quote: "With 100K+ views in just 28 days and a rapidly growing hair community, they’ve been instrumental in bringing our product to thousands of people and fueling our shared mission. ",
     rating: 5,
-    results: "100X views just ",
+    results: "100X views",
     timeframe: "28 Days"
   },
   {

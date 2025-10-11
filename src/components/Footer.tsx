@@ -6,12 +6,14 @@ const Footer = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-                <span className="text-2xl font-black text-primary-foreground">G</span>
-              </div>
+            <div className="flex items-center gap-3">
+              <img
+                src="/favicon.svg"
+                alt="Growu Media Logo"
+                className="w-12 h-12 object-contain"
+              />
               <span className="text-xl font-bold">
-                <span className="text-foreground">Growu</span>
+                <span className="text-foreground">GrowU</span>
                 <span className="text-primary">Media</span>
               </span>
             </div>
@@ -52,7 +54,7 @@ const Footer = () => {
         </div>
 
         <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          <p>© 2024 Growu Media. All rights reserved. Built with passion for YouTube creators.</p>
+          <p>© 2024 GrowUMedia. All rights reserved.Built with passion to scale businesses on YouTube.</p>
         </div>
       </div>
     </footer>
