@@ -83,7 +83,7 @@ All colors MUST be HSL.
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(calc(-100% - 2rem));
   }
 }
 
@@ -94,32 +94,34 @@ All colors MUST be HSL.
   mask-image: linear-gradient(
     to right,
     transparent 0%,
-    black 5%,
-    black 95%,
+    black 3%,
+    black 97%,
     transparent 100%
   );
   -webkit-mask-image: linear-gradient(
     to right,
     transparent 0%,
-    black 5%,
-    black 95%,
+    black 3%,
+    black 97%,
     transparent 100%
   );
 }
 
 .marquee-wrapper {
   display: flex;
-  animation: marquee 45s linear infinite;
+  animation: marquee 50s linear infinite;
+  gap: 2rem;
 }
 
 .marquee-content {
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  min-width: 100%;
+  gap: 2rem;
+  white-space: nowrap;
 }
 
-.marquee-wrapper:hover {
+.marquee-container:hover .marquee-wrapper {
   animation-play-state: paused;
 }
 
@@ -127,25 +129,29 @@ All colors MUST be HSL.
   flex-shrink: 0;
   width: 140px;
   height: 70px;
-  margin: 0 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
-  opacity: 0.8;
+  opacity: 0.9;
+  min-width: 140px;
 }
 
 .logo-item:hover {
   opacity: 1;
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 .logo-item img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  filter: brightness(0.9);
-  transition: filter 0.3s ease;
+  filter: brightness(1.1) contrast(1.15) saturate(1.1);
+  transition: all 0.3s ease;
+}
+
+.logo-item:hover img {
+  filter: brightness(1.2) contrast(1.25) saturate(1.2);
 }
 
 .logo-item:hover img {
