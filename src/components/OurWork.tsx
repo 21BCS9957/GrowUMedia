@@ -288,7 +288,7 @@ const VideoCard = ({ video, index, onOpenModal }: {
         {/* Category Badge */}
         <div className="absolute top-4 left-4">
           <span className="px-3 py-1 bg-secondary/90 backdrop-blur-sm rounded-full text-xs font-medium text-secondary-foreground capitalize">
-            {(video as any).badge || video.category.replace('-', ' ')}
+            {(video as { badge?: string }).badge || video.category.replace('-', ' ')}
           </span>
         </div>
 
