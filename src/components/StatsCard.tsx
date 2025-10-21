@@ -70,7 +70,7 @@ const StatsCard = ({ stat, description, icon: Icon }: StatsCardProps) => {
   }, [isVisible, targetNumber]);
 
   return (
-    <div 
+    <div
       id={`stat-${targetNumber}`}
       className="group relative p-6 rounded-2xl bg-card/50 backdrop-blur border border-border hover:border-yellow-400/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(251,191,36,0.2)] animate-slide-up"
     >
