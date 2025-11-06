@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { trackInitiateCheckout } from "@/lib/metaPixel";
 
 const CTA = () => {
   const navigate = useNavigate();
@@ -33,7 +34,10 @@ const CTA = () => {
               variant="hero"
               size="lg"
               className="text-lg px-10 py-7 h-auto group"
-              onClick={() => navigate('/booking')}
+              onClick={() => {
+                trackInitiateCheckout();
+                navigate('/booking');
+              }}
             >
               <Calendar className="mr-2" />
               Book Your Free Call

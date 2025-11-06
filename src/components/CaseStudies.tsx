@@ -1,6 +1,7 @@
 import { Play, ExternalLink, TrendingUp, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { trackInitiateCheckout } from "@/lib/metaPixel";
 
 const caseStudies = [
   {
@@ -224,7 +225,10 @@ const CaseStudies = () => {
 
             <button
               className="group px-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl font-semibold transition-all duration-300 flex items-center gap-2 text-sm"
-              onClick={() => navigate('/booking')}
+              onClick={() => {
+                trackInitiateCheckout();
+                navigate('/booking');
+              }}
             >
               Book Strategy Call
               <ExternalLink className="w-4 h-4 group-hover:scale-110 transition-transform" />

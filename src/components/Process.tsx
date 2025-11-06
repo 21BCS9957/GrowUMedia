@@ -1,6 +1,7 @@
 import { MessageSquare, Target, Zap, Rocket, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { trackInitiateCheckout } from "@/lib/metaPixel";
 
 const steps = [
   {
@@ -178,7 +179,10 @@ const Process = () => {
             </p>
             <button
               className="group px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl font-semibold transition-all duration-300 flex items-center gap-2"
-              onClick={() => navigate('/booking')}
+              onClick={() => {
+                trackInitiateCheckout();
+                navigate('/booking');
+              }}
             >
               Start Your Journey
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

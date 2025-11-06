@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { trackInitiateCheckout } from "@/lib/metaPixel";
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -53,7 +54,10 @@ const Footer = () => {
           <div>
             <h4 className="font-bold mb-4">Contact</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><button onClick={() => navigate('/booking')} className="hover:text-primary transition-colors text-left">Book a Call</button></li>
+              <li><button onClick={() => {
+                trackInitiateCheckout();
+                navigate('/booking');
+              }} className="hover:text-primary transition-colors text-left">Book a Call</button></li>
               <li><a href="mailto:growth@growumedia.com" className="hover:text-primary transition-colors">growth@growumedia.com</a></li>
               <li><a href="https://www.instagram.com/growumedia" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Instagram</a></li>
               <li><a href="https://www.linkedin.com/company/growumedia" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">LinkedIn</a></li>

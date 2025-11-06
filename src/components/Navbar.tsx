@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { trackInitiateCheckout } from "@/lib/metaPixel";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -35,7 +36,10 @@ const Navbar = () => {
             variant="outline"
             size="default"
             className="px-6 py-2"
-            onClick={() => navigate('/booking')}
+            onClick={() => {
+              trackInitiateCheckout();
+              navigate('/booking');
+            }}
           >
             Book Strategy Call
           </Button>

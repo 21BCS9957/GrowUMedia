@@ -1,6 +1,7 @@
 import { Video, BarChart3, Search, Target, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { trackInitiateCheckout } from "@/lib/metaPixel";
 
 const coreServices = [
   {
@@ -138,7 +139,10 @@ const CoreServices = () => {
               variant="hero" 
               size="lg" 
               className="text-lg px-10 py-6 h-auto"
-              onClick={() => navigate('/booking')}
+              onClick={() => {
+                trackInitiateCheckout();
+                navigate('/booking');
+              }}
             >
               Get Your Custom Strategy
             </Button>

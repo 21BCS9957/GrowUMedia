@@ -1,6 +1,7 @@
 import { Edit3, Repeat, TrendingUp, Upload, Play, Scissors, BarChart3, Calendar, ArrowRight, Sparkles } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { trackInitiateCheckout } from "@/lib/metaPixel";
 
 const services = [
   {
@@ -174,7 +175,10 @@ const Services = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <button 
                 className="group px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl font-semibold transition-all duration-300 flex items-center gap-2 shadow-lg shadow-primary/30"
-                onClick={() => navigate('/booking')}
+                onClick={() => {
+                  trackInitiateCheckout();
+                  navigate('/booking');
+                }}
               >
                 <Play className="w-4 h-4" />
                 Get Started Today
@@ -183,7 +187,10 @@ const Services = () => {
 
               <button 
                 className="px-8 py-4 border border-border hover:border-primary/50 rounded-xl font-semibold transition-all duration-300 flex items-center gap-2"
-                onClick={() => navigate('/booking')}
+                onClick={() => {
+                  trackInitiateCheckout();
+                  navigate('/booking');
+                }}
               >
                 <Calendar className="w-4 h-4" />
                 Schedule Consultation

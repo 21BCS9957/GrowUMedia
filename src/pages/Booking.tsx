@@ -1,9 +1,34 @@
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import { trackSchedule, trackPageView } from '@/lib/metaPixel';
 
 const Booking = () => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    // Track page view for booking page
+    trackPageView();
+
+    // Listen for messages from the iframe (when booking is completed)
+    const handleMessage = (event: MessageEvent) => {
+      // Check if the message is from reclaim.ai
+      if (event.origin === 'https://meet.reclaimai.com') {
+        // Check if it's a booking completion event
+        if (event.data && (event.data.type === 'booking_completed' || event.data.type === 'scheduled')) {
+          trackSchedule();
+        }
+      }
+    };
+
+    window.addEventListener('message', handleMessage);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('message', handleMessage);
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">

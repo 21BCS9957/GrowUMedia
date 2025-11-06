@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp, DollarSign, Users } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { trackInitiateCheckout } from "@/lib/metaPixel";
 import StatsCard from "./StatsCard";
 
 const Hero = () => {
@@ -28,7 +29,10 @@ const Hero = () => {
               variant="hero"
               size="lg"
               className="text-lg px-8 py-6 h-auto group"
-              onClick={() => navigate('/booking')}
+              onClick={() => {
+                trackInitiateCheckout();
+                navigate('/booking');
+              }}
             >
               Book Free Strategy Session
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
