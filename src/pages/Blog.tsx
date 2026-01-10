@@ -11,7 +11,7 @@ const blogPosts = [
     date: "Jan 10, 2026",
     readTime: "11 min read",
     category: "Strategy",
-    image: "public/B.png",
+    image: "/B.png",
     tags: ["Strategy", "Planning", "Content Calendar", "Growth"],
     fullContent: `Inside Steven Bartlett's Ad Library: The Smart A/B Testing Strategy Behind Podcast Growth
 
@@ -263,7 +263,7 @@ Book a free strategy session and we'll show you exactly how to apply this framew
     date: "December 12, 2024",
     readTime: "10 min read",
     category: "Content",
-    image: "public/C.png",
+    image: "/C.png",
     tags: ["Scripting", "Engagement", "Content", "Retention"],
     fullContent: `The One-Video Strategy That Builds Both Discovery and Loyalty
 
@@ -372,8 +372,8 @@ That's the difference between chasing views and building an audience. Views are 
     author: "GUM Team",
     date: "December 10, 2025",
     readTime: "15 min read",
-    category: "SEO",
-    image: "public/d.png",
+    category: "Marketing",
+    image: "/d.png",
     tags: ["Viral", "Content Marketing", "Strategy", "Growth"],
     fullContent: `How to Approach Viral Content Marketing
 
