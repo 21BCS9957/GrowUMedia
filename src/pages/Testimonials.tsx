@@ -82,6 +82,41 @@ const allTestimonials = [
   },
 
 
+  // Home screen video testimonials
+  {
+    id: 1,
+    name: "Flow With Adee",
+    title: "Yoga Instructor",
+    channel: "@Flow With Adee",
+    videoUrl: "https://www.youtube.com/watch?v=QCoObNPANxI&feature=youtu.be",
+    quote: "GUM has played a pivotal role in scaling this channel's audience from 500K to 1.6M subscribers in just 9 months.",
+    rating: 5,
+    results: "+1.4M subscribers",
+    timeframe: "9 months"
+  },
+  {
+    id: 9,
+    name: "Andrew Verbinnen",
+    title: "Cofounder HairDAO",
+    channel: "@Anagen",
+    videoUrl: "https://www.youtube.com/watch?v=uLm5--cS_Z4",
+    quote: "With 100K+ views in just 28 days and a rapidly growing hair community, they've been instrumental in bringing our product to thousands of people and fueling our shared mission.",
+    rating: 5,
+    results: "100X views",
+    timeframe: "28 Days"
+  },
+  {
+    id: 10,
+    name: "Tom Zenner",
+    title: "True Crime Authority",
+    channel: "@Tom Zenner",
+    videoUrl: "https://www.youtube.com/watch?v=TehJ9uHD_ZU&feature=youtu.be",
+    quote: "The most efficient and growth-driven team I've ever had the pleasure of working with.",
+    rating: 5,
+    results: "+68K subscribers",
+    timeframe: "6 months"
+  }
+
 ];
 
 const TestimonialCard = ({
@@ -310,8 +345,19 @@ const TestimonialsPage = () => {
       </section>
 
       {/* All Testimonials Grid */}
-      <section className="pb-24">
+      <section className="pb-12">
         <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-medium mb-4">
+              <span className="bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent">
+                Video Testimonials
+              </span>
+            </h2>
+            <p className="text-muted-foreground">
+              Watch our clients share their success stories
+            </p>
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {allTestimonials.map((testimonial, index) => (
               <TestimonialCard

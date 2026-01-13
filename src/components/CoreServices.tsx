@@ -7,9 +7,9 @@ const coreServices = [
   {
     icon: Video,
     title: "YouTube Strategy & Production",
-    description: "Research, Ideation, Recording, Post Production",
+    description: "Complete video production and strategic planning to maximize your channel's growth potential.",
     features: [
-      "Professional video editing & motion graphics",
+      "Research, Ideation, Recording, Post Production",
       "Data-driven content strategy & optimization"
     ],
     color: "from-primary/20 to-primary/5"
@@ -27,7 +27,7 @@ const coreServices = [
   {
     icon: Search,
     title: "YouTube SEO",
-    description: "Comprehensive SEO optimization to improve discoverability and rank higher in search results.",
+    description: "Comprehensive SEO optimization to improve discoverability and rank higher in search/suggested results.",
     features: [
       "Keyword research & optimization",
       "Title, description & tag optimization"
@@ -74,7 +74,7 @@ const CoreServices = () => {
             </h2>
 
             <p className="text-xl text-muted-foreground leading-relaxed">
-              From concept to viral success—we provide the complete toolkit for sustainable YouTube growth.
+              From concept to viral success-we provide the complete toolkit for sustainable YouTube growth.
             </p>
           </div>
         </div>
