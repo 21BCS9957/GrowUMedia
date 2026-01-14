@@ -88,7 +88,7 @@ Think about what Meta ads actually give you:
 • Clean A/B testing
 • Zero reliance on algorithms
 
-Steven uses Meta ads not as a growth channel—but as a research tool.
+Steven uses Meta ads not as a growth channel-but as a research tool.
 
 That's a mindset shift most brands miss.
 
@@ -115,7 +115,7 @@ You can have:
 • Incredible insights
 • Perfect production
 
-And still fail—because nobody clicks.
+And still fail-because nobody clicks.
 
 Steven Bartlett understands that distribution beats depth if depth is never discovered.
 
@@ -240,11 +240,11 @@ He engineered it:
 • With feedback loops
 • With intelligent use of paid media
 
-Testing thumbnails with small-budget ad campaigns might look simple—but it reflects a much deeper philosophy:
+Testing thumbnails with small-budget ad campaigns might look simple-but it reflects a much deeper philosophy:
 
 Don't guess. Measure. Then scale.
 
-If you're building a podcast, a YouTube channel, or a serious brand—this is the level of thinking required to win.
+If you're building a podcast, a YouTube channel, or a serious brand-this is the level of thinking required to win.
 
 Want to Apply This Strategy to Your YouTube Channel?
 
@@ -377,11 +377,11 @@ That's the difference between chasing views and building an audience. Views are 
     tags: ["Viral", "Content Marketing", "Strategy", "Growth"],
     fullContent: `How to Approach Viral Content Marketing
 
-Viral content marketing doesn't start with the post — it starts with the title. The title is the first filter. If the title doesn't trigger curiosity, relevance, or emotion, the content never gets a chance to perform. That's why the smartest creators and brands write the title first, then shape the content to deliver on that promise.
+Viral content marketing doesn't start with the post - it starts with the title. The title is the first filter. If the title doesn't trigger curiosity, relevance, or emotion, the content never gets a chance to perform. That's why the smartest creators and brands write the title first, then shape the content to deliver on that promise.
 
 The Title Is Everything
 
-A strong viral title does one thing extremely well: it makes the reader feel like skipping it would be a mistake. It signals value instantly. It hints at an outcome, a lesson, or a surprising insight without giving everything away. The goal isn't clickbait, it's tension — the right amount of unanswered "why" that pulls people in.
+A strong viral title does one thing extremely well: it makes the reader feel like skipping it would be a mistake. It signals value instantly. It hints at an outcome, a lesson, or a surprising insight without giving everything away. The goal isn't clickbait, it's tension - the right amount of unanswered "why" that pulls people in.
 
 Think about the titles that made you stop scrolling recently. They probably shared common elements:
 
@@ -434,7 +434,7 @@ This isn't about breaking up your content artificially. It's about recognizing t
 
 Respect Your Audience
 
-Most importantly, viral content respects the audience. It doesn't talk down, over-explain, or chase trends blindly. It feels timely, human, and opinionated. People don't share content because it's perfect — they share it because it says something they wish they had said themselves.
+Most importantly, viral content respects the audience. It doesn't talk down, over-explain, or chase trends blindly. It feels timely, human, and opinionated. People don't share content because it's perfect - they share it because it says something they wish they had said themselves.
 
 Respecting your audience means:
 
@@ -462,7 +462,7 @@ Making Viral Intentional
 
 When you approach viral content marketing this way, growth stops feeling random. You're not hoping something goes viral. You're designing content with intention, starting from a strong title and building everything else to support it.
 
-This doesn't guarantee virality — nothing can. But it dramatically increases your odds. More importantly, it ensures that when your content does spread, it spreads for the right reasons and attracts the right audience.
+This doesn't guarantee virality - nothing can. But it dramatically increases your odds. More importantly, it ensures that when your content does spread, it spreads for the right reasons and attracts the right audience.
 
 The Process in Practice
 
@@ -471,7 +471,7 @@ Here's how to apply this approach:
 1. Start with the title. Write 10-20 options before choosing one.
 2. Test the title with a small group or on a smaller platform first.
 3. Outline your content to deliver on the title's promise.
-4. Write with sharing in mind — create quotable moments.
+4. Write with sharing in mind - create quotable moments.
 5. Edit ruthlessly. Remove anything that doesn't serve the core idea.
 6. Review: Does this content justify the click? Would you share it?
 

@@ -74,7 +74,7 @@ const CoreServices = () => {
             </h2>
 
             <p className="text-xl text-muted-foreground leading-relaxed">
-              From idea to impact—we deliver a complete YouTube growth system engineered for SaaS monetization.
+              From idea to impact-we deliver a complete YouTube growth system engineered for SaaS monetization.
             </p>
           </div>
         </div>

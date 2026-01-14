@@ -57,7 +57,7 @@ const Process = () => {
             <span className="bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent">What happens when you book A call</span>
           </h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            From first call to viral success—here's our battle-tested methodology that's helped 60+ channels scale.
+            From first call to viral success-here's our battle-tested methodology that's helped 60+ channels scale.
           </p>
         </div>
 

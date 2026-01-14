@@ -12,17 +12,17 @@ const faqs = [
   {
     id: 2,
     question: "Will this work for new channels too?",
-    answer: "100%. Yes—provided your ICP and revenue model are clearly defined."
+    answer: "100%. Yes-provided your ICP and revenue model are clearly defined."
   },
   {
     id: 3,
     question: "What happens before our free call?",
-    answer: "We audit your channel (and analytics if shared) and prepare a custom strategy for you—ready before you even join the call."
+    answer: "We audit your channel (and analytics if shared) and prepare a custom strategy for you-ready before you even join the call."
   },
   {
     id: 4,
     question: "What if I already have a team?",
-    answer: "No problem—we can plug in exactly where you need us, and work alongside your current team seamlessly."
+    answer: "No problem-we can plug in exactly where you need us, and work alongside your current team seamlessly."
   },
   {
     id: 5,
@@ -32,7 +32,7 @@ const faqs = [
   {
     id: 6,
     question: "What if it doesn't work?",
-    answer: "We either deliver—or we keep optimizing until we do. No fluff. Just results."
+    answer: "We either deliver-or we keep optimizing until we do. No fluff. Just results."
   }
 ];
 

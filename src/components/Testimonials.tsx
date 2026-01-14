@@ -15,19 +15,19 @@ const testimonials = [
     growth: "450% increase in 6 months"
   },
   {
-    quote: "The team's understanding of YouTube's algorithm and audience psychology is unmatched. They don't just edit videos—they engineer growth.",
+    quote: "The team's understanding of YouTube's algorithm and audience psychology is unmatched. They don't just edit videos-they engineer growth.",
     author: "Pratham",
     role: "Business Coach",
     growth: "$2M+ in course sales"
   },
   {
-    quote: "From 5K to 250K subscribers in a year. The systems they built are scalable, repeatable, and most importantly—they work.",
+    quote: "From 5K to 250K subscribers in a year. The systems they built are scalable, repeatable, and most importantly-they work.",
     author: "Tom Zener",
     role: "Lifestyle Creator",
     growth: "5000% subscriber growth"
   },
   {
-    quote: "Working with Growu Media has been game-changing. They handle everything so I can focus on what I do best—creating content.",
+    quote: "Working with Growu Media has been game-changing. They handle everything so I can focus on what I do best-creating content.",
     author: "Flow With Adee",
     role: "Tech Reviewer",
     growth: "2M+ views per month"

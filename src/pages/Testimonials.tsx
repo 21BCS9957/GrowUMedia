@@ -42,7 +42,7 @@ const allTestimonials = [
     title: "Co-Founder",
     channel: "@Super Mortgage Brothers",
     videoUrl: "https://www.youtube.com/watch?v=7VevPW_fOws",
-    quote: "GUM’s approach helped us turn engagement into real business — our inbound sales inquiries doubled thanks to their strategy.",
+    quote: "GUM’s approach helped us turn engagement into real business - our inbound sales inquiries doubled thanks to their strategy.",
     rating: 5,
     results: "2X Engagement",
     timeframe: "4 months"
@@ -64,7 +64,7 @@ const allTestimonials = [
     title: "Advisor",
     channel: "@Real Estate",
     videoUrl: "https://www.youtube.com/watch?v=L5_sMg2Uk68&t=23s",
-    quote: "Our videos started generating qualified leads on autopilot — GUM’s work directly contributed to a noticeable spike in closed deals.",
+    quote: "Our videos started generating qualified leads on autopilot - GUM’s work directly contributed to a noticeable spike in closed deals.",
     rating: 5,
     results: "Revenue grew by 95%",
     timeframe: "7 months"
@@ -75,7 +75,7 @@ const allTestimonials = [
     title: "Co-Founder",
     channel: "@TheSale.io",
     videoUrl: "https://www.youtube.com/watch?v=_dRW_QWhmzA&t=6s",
-    quote: "GUM turned our channel into a revenue engine — our video strategy now drives consistent sales and client sign-ups every week.",
+    quote: "GUM turned our channel into a revenue engine - our video strategy now drives consistent sales and client sign-ups every week.",
     rating: 5,
     results: "Generated 4x more qualified leads,",
     timeframe: "3 months"

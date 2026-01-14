@@ -25,7 +25,7 @@ const CTA = () => {
             </h2>
 
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Book a free strategy session to see exactly how we'll scale your business by boosting conversions and cutting CAC—fast, clear, and proven.
+              Book a free strategy session to see exactly how we'll scale your business by boosting conversions and cutting CAC-fast, clear, and proven.
             </p>
           </div>
 
