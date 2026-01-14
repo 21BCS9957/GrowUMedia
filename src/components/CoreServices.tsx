@@ -69,12 +69,12 @@ const CoreServices = () => {
 
             <h2 className="text-3xl md:text-4xl font-semibold">
               <span className="bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent">
-                Everything Your Channel Needs to Thrive
+                Everything Your SaaS Needs to Grow Revenue on YouTube
               </span>
             </h2>
 
             <p className="text-xl text-muted-foreground leading-relaxed">
-              From concept to viral success-we provide the complete toolkit for sustainable YouTube growth.
+              From idea to impact—we deliver a complete YouTube growth system engineered for SaaS monetization.
             </p>
           </div>
         </div>
