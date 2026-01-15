@@ -282,7 +282,7 @@ const Hero = () => {
                     { name: "Client 4", logo: "/Company%20Logo/image%20(4).png" },
                     { name: "F2H", logo: "/Company%20Logo/F2H.png" },
                     { name: "Modern Stoa", logo: "/Company%20Logo/Modern%20Stoa.png" },
-                    { name: "Unchained Podcast", logo: "/Company%20Logo/Unchained-Podcast-Artwork-2000x2000-1.png" },
+         
                 
                   ].map((client, index) => (
                     <div 
@@ -332,7 +332,7 @@ const Hero = () => {
                     { name: "Image", logo: "/Company%20Logo/image.png" },
                     { name: "Modern Stoa", logo: "/Company%20Logo/Modern%20Stoa.png" },
                     { name: "Client 5", logo: "/Company%20Logo/logowhite-2.svg" },
-                    { name: "Unchained Podcast", logo: "/Company%20Logo/Unchained-Podcast-Artwork-2000x2000-1.png" },
+      
                   ].map((client, index) => (
                     <div 
                       key={`second-${index}`} 

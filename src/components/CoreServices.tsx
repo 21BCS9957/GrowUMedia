@@ -69,7 +69,7 @@ const CoreServices = () => {
 
             <h2 className="text-3xl md:text-4xl font-semibold">
               <span className="bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent">
-                Everything Your SaaS Needs to Grow Revenue on YouTube
+                Everything Your Business Needs to Grow Revenue Through YouTube
               </span>
             </h2>
 
