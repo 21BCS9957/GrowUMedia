@@ -230,22 +230,28 @@ const Hero = () => {
       <div className="absolute inset-0 bg-background/20" />
 
       <div className="container mx-auto px-6 relative z-20">
-        <div className="text-center max-w-5xl mx-auto space-y-8 animate-fade-in">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent" style={{ fontFamily: 'Manrope, sans-serif' }}>
-            YouTube as a Revenue Channel,
-            <br />
-            for Established Companies
-          </h1>
+        <div className="text-center max-w-5xl mx-auto animate-fade-in">
+          {/* Hero Content Block - Heading + Subheading grouped together */}
+          <div className="mb-12 md:mb-16">
+            {/* Main Heading */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent mb-6 md:mb-8" style={{ fontFamily: 'Manrope, sans-serif' }}>
+              YouTube as a Revenue Channel,
+              <br />
+              for Established Companies
+            </h1>
 
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            We build revenue-first YouTube systems that drive pipeline, lower CAC, and scale with your GTM motion.
-          </p>
+            {/* Subheading - closely paired with heading */}
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              We build revenue-first YouTube systems that drive pipeline, lower CAC, and scale with your GTM motion.
+            </p>
+          </div>
 
-          <div className="flex justify-center items-center pt-4">
+          {/* CTA Section - clearly separated for action */}
+          <div className="mb-16 md:mb-20">
             <Button
               variant="hero"
               size="lg"
-              className="text-lg px-8 py-6 h-auto group"
+              className="text-lg px-10 py-7 h-auto group shadow-lg hover:shadow-xl transition-all duration-300"
               onClick={() => {
                 trackInitiateCheckout();
                 navigate('/booking');
@@ -257,8 +263,8 @@ const Hero = () => {
           </div>
 
           {/* Client Logos Section */}
-          <div className="pt-16 pb-8">
-            <div className="text-center mb-8">
+          <div className="pt-8 md:pt-12 pb-8">
+            <div className="text-center mb-8 md:mb-10">
               <p className="text-sm text-muted-foreground uppercase tracking-wider font-medium">
                 Trusted by Industry Leaders
               </p>
