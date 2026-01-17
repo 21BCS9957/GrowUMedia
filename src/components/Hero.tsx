@@ -225,23 +225,23 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20" style={{ backgroundImage: 'url(/new.svg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 md:pt-40" style={{ backgroundImage: 'url(/new.svg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
       {/* Light overlay for better text readability */}
       <div className="absolute inset-0 bg-background/20" />
 
       <div className="container mx-auto px-6 relative z-20">
         <div className="text-center max-w-5xl mx-auto animate-fade-in">
           {/* Hero Content Block - Heading + Subheading grouped together */}
-          <div className="mb-12 md:mb-16">
+          <div className="mb-10 md:mb-12">
             {/* Main Heading */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent mb-6 md:mb-8" style={{ fontFamily: 'Manrope, sans-serif' }}>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent mb-4 md:mb-6" style={{ fontFamily: 'Manrope, sans-serif' }}>
               YouTube as a Revenue Channel,
               <br />
               for Established Companies
             </h1>
 
             {/* Subheading - closely paired with heading */}
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               We build revenue-first YouTube systems that drive pipeline, lower CAC, and scale with your GTM motion.
             </p>
           </div>
