@@ -714,7 +714,7 @@ const Blog = () => {
           
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              GUMO{" "}
+              GUM{" "}
               <span className="bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent">
                 Blog
               </span>
