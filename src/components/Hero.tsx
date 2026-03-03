@@ -242,7 +242,7 @@ const Hero = () => {
 
             {/* Subheading - closely paired with heading */}
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              We build revenue-first YouTube systems that drive pipeline, lower CAC, and scale with your GTM motion.
+              We Build Education-Led YouTube Funnels That Drive Revenue And Build Trust.
             </p>
           </div>
 
