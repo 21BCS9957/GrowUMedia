@@ -34,6 +34,7 @@ const App = () => (
           <Route path="/landing/audit" element={<LandingAudit />} />
           <Route path="/landining/audit" element={<LandingAudit />} />
           <Route path="/thanku" element={<Thanku />} />
+          <Route path="/landing/thanku" element={<Thanku />} />
           <Route path="/thank-you" element={<Thanku />} />
           <Route path="/landing/thank-you" element={<LandingThankYou />} />
           <Route path="/landining/thank-you" element={<LandingThankYou />} />

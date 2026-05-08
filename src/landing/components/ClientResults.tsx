@@ -92,10 +92,13 @@ export default function ClientResults() {
             {/* Body Text */}
             <div className="space-y-3 text-sm text-text-muted leading-relaxed">
               <p>
-                Andrew had a hair care product and a group of freelancers running his YouTube. Each one delivering their piece, none talking to each other, zero research behind any decision. Months of consistent output. Nothing moved.
+                Andrew had a hair care product and a team running his YouTube — real effort, deep expertise, consistent output. Communication gaps and coordination issues, nothing unusual. But more importantly: no research behind any content decision. None of it was compounding. Nothing was getting views.
               </p>
               <p>
                 His fourth video with us drove 200,000 views and $45,000 in direct product revenue — in a single month. No paid ads. One video. Because for the first time, someone figured out which video to make before anyone touched a camera. YouTube then monetised his channel — the platform now pays him every month just to keep posting.
+              </p>
+              <p className="font-semibold text-text-white">
+                "I'm getting paid to market my own product." — Andrew Verbinnen
               </p>
             </div>
           </div>

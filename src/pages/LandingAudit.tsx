@@ -1,9 +1,6 @@
 import Navbar from "@/landing/components/Navbar";
 
-const TYPEFORM_REDIRECT_URL =
-  typeof window !== "undefined" ? `${window.location.origin}/thank-you` : "/thank-you";
-const TYPEFORM_URL =
-  `https://form.typeform.com/to/mKGqFyrp?typeform-source=growumedia-landing&redirect_url=${encodeURIComponent(TYPEFORM_REDIRECT_URL)}`;
+const JOTFORM_URL = "https://form.jotform.com/261273931101043";
 
 export default function LandingAudit() {
   return (
@@ -25,7 +22,7 @@ export default function LandingAudit() {
 
           <div className="overflow-hidden rounded-lg border border-dark-border bg-dark-card shadow-[0_24px_100px_rgba(0,0,0,0.35)]">
             <iframe
-              src={TYPEFORM_URL}
+              src={JOTFORM_URL}
               title="GrowUMedia free channel audit form"
               className="h-[760px] w-full bg-dark-bg"
               allow="camera; microphone; autoplay; encrypted-media;"
