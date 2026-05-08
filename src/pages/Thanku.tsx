@@ -7,6 +7,10 @@ const RECLAIM_REDIRECT_URL =
   typeof window !== "undefined" ? `${window.location.origin}/schedule` : "/schedule";
 const RECLAIM_URL =
   `https://meet.reclaimai.com/e/673b1d38-a315-443d-a5f4-8e194af12d28?redirect_url=${encodeURIComponent(RECLAIM_REDIRECT_URL)}`;
+const RECLAIM_ORIGINS = new Set([
+  "https://meet.reclaimai.com",
+  "https://app.reclaim.ai",
+]);
 
 export default function Thanku() {
   const navigate = useNavigate();
@@ -16,14 +20,16 @@ export default function Thanku() {
     trackSchedulerViewed();
 
     const handleMessage = (event: MessageEvent) => {
-      if (event.origin !== "https://meet.reclaimai.com") {
+      if (!RECLAIM_ORIGINS.has(event.origin)) {
         return;
       }
 
       const eventType =
-        typeof event.data === "object" && event.data && "type" in event.data
-          ? String(event.data.type)
-          : "";
+        typeof event.data === "string"
+          ? event.data
+          : typeof event.data === "object" && event.data && "type" in event.data
+            ? String(event.data.type)
+            : "";
 
       if (
         [
@@ -70,6 +76,15 @@ export default function Thanku() {
               className="h-[780px] w-full bg-dark-bg"
               allow="camera; microphone; autoplay; encrypted-media;"
             />
+          </div>
+
+          <div className="mt-6 text-center">
+            <a
+              href="/schedule"
+              className="inline-flex w-full max-w-sm items-center justify-center rounded-lg border border-brand-yellow-border bg-brand-yellow px-6 py-4 text-base font-bold text-dark-bg transition-colors duration-200 hover:bg-brand-yellow-hover"
+            >
+              I Scheduled My Call
+            </a>
           </div>
         </div>
       </section>
