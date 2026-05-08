@@ -13,6 +13,7 @@ import LandingAudit from "./pages/LandingAudit";
 import LandingScheduled from "./pages/LandingScheduled";
 import LandingThankYou from "./pages/LandingThankYou";
 import NotFound from "./pages/NotFound";
+import Thanku from "./pages/Thanku";
 
 const queryClient = new QueryClient();
 
@@ -32,8 +33,12 @@ const App = () => (
           <Route path="/landining" element={<Landing />} />
           <Route path="/landing/audit" element={<LandingAudit />} />
           <Route path="/landining/audit" element={<LandingAudit />} />
+          <Route path="/thanku" element={<Thanku />} />
+          <Route path="/thank-you" element={<Thanku />} />
           <Route path="/landing/thank-you" element={<LandingThankYou />} />
           <Route path="/landining/thank-you" element={<LandingThankYou />} />
+          <Route path="/sheduled" element={<LandingScheduled />} />
+          <Route path="/scheduled" element={<LandingScheduled />} />
           <Route path="/landing/scheduled" element={<LandingScheduled />} />
           <Route path="/landing/schedule" element={<LandingScheduled />} />
           <Route path="/landining/scheduled" element={<LandingScheduled />} />

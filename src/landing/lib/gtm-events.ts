@@ -30,6 +30,14 @@ export function trackAuditLead() {
   });
 }
 
+export function trackSchedulerViewed() {
+  pushDataLayerEvent({
+    event: "scheduler_viewed",
+    scheduler_name: "Reclaim Audit Call",
+    source_path: window.location.pathname,
+  });
+}
+
 export function trackAuditScheduled() {
   pushDataLayerEvent({
     event: "audit_call_scheduled",
