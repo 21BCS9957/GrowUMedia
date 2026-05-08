@@ -5,7 +5,8 @@ import { useNavigate } from "react-router-dom";
 
 const RECLAIM_REDIRECT_URL =
   typeof window !== "undefined" ? `${window.location.origin}/schedule` : "/schedule";
-const RECLAIM_URL = "https://app.reclaim.ai/m/arsh-groumedia/arsh";
+const RECLAIM_URL =
+  `https://meet.reclaimai.com/e/673b1d38-a315-443d-a5f4-8e194af12d28?redirect_url=${encodeURIComponent(RECLAIM_REDIRECT_URL)}`;
 
 export default function Thanku() {
   const navigate = useNavigate();
