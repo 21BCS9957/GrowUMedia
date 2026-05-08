@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const RECLAIM_REDIRECT_URL =
-  typeof window !== "undefined" ? `${window.location.origin}/schedule` : "/schedule";
+  typeof window !== "undefined" ? `${window.location.origin}/sheduled` : "/sheduled";
 const RECLAIM_URL =
   `https://meet.reclaimai.com/e/673b1d38-a315-443d-a5f4-8e194af12d28?redirect_url=${encodeURIComponent(RECLAIM_REDIRECT_URL)}`;
 const RECLAIM_ORIGINS = new Set([
@@ -18,6 +18,7 @@ export default function Thanku() {
   useEffect(() => {
     trackAuditLead();
     trackSchedulerViewed();
+    let redirectTimer: number | undefined;
 
     const handleMessage = (event: MessageEvent) => {
       if (!RECLAIM_ORIGINS.has(event.origin)) {
@@ -41,13 +42,18 @@ export default function Thanku() {
           "cancelled",
         ].includes(eventType)
       ) {
-        navigate("/schedule");
+        redirectTimer = window.setTimeout(() => {
+          navigate("/sheduled");
+        }, 3000);
       }
     };
 
     window.addEventListener("message", handleMessage);
 
     return () => {
+      if (redirectTimer) {
+        window.clearTimeout(redirectTimer);
+      }
       window.removeEventListener("message", handleMessage);
     };
   }, [navigate]);
@@ -76,15 +82,6 @@ export default function Thanku() {
               className="h-[780px] w-full bg-dark-bg"
               allow="camera; microphone; autoplay; encrypted-media;"
             />
-          </div>
-
-          <div className="mt-6 text-center">
-            <a
-              href="/schedule"
-              className="inline-flex w-full max-w-sm items-center justify-center rounded-lg border border-brand-yellow-border bg-brand-yellow px-6 py-4 text-base font-bold text-dark-bg transition-colors duration-200 hover:bg-brand-yellow-hover"
-            >
-              I Scheduled My Call
-            </a>
           </div>
         </div>
       </section>
