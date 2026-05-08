@@ -1,50 +1,24 @@
-# React Project
+# GrowUMedia Web App
 
-## Project info
+## Project Info
 
 This is a React application built with Vite, TypeScript, and Tailwind CSS.
 
-## How can I edit this code?
+## Local Development
 
-**Use your preferred IDE**
+Requirements:
+- Node.js and npm ([install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating))
 
-Clone this repo and push changes to deploy your updates.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Run locally:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
 git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
 cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
 npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
+## Stack
 
 - Vite
 - TypeScript
@@ -52,8 +26,84 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
+## Deployment
 
-You can deploy this project to any hosting platform that supports static sites, such as Vercel, Netlify, or GitHub Pages.
+Build the project with:
 
-Build the project with `npm run build` and deploy the `dist` folder.
+```sh
+npm run build
+```
+
+Then deploy the `dist` folder to Vercel, Netlify, GitHub Pages, or any static host.
+
+## Meta Pixel Tracking
+
+Implemented events:
+- `PageView` (automatic on load)
+- `InitiateCheckout` (CTA/book session button clicks)
+- `Schedule` (booking completion event)
+
+Main files:
+- `index.html` (base pixel snippet)
+- `src/lib/metaPixel.ts` (tracking helpers)
+- `src/api/facebook-conversions.ts` (Conversions API example)
+- `src/pages/Booking.tsx` (schedule/booking completion tracking)
+
+Notes:
+- Keep all Pixel IDs/tokens/event codes in environment variables.
+- Do not commit production secrets or access tokens to markdown/docs.
+
+## Marquee Logo Notes
+
+Fixes applied for logo visibility and smooth animation:
+- URL-safe image paths for files/folders with spaces
+- Consistent responsive logo container sizes
+- SVG-specific filter tweaks for contrast
+- Overflow/flex structure fixes to avoid clipping
+- Stable marquee keyframes and smooth looping
+- Image load error handling to hide broken assets
+
+Recommended production cleanup:
+- Rename `public/Company Logo/` to a URL-safe folder like `public/company-logos/`.
+- Prefer lowercase, hyphenated file names.
+
+## Mobile Marquee Layout
+
+Target behavior:
+- Show about 3 logos on mobile devices with smooth infinite scrolling.
+
+Responsive approach:
+- Smaller logo widths/heights on narrow screens
+- Reduced horizontal gaps/margins for 320px-375px devices
+- Slightly slower animation on mobile for readability
+
+## Image Optimization
+
+Case study image optimization completed:
+- Reduced total image weight from about 66MB to about 1MB
+- Converted large PNG assets to optimized JPEG where appropriate
+- Resized to web-friendly dimensions (for example max width around 800px)
+- Applied quality compression (around 80%)
+- Added lazy loading and resilient image rendering behavior
+
+Related component updates:
+- `src/components/CaseStudies.tsx`
+- `src/components/OptimizedImage.tsx`
+
+Example optimization command:
+
+```sh
+sips -Z 800 -s format jpeg -s formatOptions 80 "input.png" --out "output.jpg"
+```
+
+## Production Cleanup Checklist
+
+Before deleting original backups:
+- Verify optimized images render correctly across the site
+- Run a full QA pass
+- Ensure backups exist externally if needed
+
+Optional cleanup examples:
+- Remove old backup assets once verified
+- Audit other `public/` folders for oversized images
+- Monitor bandwidth usage and Core Web Vitals after deployment
