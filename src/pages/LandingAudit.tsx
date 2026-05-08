@@ -1,7 +1,7 @@
 import Navbar from "@/landing/components/Navbar";
 
 const TYPEFORM_REDIRECT_URL =
-  typeof window !== "undefined" ? `${window.location.origin}/thanku` : "/thanku";
+  typeof window !== "undefined" ? `${window.location.origin}/thank-you` : "/thank-you";
 const TYPEFORM_URL =
   `https://form.typeform.com/to/mKGqFyrp?typeform-source=growumedia-landing&redirect_url=${encodeURIComponent(TYPEFORM_REDIRECT_URL)}`;
 

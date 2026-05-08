@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="min-h-[62vh] flex items-center justify-center bg-dark-bg px-6 pt-24 pb-8 md:min-h-[66vh]">
+    <section className="flex items-center justify-center bg-dark-bg px-6 pb-8 pt-24">
       <div className="max-w-5xl mx-auto text-center">
         {/* Top Badge */}
         <div className="inline-flex items-center justify-center">
@@ -10,7 +10,7 @@ export default function Hero() {
         </div>
 
         {/* Main Headline */}
-        <h1 className="mt-10 font-manrope text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-center">
+        <h1 className="mt-8 font-manrope text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-center">
           <span className="block">
             <span className="inline-block gradient-headline">
               We'll Drive Revenue From Your

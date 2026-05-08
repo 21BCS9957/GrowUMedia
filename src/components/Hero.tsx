@@ -237,7 +237,7 @@ const Hero = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight bg-gradient-to-r from-gray-500 via-white to-yellow-400 bg-clip-text text-transparent mb-4 md:mb-6" style={{ fontFamily: 'Manrope, sans-serif' }}>
               YouTube as a Revenue Channel,
               <br />
-              for Established Businesses
+              for Established Business Owners
             </h1>
 
             {/* Subheading - closely paired with heading */}
