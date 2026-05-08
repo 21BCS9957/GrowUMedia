@@ -1,9 +1,13 @@
-import ConversionEventTracker from "@/landing/components/ConversionEventTracker";
+import { trackAuditScheduled } from "@/landing/lib/gtm-events";
+import { useEffect } from "react";
 
 export default function LandingScheduled() {
+  useEffect(() => {
+    trackAuditScheduled();
+  }, []);
+
   return (
     <main className="landing-page min-h-screen bg-dark-bg px-6 py-24 text-text-white font-inter">
-      <ConversionEventTracker eventName="Schedule" />
       <section className="mx-auto flex min-h-[60vh] max-w-3xl flex-col items-center justify-center text-center">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-yellow">
           Call Scheduled

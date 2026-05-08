@@ -9,6 +9,7 @@ import Blog from "./pages/Blog";
 import Testimonials from "./pages/Testimonials";
 import Booking from "./pages/Booking";
 import Landing from "./pages/Landing";
+import LandingAudit from "./pages/LandingAudit";
 import LandingScheduled from "./pages/LandingScheduled";
 import LandingThankYou from "./pages/LandingThankYou";
 import NotFound from "./pages/NotFound";
@@ -29,8 +30,14 @@ const App = () => (
           <Route path="/booking" element={<Booking />} />
           <Route path="/landing" element={<Landing />} />
           <Route path="/landining" element={<Landing />} />
+          <Route path="/landing/audit" element={<LandingAudit />} />
+          <Route path="/landining/audit" element={<LandingAudit />} />
           <Route path="/landing/thank-you" element={<LandingThankYou />} />
+          <Route path="/landining/thank-you" element={<LandingThankYou />} />
           <Route path="/landing/scheduled" element={<LandingScheduled />} />
+          <Route path="/landing/schedule" element={<LandingScheduled />} />
+          <Route path="/landining/scheduled" element={<LandingScheduled />} />
+          <Route path="/landining/schedule" element={<LandingScheduled />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

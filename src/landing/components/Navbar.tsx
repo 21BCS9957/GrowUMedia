@@ -15,9 +15,7 @@ export default function Navbar() {
 
         {/* CTA Button */}
         <AuditBookingLink
-          href="https://form.typeform.com/to/mKGqFyrp"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/landing/audit"
           className="bg-brand-yellow text-dark-bg font-semibold px-5 py-2 rounded-md hover:bg-brand-yellow-hover transition-colors duration-200 cursor-pointer"
         >
           Book a Free Audit

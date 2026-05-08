@@ -19,9 +19,7 @@ export default function Footer() {
 
           {/* CTA Button */}
           <AuditBookingLink
-            href="https://form.typeform.com/to/mKGqFyrp"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/landing/audit"
             id="audit"
             className="inline-block mt-8 bg-brand-yellow text-dark-bg font-bold px-10 py-5 rounded-xl text-lg hover:bg-brand-yellow-hover transition-colors duration-200 cursor-pointer"
           >

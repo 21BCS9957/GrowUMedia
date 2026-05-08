@@ -1,7 +1,7 @@
 "use client";
 
 import type { AnchorHTMLAttributes, ReactNode } from "react";
-import { trackAuditBookingClick } from "../lib/meta-events";
+import { trackAuditBookingClick } from "../lib/gtm-events";
 
 type AuditBookingLinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
   children: ReactNode;
