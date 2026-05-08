@@ -5,7 +5,7 @@ import { useEffect } from "react";
 const RECLAIM_REDIRECT_URL =
   typeof window !== "undefined" ? `${window.location.origin}/sheduled` : "/sheduled";
 const RECLAIM_URL =
-  `https://meet.reclaimai.com/e/673b1d38-a315-443d-a5f4-8e194af12d28?redirect_url=${encodeURIComponent(RECLAIM_REDIRECT_URL)}`;
+  `https://app.reclaim.ai/m/arsh-growumedia/m?redirect_url=${encodeURIComponent(RECLAIM_REDIRECT_URL)}`;
 
 export default function Thanku() {
   useEffect(() => {
