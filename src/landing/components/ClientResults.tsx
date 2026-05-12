@@ -106,24 +106,6 @@ const caseStudies: CaseStudy[] = [
     title: "Vista Social — B2B SaaS Platform",
     images: [
       {
-        label: "Vista Shorts Strategy",
-        src: "/case-studies/vista-shorts-strategy.png",
-        alt: "Vista Social shorts strategy views by content table",
-        note: "222,769 views · 108 subscribers",
-      },
-      {
-        label: "Vista Domino's Short",
-        src: "/case-studies/vista-dominos-short-analytics.png",
-        alt: "Vista Social short analytics showing 30,560 views",
-        note: "30.6K views · +15 subscribers",
-      },
-      {
-        label: "Vista Apple Short",
-        src: "/case-studies/vista-apple-short-analytics.png",
-        alt: "Vista Social short analytics showing 28,835 views",
-        note: "28.8K views · +20 subscribers",
-      },
-      {
         label: "Vista AI Tools Video",
         src: "/case-studies/vista-ai-tools-analytics.png",
         alt: "Vista Social video analytics showing 6,024 views",
@@ -134,6 +116,18 @@ const caseStudies: CaseStudy[] = [
         src: "/case-studies/vista-instagram-algorithm-analytics.png",
         alt: "Vista Social video analytics showing 5,437 views",
         note: "5.4K views · +37 subscribers",
+      },
+      {
+        label: "Vista Apple Short",
+        src: "/case-studies/vista-apple-short-analytics.png",
+        alt: "Vista Social short analytics showing 28,835 views",
+        note: "28.8K views · +20 subscribers",
+      },
+      {
+        label: "Vista Domino's Short",
+        src: "/case-studies/vista-dominos-short-analytics.png",
+        alt: "Vista Social short analytics showing 30,560 views",
+        note: "30.6K views · +15 subscribers",
       },
     ],
     body: [
