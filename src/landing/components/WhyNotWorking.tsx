@@ -30,8 +30,8 @@ export default function WhyNotWorking() {
 
         {/* Heading */}
         <h2 className="mt-6 font-manrope font-black text-4xl md:text-5xl lg:text-6xl leading-tight text-left md:text-left">
-          <span className="block gradient-headline">Most YouTube channels produce.</span>
-          <span className="block gradient-headline">Very few actually perform.</span>
+          <span className="block gradient-headline">Getting views is hard.</span>
+          <span className="block gradient-headline">Generating revenue from them is even harder.</span>
         </h2>
 
         {/* Subtext */}

@@ -4,9 +4,6 @@ export default function VideoSection() {
   return (
     <section className="bg-dark-bg px-6 pb-20 pt-0">
       <div className="max-w-4xl mx-auto">
-        <div className="mb-4 text-center text-xs font-semibold uppercase tracking-[0.2em] text-brand-yellow">
-          Watch the VSL
-        </div>
         <div className="relative overflow-hidden rounded-2xl bg-black border border-brand-yellow-border aspect-video shadow-[0_24px_100px_rgba(0,0,0,0.35)]">
           <iframe
             src="https://www.tella.tv/video/why-your-youtube-channel-isn-t-growing-c1g0/embed?feature=oembed"

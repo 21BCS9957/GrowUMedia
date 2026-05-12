@@ -3,7 +3,6 @@ import Footer from "@/landing/components/Footer";
 import Hero from "@/landing/components/Hero";
 import HowItWorks from "@/landing/components/HowItWorks";
 import Navbar from "@/landing/components/Navbar";
-import ScreenshotProof from "@/landing/components/ScreenshotProof";
 import VideoSection from "@/landing/components/VideoSection";
 import WhyNotWorking from "@/landing/components/WhyNotWorking";
 
@@ -14,7 +13,6 @@ export default function Landing() {
       <Hero />
       <VideoSection />
       <ClientResults />
-      <ScreenshotProof />
       <WhyNotWorking />
       <HowItWorks />
       <Footer />
