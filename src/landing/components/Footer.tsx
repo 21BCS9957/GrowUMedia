@@ -8,8 +8,8 @@ export default function Footer() {
         <div className="max-w-4xl mx-auto text-center">
           {/* Heading */}
           <h2 className="font-manrope font-black text-4xl md:text-5xl lg:text-6xl leading-tight">
-            <span className="block gradient-headline">Ready to make YouTube</span>
-            <span className="block gradient-headline">your best channel?</span>
+            <span className="block gradient-headline">Ready to become the #1</span>
+            <span className="block gradient-headline"> authority in your niche?</span>
           </h2>
 
           {/* Subtext */}

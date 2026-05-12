@@ -39,7 +39,7 @@ const caseStudies: CaseStudy[] = [
         label: "Anagen Rankings Video",
         src: "/case-studies/anagen-analytics-rankings.png",
         alt: "Anagen video analytics showing 76,787 views",
-        note: "76.8K views · $30K revenue",
+        note: "76.8K views · $15K revenue",
       },
       {
         label: "Anagen Minoxidil Revenue",
