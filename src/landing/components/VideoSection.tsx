@@ -9,8 +9,8 @@ export default function VideoSection() {
         </div>
         <div className="relative overflow-hidden rounded-2xl bg-black border border-brand-yellow-border aspect-video shadow-[0_24px_100px_rgba(0,0,0,0.35)]">
           <iframe
-            src="https://www.tella.tv/video/stop-guessing-how-to-actually-grow-your-youtube-channel-3noo/embed?feature=oembed"
-            title="Stop Guessing: How to Actually Grow Your YouTube Channel"
+            src="https://www.tella.tv/video/why-your-youtube-channel-isn-t-growing-c1g0/embed?feature=oembed"
+            title="Why your YouTube channel isn't growing"
             className="h-full w-full"
             allow="accelerometer *; autoplay *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; fullscreen *"
             allowFullScreen

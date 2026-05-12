@@ -30,7 +30,7 @@ export default function Hero() {
 
         {/* Subtext */}
         <p className="text-base text-text-muted max-w-sm mx-auto mt-6">
-          90 days or we keep working for free. No lock-in. Month on month.
+          30 days or we keep working for free. No lock-in. Month on month.
         </p>
       </div>
     </section>
