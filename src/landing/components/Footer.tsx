@@ -14,16 +14,16 @@ export default function Footer() {
 
           {/* Subtext */}
           <p className="text-base text-text-muted mt-6">
-            Book a free 30-minute channel audit. No pitch. Just clarity.
+            Apply for a free audit and leave with a sharper path to views, authority, and revenue.
           </p>
 
           {/* CTA Button */}
           <AuditBookingLink
             href="/landing/audit"
             id="audit"
-            className="inline-block mt-8 bg-brand-yellow text-dark-bg font-bold px-10 py-5 rounded-xl text-lg hover:bg-brand-yellow-hover transition-colors duration-200 cursor-pointer"
+            className="mt-8 inline-flex items-center justify-center rounded-md border border-brand-yellow-border bg-transparent px-10 py-5 text-lg font-black text-brand-yellow transition duration-200 hover:border-brand-yellow hover:bg-brand-yellow hover:text-dark-bg hover:shadow-[0_18px_60px_rgba(246,196,83,0.2)]"
           >
-            Book Your Free Audit →
+            Claim My Free Audit →
           </AuditBookingLink>
         </div>
       </section>

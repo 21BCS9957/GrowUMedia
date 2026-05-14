@@ -20,14 +20,15 @@ export default function VideoSection() {
         <div className="mt-10 flex flex-col items-center">
           <AuditBookingLink
             href="/landing/audit"
-            className="block w-full max-w-lg bg-brand-yellow text-dark-bg font-bold py-5 rounded-xl text-lg text-center hover:bg-brand-yellow-hover transition-colors duration-200 cursor-pointer"
+            className="group relative block w-full max-w-xl overflow-hidden rounded-xl border border-brand-yellow bg-brand-yellow px-6 py-5 text-center text-lg font-black text-dark-bg shadow-[0_18px_50px_rgba(246,196,83,0.22)] transition duration-200 hover:-translate-y-0.5 hover:bg-brand-yellow-hover hover:shadow-[0_22px_70px_rgba(246,196,83,0.32)]"
           >
-            Book Your Free Channel Audit →
+            <span className="absolute inset-x-0 top-0 h-px bg-white/60" />
+            Show Me My 30-Day YouTube Plan →
           </AuditBookingLink>
           
           {/* Micro-copy */}
-          <p className="text-sm text-text-muted mt-4 text-center">
-            Takes 30 seconds · No commitment · Walk away with video ideas regardless
+          <p className="mt-4 max-w-md text-center text-sm text-text-muted">
+            Answer a few questions. Get clear next-video angles, revenue bottlenecks, and whether we can help.
           </p>
         </div>
       </div>

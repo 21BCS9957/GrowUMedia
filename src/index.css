@@ -395,6 +395,42 @@ al gradient utility */
 .bg-gradient-radial {
   background: radial-gradient(circle, var(--tw-gradient-stops));
 }
+
+@keyframes systemStepRise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes systemHeadingGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 0 rgba(246, 196, 83, 0));
+  }
+  50% {
+    filter: drop-shadow(0 0 18px rgba(246, 196, 83, 0.12));
+  }
+}
+
+.system-heading {
+  animation: systemHeadingGlow 4s ease-in-out infinite;
+}
+
+.system-step {
+  animation: systemStepRise 0.7s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .system-heading,
+  .system-step {
+    animation: none;
+  }
+}
+
 /* Line clamp utilities */
 .line-clamp-2 {
   display: -webkit-box;

@@ -31,7 +31,9 @@ export default function WhyNotWorking() {
         {/* Heading */}
         <h2 className="mt-6 font-manrope font-black text-4xl md:text-5xl lg:text-6xl leading-tight text-left md:text-left">
           <span className="block gradient-headline">Getting views is hard.</span>
-          <span className="block gradient-headline">Generating revenue from them is even harder.</span>
+          <span className="block bg-gradient-to-r from-brand-yellow via-[#F5E4A8] to-text-white bg-clip-text text-transparent">
+            Generating revenue from them is even harder.
+          </span>
         </h2>
 
         {/* Subtext */}
@@ -44,20 +46,25 @@ export default function WhyNotWorking() {
           {issues.map((issue) => (
             <div
               key={issue.number}
-              className="rounded-2xl border border-dark-border bg-dark-card p-8"
+              className="group relative overflow-hidden rounded-2xl border border-dark-border bg-dark-card/80 p-8 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-brand-yellow-border hover:bg-dark-card-2/90 hover:shadow-[0_24px_80px_rgba(246,196,83,0.12)]"
             >
+              <div className="pointer-events-none absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100">
+                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-yellow to-transparent" />
+                <div className="absolute -right-20 -top-20 h-44 w-44 rounded-full bg-brand-yellow/10 blur-3xl" />
+              </div>
+
               {/* Large Number */}
-              <div className="text-6xl font-black text-dark-border tracking-tight mb-4">
+              <div className="relative text-6xl font-black text-dark-border tracking-tight mb-4 transition duration-300 group-hover:text-brand-yellow/40">
                 {issue.number}
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-black leading-tight gradient-headline font-manrope text-left md:text-left">
+              <h3 className="relative text-xl font-black leading-tight gradient-headline font-manrope text-left md:text-left">
                 {issue.title}
               </h3>
 
               {/* Description */}
-              <p className="text-sm text-text-muted leading-relaxed mt-3">
+              <p className="relative text-sm text-text-muted leading-relaxed mt-3 transition duration-300 group-hover:text-text-white/80">
                 {issue.description}
               </p>
             </div>

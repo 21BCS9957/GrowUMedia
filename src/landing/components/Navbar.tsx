@@ -16,9 +16,10 @@ export default function Navbar() {
         {/* CTA Button */}
         <AuditBookingLink
           href="/landing/audit"
-          className="bg-brand-yellow text-dark-bg font-semibold px-5 py-2 rounded-md hover:bg-brand-yellow-hover transition-colors duration-200 cursor-pointer"
+          className="group inline-flex items-center gap-2 rounded-md border border-brand-yellow-border bg-dark-card px-4 py-2 text-sm font-bold text-brand-yellow shadow-[0_0_0_1px_rgba(246,196,83,0.06)] transition duration-200 hover:border-brand-yellow hover:bg-brand-yellow-muted hover:text-brand-yellow"
         >
-          Book a Free Audit
+          <span className="h-2 w-2 rounded-full bg-brand-yellow transition duration-200 group-hover:scale-125" />
+          Request Audit
         </AuditBookingLink>
       </div>
     </nav>

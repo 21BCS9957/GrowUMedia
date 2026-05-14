@@ -35,21 +35,23 @@ export default function HowItWorks() {
         </div>
 
         {/* Heading */}
-        <h2 className="mt-6 font-manrope font-black text-4xl md:text-5xl lg:text-6xl leading-tight gradient-headline text-left md:text-left">
-          Research first. Then we build.
+        <h2 className="system-heading mt-6 font-manrope font-black text-4xl md:text-5xl lg:text-6xl leading-tight gradient-headline text-left md:text-left">
+          <span className="inline-block">Research first.</span>{" "}
+          <span className="inline-block">Then we build.</span>
         </h2>
 
         {/* Steps Container */}
         <div className="mt-16 relative">
-          {/* Connecting Line - Hidden on mobile, visible on desktop */}
-          <div className="hidden lg:block absolute top-8 left-0 right-0 h-0.5 bg-brand-yellow/20"></div>
-
           {/* Steps Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
             {steps.map((step, index) => (
-              <div key={step.number} className="relative">
+              <div
+                key={step.number}
+                className="system-step group relative rounded-2xl border border-transparent p-5 transition duration-300 hover:-translate-y-1 hover:border-brand-yellow-border hover:bg-dark-card/70 hover:shadow-[0_20px_70px_rgba(246,196,83,0.1)]"
+                style={{ animationDelay: `${index * 120}ms` }}
+              >
                 {/* Step Number Circle */}
-                <div className="relative z-10 w-16 h-16 rounded-full bg-brand-yellow text-dark-bg font-bold text-xl flex items-center justify-center mb-6">
+                <div className="relative z-10 w-16 h-16 rounded-full bg-brand-yellow text-dark-bg font-bold text-xl flex items-center justify-center mb-6 shadow-[0_0_0_8px_rgba(246,196,83,0.08)] transition duration-300 group-hover:scale-105 group-hover:shadow-[0_0_32px_rgba(246,196,83,0.28)]">
                   {step.number}
                 </div>
 
