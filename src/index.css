@@ -198,6 +198,139 @@ All colors MUST be HSL.
   filter: brightness(1.15) contrast(1.25) saturate(1.2);
 }
 
+.landing-page .premium-phase-panel {
+  position: relative;
+  isolation: isolate;
+}
+
+.landing-page .premium-phase-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(246, 196, 83, 0.16), transparent 34%),
+    linear-gradient(115deg, transparent 0%, rgba(255, 255, 255, 0.05) 42%, transparent 58%);
+  opacity: 0;
+  transform: translateX(-12%);
+  transition: opacity 420ms ease, transform 700ms ease;
+}
+
+.landing-page .premium-phase-panel.is-open::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.landing-page .premium-phase-panel.is-open {
+  animation: premium-panel-lift 520ms ease both;
+}
+
+.landing-page .premium-step-card {
+  animation: premium-step-rise 460ms ease both;
+}
+
+.landing-page .premium-guarantee-card {
+  position: relative;
+  isolation: isolate;
+}
+
+.landing-page .premium-guarantee-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(246, 196, 83, 0.2), transparent 42%),
+    linear-gradient(135deg, rgba(246, 196, 83, 0.08), transparent 38%, rgba(255, 255, 255, 0.04));
+  opacity: 0.9;
+}
+
+.landing-page .premium-guarantee-card::after {
+  content: "";
+  position: absolute;
+  left: -20%;
+  top: 0;
+  height: 1px;
+  width: 45%;
+  background: linear-gradient(90deg, transparent, rgba(246, 196, 83, 0.85), transparent);
+  animation: premium-light-sweep 4.5s ease-in-out infinite;
+}
+
+.landing-page .premium-text-reveal {
+  animation: premium-text-reveal 680ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.landing-page .premium-text-reveal:nth-child(2) {
+  animation-delay: 90ms;
+}
+
+.landing-page .premium-text-reveal:nth-child(3) {
+  animation-delay: 170ms;
+}
+
+.landing-page .premium-text-reveal:nth-child(4) {
+  animation-delay: 240ms;
+}
+
+@keyframes premium-panel-lift {
+  from {
+    transform: translateY(8px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes premium-step-rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes premium-text-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes premium-light-sweep {
+  0%,
+  35% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(320%);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing-page .premium-phase-panel,
+  .landing-page .premium-step-card,
+  .landing-page .premium-phase-panel::before,
+  .landing-page .premium-text-reveal,
+  .landing-page .premium-guarantee-card::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
 /* Mobile-specific optimizations for 3 logos visible */
 @media (max-width: 640px) {
   .marquee-container {
