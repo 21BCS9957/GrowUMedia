@@ -107,19 +107,19 @@ const phases = [
         icon: Target,
         title: "ICP Mapping",
         description:
-          "We identify exactly who your buyer is on YouTube, their sophistication level, their research stage, and where they are in their journey.",
+          "We identify exactly who your buyer is on YouTube, their sophistication level, their research stage, and where they are in their journey before a single content decision is made.",
       },
       {
         icon: Compass,
         title: "Funnel Architecture",
         description:
-          "We design your complete YouTube funnel so every piece of content has a defined role in moving your audience from discovery to purchase.",
+          "We design your complete YouTube funnel, top, middle, and bottom, so every piece of content has a defined role in moving your audience from discovery to purchase.",
       },
       {
         icon: CircleDollarSign,
         title: "Conversion Architecture",
         description:
-          "We build the VSL, featured section strategy, CTA system, and attribution layer so you know which content is driving sales.",
+          "We build your bottom of funnel conversion infrastructure, video sales letter, featured section strategy, CTA system, and revenue attribution, so you know exactly which content is driving sales and where every conversion is coming from.",
       },
     ],
   },
@@ -131,25 +131,25 @@ const phases = [
         icon: Search,
         title: "Cross-Niche Research",
         description:
-          "We study what is working in adjacent niches and bring proven formats into your space before competitors discover them.",
+          "We study what's working in adjacent niches and bring proven formats into your space before your competitors discover them.",
       },
       {
         icon: ChartNoAxesCombined,
         title: "Outlier Research",
         description:
-          "We identify videos that dramatically outperformed a channel's average and reverse engineer exactly why.",
+          "We study channels across your space and beyond, identifying videos that dramatically outperformed their channel's average, and reverse engineer exactly why so every concept has a validated demand signal behind it.",
       },
       {
         icon: FileSearch,
         title: "Gap Analysis",
         description:
-          "We map active audience demand against weak existing supply, then build where channels compound fastest.",
+          "We map what your audience is actively watching right now against how well existing channels are serving that demand. Where demand is high and supply is weak, we build.",
       },
       {
         icon: Lightbulb,
         title: "Idea Development",
         description:
-          "Every concept is informed by ICP mapping, outlier research, and gap analysis before anything goes to camera.",
+          "We develop every video concept from the ground up, informed by ICP mapping, outlier research, and gap analysis, so nothing goes to camera without a validated reason to exist.",
       },
     ],
   },
@@ -161,13 +161,13 @@ const phases = [
         icon: PackageCheck,
         title: "Packaging",
         description:
-          "We engineer every title and thumbnail to make the right person stop scrolling and click while filtering everyone else out.",
+          "We engineer every title and thumbnail as a precision instrument, designed to make the right person stop scrolling and click while filtering everyone else out.",
       },
       {
         icon: Camera,
         title: "Retention Architecture",
         description:
-          "We script and edit every video to keep the right viewer watching as long as possible. Every line earns the next.",
+          "We script and edit every video with one goal: keeping the right viewer watching as long as possible. Every line earns the next. Every cut serves the watch time.",
       },
     ],
   },
@@ -179,13 +179,13 @@ const phases = [
         icon: Crosshair,
         title: "Publishing & Channel Management",
         description:
-          "We handle uploading, scheduling, descriptions, cards, chapters, and featured sections so the channel operates without your involvement.",
+          "We handle uploading, scheduling, descriptions, cards, chapters, and featured section management so your channel operates as a complete acquisition system without your involvement.",
       },
       {
         icon: BarChart3,
         title: "Analytics & Iteration",
         description:
-          "We read the data after every publish and make the creative pivots that keep the system accelerating.",
+          "We read what the data is telling us after every publish, what is compounding, what is plateauing, what the algorithm is rewarding, and make the creative pivots that keep the system accelerating.",
       },
     ],
   },
@@ -196,42 +196,42 @@ const faqs = [
     question:
       "I've worked with YouTube agencies before and nothing happened. Why is this different?",
     answer:
-      "Most YouTube agencies optimise for views and subscribers. We optimise for revenue. The difference is not the content; it is the research and funnel architecture behind every decision. We start with your buyer, your funnel, and the demand signal that tells us which video will move them toward a purchase.",
+      "Most YouTube agencies optimise for views and subscribers. We optimise for revenue. The difference is not the content; it is the research and funnel architecture behind every decision. We do not start with a camera. We start with your buyer, your funnel, and the specific demand signal that tells us exactly which video will move them toward a purchase. The results compound because the system is built for acquisition, not for content.",
   },
   {
     question: "I don't have a big subscriber base. Will this still work for me?",
     answer:
-      "Yes. Subscriber count is largely irrelevant to how we work. YouTube distributes content based on psychographic signals: who the viewer is, what they watch, and how sophisticated their research is. Andrew had under 1,500 views per video when we started. His third video with us did 214,000 views.",
+      "Yes. Subscriber count is largely irrelevant to how we work. YouTube's recommendation algorithm distributes content based on psychographic signals: who the viewer is, what they watch, how sophisticated their research is, not how many subscribers the channel has. Andrew had under 1,500 views per video and almost no subscribers when we started. His third video with us did 214,000 views. The algorithm does not care about your base. It cares about whether your content is engineered correctly.",
   },
   {
     question: "How much of my time does this require?",
     answer:
-      "One hour a week in front of a camera. Everything else, from ICP mapping and funnel architecture to scripting, editing, publishing, channel management, and analytics, is handled by us.",
+      "One hour a week in front of a camera. That's it. Everything else, ICP mapping, funnel architecture, idea development, scripting, editing, packaging, publishing, channel management, and analytics, is handled entirely by us. You bring the expertise. We build the machine around it.",
   },
   {
     question: "How does the 15-day free trial work exactly?",
     answer:
-      "In 15 days we audit your channel completely, map your ICP, build your funnel architecture, and produce a complete video: researched, scripted, edited, and published. No credit card. No contract. No obligation.",
+      "In 15 days we audit your channel completely, map your ICP, build your funnel architecture, and produce a complete video: researched, scripted, edited, and published. You see the entire system working on your specific product, your specific audience, your specific channel. No credit card. No contract. No obligation. If you do not want to continue after 15 days, you do not have to. But you will have a complete video live on your channel and a full funnel architecture mapped regardless.",
   },
   {
     question: "What does the guarantee actually mean? How do you define 'double my revenue'?",
     answer:
-      "We agree on a baseline revenue number from your YouTube channel before we start. Our guarantee is to double that number organically, with no paid ads, within 60 days. If we do not hit it, we keep working at no charge until we do.",
+      "We agree on a baseline revenue number from your YouTube channel before we start. Our guarantee is to double that number organically, no paid ads, within 60 days. If we do not hit that number, we keep working at no charge until we do. Month to month. No lock in. Everything in writing before day one.",
   },
   {
     question: "My product or consultation requires a lot of trust before someone buys. Can YouTube really drive that?",
     answer:
-      "This is exactly why YouTube outperforms every other platform for health and wellness brands. Trust is built through time and education, and YouTube is where someone will voluntarily spend 12, 20, or 40 minutes with your expertise before they arrive pre-sold.",
+      "This is exactly why YouTube outperforms every other platform for health and wellness brands. Trust is built through time and education, and YouTube is the only platform where someone will voluntarily spend 12, 20, or 40 minutes with your content, your research, your expertise. That depth of attention creates a fundamentally different quality of buyer, one who already understands your mechanism, already trusts your authority, and arrives at your website or booking page pre-sold. Paid ads cannot manufacture that. YouTube does it organically and it compounds over time.",
   },
   {
     question: "I've been creating YouTube content for years and it hasn't worked. What makes you think you can fix that?",
     answer:
-      "The problem is almost never the content itself. It is the architecture behind it. Most channels that are not converting are missing ICP precision, funnel structure, or the right content engineering methodology. In 15 days you will see exactly where your specific gap is.",
+      "The problem is almost never the content itself. It is the architecture behind it. Most channels that are not converting commercially are missing one or more of three things: the right ICP precision, the right funnel structure, or the right content engineering methodology. In 15 days of working together you will see exactly where your specific gap is and what fixing it produces. That's not a sales pitch. That's a diagnosis you can act on regardless of whether we continue together.",
   },
   {
     question: "Why are you working exclusively with healthcare and wellness professionals now?",
     answer:
-      "Because this is where the system performs at its peak. Health and wellness buyers need trust, research depth, and authority before they act. Long-form YouTube builds that better than any other platform, and sophisticated audiences convert dramatically when the right content finds them.",
+      "Because that's where this system performs at its absolute peak. YouTube's psychographic data on health and wellness audiences is unmatched in depth and specificity. The trust required before someone makes a health decision is exactly the kind of trust that long form YouTube content builds better than any other platform. And the sophistication of the audiences already researching solutions in this space means that when the right content finds the right person, the conversion is dramatically higher than in almost any other category. We've seen it consistently. It's why we narrowed our focus entirely.",
   },
 ];
 
@@ -438,18 +438,18 @@ export default function Landing() {
       <section className="flex items-center justify-center bg-dark-bg px-6 pb-12 pt-28 md:pt-32">
         <div className="mx-auto max-w-6xl text-center">
           <div className="inline-flex max-w-4xl rounded-full border border-brand-yellow-border bg-brand-yellow-muted px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-brand-yellow">
-            For healthcare and wellness professionals with a product, supplement, consultation, or program creating content on YouTube but not generating consistent revenue from it
+            For health & wellness businesses
           </div>
 
           <h1 className="mt-8 font-manrope text-4xl font-black leading-tight sm:text-5xl md:text-6xl lg:text-7xl">
             <span className="gradient-headline">
-              We'll Install a YouTube Funnel System That Doubles Your Organic Revenue in 60 Days
+              We'll Double Your Organic Revenue in 60 Days. No Paid Ads.
             </span>{" "}
             <span className="text-text-white">Or We Keep Working For Free</span>
           </h1>
 
           <p className="mx-auto mt-7 max-w-4xl text-base leading-relaxed text-text-muted md:text-xl">
-            You have the expertise, the research, the authority. Less credible voices are outranking you, outselling you, outbooking you. YouTube in 2026, done right, puts you in front of the exact people already searching for what only you can offer organically, at scale, without paid ads.
+            Your CAC has a ceiling paid ads will never break. YouTube organic removes it entirely.
           </p>
 
           <p className="mt-8 text-sm font-bold uppercase tracking-[0.16em] text-brand-yellow">
@@ -492,13 +492,13 @@ export default function Landing() {
           Case Study 01 · Healthcare · Hair Loss
         </div>
         <div className="mt-5 inline-flex flex-wrap items-center rounded-lg border border-brand-yellow-border bg-brand-yellow-muted px-4 py-2 text-sm font-black uppercase tracking-[0.12em] text-brand-yellow">
-          $60K monthly business revenue · organic YouTube · zero paid ads · growing 20% month on month
+          $0 → $60K MRR · Organic YouTube · Zero Paid Ads · +20% MoM
         </div>
         <h2 className="mt-6 font-manrope text-4xl font-black leading-tight md:text-6xl">
           <span className="gradient-headline">Andrew Verbinnen — Anagen</span>
         </h2>
         <p className="mt-5 max-w-4xl text-lg leading-relaxed text-text-muted">
-          From averaging 1,500 views per video and zero revenue to $60K a month in business revenue, entirely organic, paid ads never turned back on.
+          From avg 1,500 views per video. Zero revenue. To $60K MRR, entirely organic. Paid ads never turned back on.
         </p>
 
         <div className="mt-10 overflow-hidden rounded-xl border border-dark-border bg-black">
@@ -538,10 +538,10 @@ export default function Landing() {
 
         <div className="mt-10 grid gap-6 text-sm leading-relaxed text-text-muted md:grid-cols-2 md:text-base">
           <p>
-            Andrew spent years developing proprietary formulations for hair loss that did not exist anywhere else in the market. He built a teleconsultation process around them, diagnosing each case precisely and administering the right combination of treatments for that specific individual. He had built something complete, something real, something that was genuinely changing lives. But competing against billion dollar incumbents on paid ads was a losing battle. So he turned to YouTube. Both founders on camera. An editor. A social media team. Six months of genuine company level effort. Averaging 1,500 views per video. Zero business revenue. Zero engagement that translated into anything.
+            Andrew spent years developing proprietary formulations for hair loss that did not exist anywhere else in the market. He built a teleconsultation process around them, diagnosing each case precisely and administering the right combination of treatments for that specific individual. Something complete. Something real. Genuinely changing lives. But competing against billion dollar incumbents on paid ads was a losing battle. So he turned to YouTube. Both founders on camera. An editor. A social media team. Six months of genuine company level effort. Averaging 1,500 views per video. Zero business revenue. Zero engagement that translated into anything.
           </p>
           <p>
-            We applied our research mechanism to identify the exact person on YouTube who was sophisticated enough to understand his formulation, deep enough in their research to recognise it as genuinely different, and ready enough to act. Our content engineering built precise content with precise packaging to reach that person, retain them completely, and take them from cold stranger to someone who trusts Andrew as the authority. His third video with us reached 214,000 views, averaged over 50% retention, and generated $45,000 in direct business revenue. Seven months later, he is at $60,000 a month in business revenue, growing 20% month on month, entirely from organic YouTube.
+            We applied our research mechanism to identify the exact person on YouTube, sophisticated enough to understand his formulation, deep enough in their research to recognise it as genuinely different, ready enough to act. Our content engineering built precise content with precise packaging to reach that person, retain them completely, and take them from cold stranger to someone who trusts Andrew as the authority. He reads the scripts on camera. The content does the rest. His third video with us: 214,000 views. 50%+ retention. $45,000 in direct business revenue. One video. No paid ads. Seven months later: $60,000 MRR. Growing 20% month on month. Entirely from organic YouTube.
           </p>
         </div>
 
@@ -557,6 +557,17 @@ export default function Landing() {
             Andrew Verbinnen, Co-Founder, Anagen
           </figcaption>
         </figure>
+      </SectionShell>
+
+      <SectionShell className="border-y border-dark-border bg-dark-card/40">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="font-manrope text-3xl font-black leading-tight text-text-white md:text-5xl">
+            See what this system looks like for your specific offer and your audience.
+          </h2>
+          <div className="mt-8 flex justify-center">
+            <CTAButton />
+          </div>
+        </div>
       </SectionShell>
 
       <SectionShell>
@@ -610,9 +621,14 @@ export default function Landing() {
       </SectionShell>
 
       <SectionShell>
-        <p className="mx-auto max-w-4xl text-center font-manrope text-2xl font-black leading-tight text-text-white md:text-4xl">
-          This YouTube system works. We've proven it across niches. But in healthcare and wellness, where trust is everything and sophistication is the moat, it performs like nothing else.
-        </p>
+        <div className="mx-auto max-w-4xl text-center">
+          <p className="font-manrope text-3xl font-black leading-tight text-text-white md:text-5xl">
+            "This YouTube system works. We've proven it across niches."
+          </p>
+          <p className="mt-4 font-manrope text-xl font-black leading-tight text-brand-yellow md:text-3xl">
+            But in healthcare and wellness, where trust is everything and sophistication is the moat, it performs like nothing else.
+          </p>
+        </div>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
           <article className="rounded-xl border border-dark-border bg-dark-card p-6 md:p-8">
